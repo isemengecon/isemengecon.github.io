@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Topic 6: Risk and Uncertainty</title>
+</head>
+<body>
+
+<h1 style="text-align:center; border-bottom:2px solid #333; padding-bottom:10px; margin-bottom:5px;">Cost Analysis and Engineering Economy</h1>
+
+<h1>Topic 6: Risk and Uncertainty</h1>
+
+<div style="background:#f0f4f8; border:1px solid #c8d8e8; border-radius:6px; padding:15px 20px; margin-bottom:30px;">
+  <b>Contents</b>
+  <ul>
+    <li><a href="#breakeven-analysis">Breakeven Analysis</a> (Q1&ndash;Q14)</li>
+    <li><a href="#sensitivity-analysis">Sensitivity Analysis</a> (Q15&ndash;Q31)</li>
+    <li><a href="#risk-analysis">Risk Analysis</a> (Q32&ndash;Q36)</li>
+    <li><a href="#option-valuation">Option Valuation</a> (Q37&ndash;Q43)</li>
+  </ul>
+</div>
+
+<!-- ===== SECTION 1: BREAKEVEN ANALYSIS ===== -->
+
+<h1 id="breakeven-analysis">Breakeven Analysis</h1>
+
+A mining company is considering whether to invest in a newly discovered mine. The mine is expected to yield 100 kg of gold annually over the next five years. It costs $17 million to purchase the mine. Furthermore, the operating cost in the first year is $1 million and is estimated to increase 10% each year. The price of the newly extracted gold is currently $50,000 per kg and is estimated to increase 5% annually (i.e., the price of the newly extracted gold in the first year of operations is estimated to be $52,500 per kg). Assume that the company uses an annual interest of 7% in their decision making.
+<br/><br/>
+
+Q1. After one year of operations, the cash flow of this investment is:
+<br/><br/>
+&bull; A<sub>0</sub> = -$17,000,000
+<br/><br/>
+&bull; A<sub>1</sub> = 100 x $52,500 &ndash; $1,000,000 = $4,250,000
+<br/><br/>
+Based on the cash flow described above, the present value of this investment after one year is $<input type="number" step="0.01" min="-99999999" max="99999999" name="ansQ1" id="ansQ1">.
+<br/><br/>
+<button onclick="funCheck('ansQ1','resQ1',-13028500,-13027500)">Check Q1 Solution</button>&nbsp &nbsp &nbsp<a id="resQ1"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q1 Explanation</button>
+<div class="panel">
+  <p>-$17M + $4.25M &divide; 1.07 = -$13,028,037</p>
+</div>
+</br></br></br>
+
+Q2. The operating cost in the second year is estimated to be $<input type="number" step="0.01" min="-99999999" max="99999999" name="ansQ2" id="ansQ2">.
+<br/><br/>
+<button onclick="funCheck('ansQ2','resQ2',1100000,1100000)">Check Q2 Solution</button>&nbsp &nbsp &nbsp<a id="resQ2"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q2 Explanation</button>
+<div class="panel">
+  <p>$1,000,000 x 1.1 = $1,100,000</p>
+</div>
+</br></br></br>
+
+Q3. The price of newly extracted gold in the second year of operations is estimated to be $<input type="number" step="0.01" min="-99999999" max="99999999" name="ansQ3" id="ansQ3"> per kg.
+<br/><br/>
+<button onclick="funCheck('ansQ3','resQ3',55120,55130)">Check Q3 Solution</button>&nbsp &nbsp &nbsp<a id="resQ3"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q3 Explanation</button>
+<div class="panel">
+  <p>$50,000 x 1.05<sup>2</sup> = $55,125</p>
+</div>
+</br></br></br>
+
+Q4. Based on your solutions from Questions 1 to 3, the present value of this investment after two years is $<input type="number" step="0.01" min="-99999999" max="99999999" name="ansQ4" id="ansQ4">.
+<br/><br/>
+<button onclick="funCheck('ansQ4','resQ4',-9174500,-9173500)">Check Q4 Solution</button>&nbsp &nbsp &nbsp<a id="resQ4"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q4 Explanation</button>
+<div class="panel">
+  <p>-$13,028,037 + (100 x $55,125 &ndash; $1,100,000) &divide; 1.07<sup>2</sup> = -$9,173,989</p>
+</div>
+</br></br></br>
+
+Q5. The operating cost in the third year is estimated to be $<input type="number" step="0.01" min="-99999999" max="99999999" name="ansQ5" id="ansQ5">.
+<br/><br/>
+<button onclick="funCheck('ansQ5','resQ5',1210000,1210000)">Check Q5 Solution</button>&nbsp &nbsp &nbsp<a id="resQ5"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q5 Explanation</button>
+<div class="panel">
+  <p>$1,100,000 x 1.1 = $1,210,000</p>
+</div>
+</br></br></br>
+
+Q6. The price of newly extracted gold in the third year of operations is estimated to be $<input type="number" step="0.01" min="-99999999" max="99999999" name="ansQ6" id="ansQ6"> per kg.
+<br/><br/>
+<button onclick="funCheck('ansQ6','resQ6',57850,57900)">Check Q6 Solution</button>&nbsp &nbsp &nbsp<a id="resQ6"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q6 Explanation</button>
+<div class="panel">
+  <p>$50,000 x 1.05<sup>3</sup> = $57,881</p>
+</div>
+</br></br></br>
+
+Q7. Based on your solutions from Questions 4 to 6, the present value of this investment after three years is $<input type="number" step="0.01" min="-99999999" max="99999999" name="ansQ7" id="ansQ7">.
+<br/><br/>
+<button onclick="funCheck('ansQ7','resQ7',-5437250,-5436250)">Check Q7 Solution</button>&nbsp &nbsp &nbsp<a id="resQ7"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q7 Explanation</button>
+<div class="panel">
+  <p>-$9,173,989 + (100 x $57,881 &ndash; $1,210,000) &divide; 1.07<sup>3</sup> = -$5,436,875</p>
+</div>
+</br></br></br>
+
+Q8. The operating cost in the fourth year is estimated to be $<input type="number" step="0.01" min="-99999999" max="99999999" name="ansQ8" id="ansQ8">.
+<br/><br/>
+<button onclick="funCheck('ansQ8','resQ8',1331000,1331000)">Check Q8 Solution</button>&nbsp &nbsp &nbsp<a id="resQ8"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q8 Explanation</button>
+<div class="panel">
+  <p>$1,210,000 x 1.1 = $1,331,000</p>
+</div>
+</br></br></br>
+
+Q9. The price of newly extracted gold in the fourth year of operations is estimated to be $<input type="number" step="0.01" min="-99999999" max="99999999" name="ansQ9" id="ansQ9"> per kg.
+<br/><br/>
+<button onclick="funCheck('ansQ9','resQ9',60750,60800)">Check Q9 Solution</button>&nbsp &nbsp &nbsp<a id="resQ9"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q9 Explanation</button>
+<div class="panel">
+  <p>$50,000 x 1.05<sup>4</sup> = $60,775</p>
+</div>
+</br></br></br>
+
+Q10. Based on your solutions from Questions 7 to 9, the present value of this investment after four years is $<input type="number" step="0.01" min="-99999999" max="99999999" name="ansQ10" id="ansQ10">.
+<br/><br/>
+<button onclick="funCheck('ansQ10','resQ10',-1816250,-1815250)">Check Q10 Solution</button>&nbsp &nbsp &nbsp<a id="resQ10"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q10 Explanation</button>
+<div class="panel">
+  <p>-$5,436,875 + (100 x $60,775 &ndash; $1,331,000) &divide; 1.07<sup>4</sup> = -$1,815,769</p>
+</div>
+</br></br></br>
+
+Q11. The operating cost in the fifth year is estimated to be $<input type="number" step="0.01" min="-99999999" max="99999999" name="ansQ11" id="ansQ11">.
+<br/><br/>
+<button onclick="funCheck('ansQ11','resQ11',1464100,1464100)">Check Q11 Solution</button>&nbsp &nbsp &nbsp<a id="resQ11"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q11 Explanation</button>
+<div class="panel">
+  <p>$1,331,000 x 1.1 = $1,464,100</p>
+</div>
+</br></br></br>
+
+Q12. The price of newly extracted gold in the fifth year of operations is estimated to be $<input type="number" step="0.01" min="-99999999" max="99999999" name="ansQ12" id="ansQ12"> per kg.
+<br/><br/>
+<button onclick="funCheck('ansQ12','resQ12',63800,63850)">Check Q12 Solution</button>&nbsp &nbsp &nbsp<a id="resQ12"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q12 Explanation</button>
+<div class="panel">
+  <p>$50,000 x 1.05<sup>5</sup> = $63,814</p>
+</div>
+</br></br></br>
+
+Q13. Based on your solutions from Questions 10 to 12, the present value of this investment after five years is $<input type="number" step="0.01" min="-99999999" max="99999999" name="ansQ13" id="ansQ13">.
+<br/><br/>
+<button onclick="funCheck('ansQ13','resQ13',1689750,1690750)">Check Q13 Solution</button>&nbsp &nbsp &nbsp<a id="resQ13"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q13 Explanation</button>
+<div class="panel">
+  <p>-$1,815,769 + (100 x $63,814 &ndash; $1,464,100) &divide; 1.07<sup>5</sup> = $1,690,203</p>
+</div>
+</br></br></br>
+
+Q14. Based on your solutions from Questions 1, 4, 7, 10 and 13, this investment will <strong>breakeven</strong> after <input type="number" step="1" min="-99999999" max="99999999" name="ansQ14" id="ansQ14"> years.
+<br/><br/>
+<button onclick="funCheck('ansQ14','resQ14',5,5)">Check Q14 Solution</button>&nbsp &nbsp &nbsp<a id="resQ14"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q14 Explanation</button>
+<div class="panel">
+  <p>Present value is greater than zero only after five years</p>
+</div>
+</br></br></br>
+
+<!-- ===== SECTION 2: SENSITIVITY ANALYSIS ===== -->
+
+<h1 id="sensitivity-analysis">Sensitivity Analysis</h1>
+
+A mining company is considering whether to invest in a newly discovered mine. The mine is expected to yield 100 kg of gold annually over the next five years. It costs $17 million to purchase the mine. Furthermore, the operating cost in the first year is $1 million and is estimated to increase 10% each year. The price of the newly extracted gold is currently $50,000 per kg and is estimated to increase 5% annually (i.e., the price of the newly extracted gold in the first year of operations is estimated to be $52,500 per kg). Assume that the company uses an annual interest of 7% in their decision making.
+<br/><br/>
+
+Q15. Suppose that the increase in price of newly extracted gold is 5.5% (i.e., 10% higher than our original estimate), the present value of this investment after five years is $<input type="number" step="0.01" min="-99999999" max="99999999" name="ansQ15" id="ansQ15">.
+<br/><br/>
+<button onclick="funCheck('ansQ15','resQ15',2025000,2026000)">Check Q15 Solution</button>&nbsp &nbsp &nbsp<a id="resQ15"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q15 Explanation</button>
+<div class="panel">
+  <p>$2,025,666. See Questions 1 to 13 for similar computations</p>
+</div>
+</br></br></br>
+
+Q16. Based on your solution from Question 15, the present value of this investment increased by <input type="number" step="0.01" min="-99999999" max="99999999" name="ansQ16" id="ansQ16">% when the increase in gold price is 10% higher than our original estimate.
+<br/><br/>
+<button onclick="funCheck('ansQ16','resQ16',19.7,19.9)">Check Q16 Solution</button>&nbsp &nbsp &nbsp<a id="resQ16"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q16 Explanation</button>
+<div class="panel">
+  <p>($2,025,666 - $1,690,203) &divide; $1,690,203 x 100% = 19.8%</p>
+</div>
+</br></br></br>
+
+Q17. Suppose that the increase in price of newly extracted gold is 6% (i.e., 20% higher than our original estimate), the present value of this investment after five years is $<input type="number" step="0.01" min="-99999999" max="99999999" name="ansQ17" id="ansQ17">.
+<br/><br/>
+<button onclick="funCheck('ansQ17','resQ17',2365000,2366000)">Check Q17 Solution</button>&nbsp &nbsp &nbsp<a id="resQ17"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q17 Explanation</button>
+<div class="panel">
+  <p>$2,365,360. See Questions 1 to 13 for similar computations</p>
+</div>
+</br></br></br>
+
+Q18. Based on your solution from Question 17, the present value of this investment increased by <input type="number" step="0.01" min="-99999999" max="99999999" name="ansQ18" id="ansQ18">% when the increase in gold price is 20% higher than our original estimate.
+<br/><br/>
+<button onclick="funCheck('ansQ18','resQ18',39.8,40)">Check Q18 Solution</button>&nbsp &nbsp &nbsp<a id="resQ18"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q18 Explanation</button>
+<div class="panel">
+  <p>($2,365,360 - $1,690,203) &divide; $1,690,203 x 100% = 39.9%</p>
+</div>
+</br></br></br>
+
+Q19. Suppose that the increase in price of newly extracted gold is 4.5% (i.e., 10% lower than our original estimate), the present value of this investment after five years is $<input type="number" step="0.01" min="-99999999" max="99999999" name="ansQ19" id="ansQ19">.
+<br/><br/>
+<button onclick="funCheck('ansQ19','resQ19',1358500,1359500)">Check Q19 Solution</button>&nbsp &nbsp &nbsp<a id="resQ19"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q19 Explanation</button>
+<div class="panel">
+  <p>$1,358,927. See Questions 1 to 13 for similar computations</p>
+</div>
+</br></br></br>
+
+Q20. Based on your solution from Question 19, the present value of this investment decreased by <input type="number" step="0.01" min="-99999999" max="99999999" name="ansQ20" id="ansQ20">% when the increase in gold price is 10% lower than our original estimate.
+<br/><br/>
+<button onclick="funCheck('ansQ20','resQ20',19.5,19.7)">Check Q20 Solution</button>&nbsp &nbsp &nbsp<a id="resQ20"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q20 Explanation</button>
+<div class="panel">
+  <p>-($1,358,927 - $1,690,203) &divide; $1,690,203 x 100% = 19.6%</p>
+</div>
+</br></br></br>
+
+Q21. Suppose that the increase in price of newly extracted gold is 4% (i.e., 20% lower than our original estimate), the present value of this investment after five years is $<input type="number" step="0.01" min="-99999999" max="99999999" name="ansQ21" id="ansQ21">.
+<br/><br/>
+<button onclick="funCheck('ansQ21','resQ21',1031000,1032000)">Check Q21 Solution</button>&nbsp &nbsp &nbsp<a id="resQ21"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q21 Explanation</button>
+<div class="panel">
+  <p>$1,031,792. See Questions 1 to 13 for similar computations</p>
+</div>
+</br></br></br>
+
+Q22. Based on your solution from Question 21, the present value of this investment decreased by <input type="number" step="0.01" min="-99999999" max="99999999" name="ansQ22" id="ansQ22">% when the increase in gold price is 20% lower than our original estimate.
+<br/><br/>
+<button onclick="funCheck('ansQ22','resQ22',38.9,39.1)">Check Q22 Solution</button>&nbsp &nbsp &nbsp<a id="resQ22"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q22 Explanation</button>
+<div class="panel">
+  <p>-($1,031,792 - $1,690,203) &divide; $1,690,203 x 100% = 39.0%</p>
+</div>
+</br></br></br>
+
+Q23. Suppose that the increase in operating cost is 11% (i.e., 10% higher than our original estimate), the present value of this investment after five years is $<input type="number" step="0.01" min="-99999999" max="99999999" name="ansQ23" id="ansQ23">.
+<br/><br/>
+<button onclick="funCheck('ansQ23','resQ23',1596500,1597500)">Check Q23 Solution</button>&nbsp &nbsp &nbsp<a id="resQ23"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q23 Explanation</button>
+<div class="panel">
+  <p>$1,597,003. See Questions 1 to 13 for similar computations</p>
+</div>
+</br></br></br>
+
+Q24. Based on your solution from Question 23, the present value of this investment decreased by <input type="number" step="0.01" min="-99999999" max="99999999" name="ansQ24" id="ansQ24">% when the increase in operating cost is 10% higher than our original estimate.
+<br/><br/>
+<button onclick="funCheck('ansQ24','resQ24',5.4,5.6)">Check Q24 Solution</button>&nbsp &nbsp &nbsp<a id="resQ24"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q24 Explanation</button>
+<div class="panel">
+  <p>-($1,597,003 - $1,690,203) &divide; $1,690,203 x 100% = 5.5%</p>
+</div>
+</br></br></br>
+
+Q25. Suppose that the increase in operating cost is 12% (i.e., 20% higher than our original estimate), the present value of this investment after five years is $<input type="number" step="0.01" min="-99999999" max="99999999" name="ansQ25" id="ansQ25">.
+<br/><br/>
+<button onclick="funCheck('ansQ25','resQ25',1501500,1502500)">Check Q25 Solution</button>&nbsp &nbsp &nbsp<a id="resQ25"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q25 Explanation</button>
+<div class="panel">
+  <p>$1,502,077. See Questions 1 to 13 for similar computations</p>
+</div>
+</br></br></br>
+
+Q26. Based on your solution from Question 25, the present value of this investment decreased by <input type="number" step="0.01" min="-99999999" max="99999999" name="ansQ26" id="ansQ26">% when the increase in operating cost is 20% higher than our original estimate.
+<br/><br/>
+<button onclick="funCheck('ansQ26','resQ26',11,11.2)">Check Q26 Solution</button>&nbsp &nbsp &nbsp<a id="resQ26"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q26 Explanation</button>
+<div class="panel">
+  <p>-($1,502,077 - $1,690,203) &divide; $1,690,203 x 100% = 11.1%</p>
+</div>
+</br></br></br>
+
+Q27. Suppose that the increase in operating cost is 9% (i.e., 10% lower than our original estimate), the present value of this investment after five years is $<input type="number" step="0.01" min="-99999999" max="99999999" name="ansQ27" id="ansQ27">.
+<br/><br/>
+<button onclick="funCheck('ansQ27','resQ27',1781000,1782000)">Check Q27 Solution</button>&nbsp &nbsp &nbsp<a id="resQ27"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q27 Explanation</button>
+<div class="panel">
+  <p>$1,781,701. See Questions 1 to 13 for similar computations</p>
+</div>
+</br></br></br>
+
+Q28. Based on your solution from Question 27, the present value of this investment increased by <input type="number" step="0.01" min="-99999999" max="99999999" name="ansQ28" id="ansQ28">% when the increase in operating cost is 10% lower than our original estimate.
+<br/><br/>
+<button onclick="funCheck('ansQ28','resQ28',5.3,5.5)">Check Q28 Solution</button>&nbsp &nbsp &nbsp<a id="resQ28"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q28 Explanation</button>
+<div class="panel">
+  <p>($1,781,701 - $1,690,203) &divide; $1,690,203 x 100% = 5.4%</p>
+</div>
+</br></br></br>
+
+Q29. Suppose that the increase in operating cost is 8% (i.e., 20% lower than our original estimate), the present value of this investment after five years is $<input type="number" step="0.01" min="-99999999" max="99999999" name="ansQ29" id="ansQ29">.
+<br/><br/>
+<button onclick="funCheck('ansQ29','resQ29',1871000,1872000)">Check Q29 Solution</button>&nbsp &nbsp &nbsp<a id="resQ29"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q29 Explanation</button>
+<div class="panel">
+  <p>$1,871,521. See Questions 1 to 13 for similar computations</p>
+</div>
+</br></br></br>
+
+Q30. Based on your solution from Question 29, the present value of this investment increased by <input type="number" step="0.01" min="-99999999" max="99999999" name="ansQ30" id="ansQ30">% when the increase in operating cost is 20% lower than our original estimate.
+<br/><br/>
+<button onclick="funCheck('ansQ30','resQ30',10.6,10.8)">Check Q30 Solution</button>&nbsp &nbsp &nbsp<a id="resQ30"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q30 Explanation</button>
+<div class="panel">
+  <p>($1,871,521 - $1,690,203) &divide; $1,690,203 x 100% = 10.7%</p>
+</div>
+</br></br></br>
+
+Q31. Based on your solutions from Questions 16, 18, 20, 22, 24, 26, 28 and 30, the present value of this investment is more sensitive to estimation errors in the increase in gold price than errors in the increase in operating cost. <select id="ansQ31" name="ansQ31" style="height:40px; padding:5px;"><option value="">-- Select --</option><option value="True">True</option><option value="False">False</option></select>
+<br/><br/>
+<button onclick="checktrue('ansQ31','resQ31','True')">Check Q31 Solution</button>&nbsp &nbsp &nbsp<a id="resQ31"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q31 Explanation</button>
+<div class="panel">
+  <p>The change in the present value of the investment is more pronounced when the increase in gold price changes.</p>
+</div>
+</br></br></br>
+
+<!-- ===== SECTION 3: RISK ANALYSIS ===== -->
+
+<h1 id="risk-analysis">Risk Analysis</h1>
+
+A mining company is considering whether to invest in a newly discovered mine. The mine is expected to yield 100 kg of gold annually. There is a 0.25 probability the mine contains 300 kg of gold (i.e., last three years), 0.5 probability it contains 500 kg of gold (i.e., last five years) and 0.25 probability it contains 600 kg of gold (i.e., last six years). It costs $17 million to purchase the mine. Furthermore, the operating cost in the first year is $1 million and is estimated to increase 10% each year. The price of the newly extracted gold is currently $50,000 per kg and is estimated to increase 5% annually (i.e., the price of the newly extracted gold in the first year of operations is estimated to be $52,500 per kg). Assume that the company uses an annual interest of 7% in their decision making.
+<br/><br/>
+
+Q32. Based on your solution from Question 13, the present value of this investment if the mine contains 500 kg of gold is $<input type="number" step="0.01" min="-99999999" max="99999999" name="ansQ32" id="ansQ32">.
+<br/><br/>
+<button onclick="funCheck('ansQ32','resQ32',1680000,1700000)">Check Q32 Solution</button>&nbsp &nbsp &nbsp<a id="resQ32"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q32 Explanation</button>
+<div class="panel">
+  <p>$1,690,203. Same as Question 13</p>
+</div>
+</br></br></br>
+
+Q33. The present value of this investment if the mine contains 300 kg of gold is $<input type="number" step="0.01" min="-99999999" max="99999999" name="ansQ33" id="ansQ33">.
+<br/><br/>
+<button onclick="funCheck('ansQ33','resQ33',-5450000,-5430000)">Check Q33 Solution</button>&nbsp &nbsp &nbsp<a id="resQ33"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q33 Explanation</button>
+<div class="panel">
+  <p>-$5,436,875. Same as Question 7</p>
+</div>
+</br></br></br>
+
+Q34. The present value of this investment if the mine contains 600 kg of gold is $<input type="number" step="0.01" min="-99999999" max="99999999" name="ansQ34" id="ansQ34">.
+<br/><br/>
+<button onclick="funCheck('ansQ34','resQ34',5080000,5090000)">Check Q34 Solution</button>&nbsp &nbsp &nbsp<a id="resQ34"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q34 Explanation</button>
+<div class="panel">
+  <p>$5,081,864. See Questions 7 and 13 for similar computations</p>
+</div>
+</br></br></br>
+
+Q35. <strong>Expected value</strong> describes the weighted average of the outcomes.
+<br/><br/>
+<span id="q35-formula"></span><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAkACQAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCABpAq0DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9/KKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoorB+KHjd/hp8N9e8RR6JrfiV9C0+e/Gk6NFHLqGpeUhfybdJHjRpWxhVZ1BJAyM0Ab1FfBn7FH/AAXw8L/8FEtP8Q3Hwd+BHx38Xf8ACJ3CWurwNN4U066sHcEpvgu9cil2ttcBwpUlGGcqQPc/+GyPiL/0ad8f/wDwb+CP/mhoA+gKK+PP2o/+CuN5+xj8GtT+IPxG/Zi/aN0TwhoxT7fqFv8A8IpqYsw7hFeSO01yWRU3MoLldoyMkV9QfB/4m2Hxr+EvhfxlpUV3Bpni3SLTWrOK7RVnjhuYUmRZArMocK4BAYjOcE9aAOjooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKivbRb+zlgcyKkyGNjHI0bgEYO1lIZT6EEEdjX5L/8ABPbQfBfiH9kj49fEL45/GH4+2ml+A/i34k8KWus/8Lk8YQtplhDdw21lCkVvf4ldXlVVzG7uzDduoA/W2ivmbRvj94J/4JjfC34N/Cz4t/E/xh4o8TeJrqHwtoniXV9E1TUrjxRqEkhEUdxdRRzxpcPuA/fSqWCMw+UHb3/iX9t/4deFPGvxA8PXV/4jl1X4W6ZDrHiaOz8J6tex6dbTJ5kZEsNs8czsmW8uFnk2qx24ViAD1qivltP+C0n7M7aD4T1c/EtItC8atbppusTaBqkWlxvcBWhjurtrYQWUjqysEunibaytjBBr174/ftY+A/2ZH0WDxdq15FqfiWWSHSNI0rSL3W9X1Vo13y/Z7GyimuZgi4LskZCAgsRkUAejUV5l8Mv2yfhh8Xvgjq3xG0TxlpTeDPD8l3DrOo32/Thoctrn7TFeR3CxyWskWPnjmVGXjIGRXB+Bv+CqnwT+JXi8eH9F1zxXd65c6JP4k06xfwLr1vNr2nQjL3OnCWzX7enTBtfN3bl25yMgH0TRXx3/AMEkv+Cpyf8ABQz9nXw5rviHw54n8P8AjHWZ9ZkuI4fA2uWegW9va6ndW8CjU54WsXm+zxReYq3THzvNUKpUxp6N4R/4KgfA7xz4+0Tw9pvjK4kl8Uam+i6Fqk2galb6Dr18m8G1stWkt1sLqbMbgJDO7MUYAEigD36ivG/j5+258K/gp45j8CeKNS1PVfEuqac19J4d0LwxqXie+WwJMbXFxa6fbXEkVsTlfMlVYycjNfJn/Bs6/h+T9j34uN4Tis4PCp+Nfio6NFZw+Tbx2XmweQsceBsQR7Aq4GBgYFAH6L0V5LD+3F8Nbj9sB/gKmsasfirHo3/CRPo//CO6l5S6dnb9rN59n+y+VvIj3ebjzCI/vnbWba/8FFfg28nxP+2eMl0G2+DN3DYeMr7XtLvdGsNGuJgpiiNzdwxQyu/mRbVhdy3nRYz5ibgD2yivGvgr+3/8Kvj/APGXUfh54e1/VIvHOl6autS6HrfhzU9BvZrAuIxdwR31vCbiDeQPNh3plhzyK+M/+CQ3jDwZ+yFH+3rrl5ar4b8CeB/jdrV3cRaPo81zHptpHaWrOY7W0jeTy0XLERxkKoJwACQAfpjRXj/iv9vT4VeCvgt8OviJqPiS6i8GfFifSrfwvqkeiX80d++qKjWAdUgZ7cTCVMGdYwpYBip4rS+Pf7Ynw/8A2atb0nSfFOqao+va9FNc6fomh6DqHiDV7uCHb5s6WWnwT3BhjLKGl8vYpZQWBIoA9Oorj/gR8ffB37Tfww0/xl4D16y8SeGtUMiwXltuX543aOSN0cB45EdWV43VXVlIYAjFcx8X/wBvL4Hfs9+Mm8O+PvjN8KPA/iBIUuG0zxB4u0/TLxY3zscwzSq+1sHBxg44oA9XorwSz/4Krfsv6jeRW9v+0h8BJ553EcUUfxA0lnkYnAUAXGSSeABXvdABRRRQAUUUUAfiJ/wVx/Zy8W/8EQP2/NL/AG5/gZpTTfDzxPerp/xY8MWq7YHFzKnmzYHCJcuFYP0ju1jY7hNsr9hv2c/2hPCn7VvwN8MfEXwPqkeseFPF1imoaddJwWRsgo4/hkRgyOp5V0ZTyK2Pid8M9A+NHw71vwl4q0mz13w34jspdO1PT7tN8N5byqUeNh6EE9OR1BBr8WP2EviJ4g/4Ny/+Cm13+zB8R9Vvb39nD403zaj8N/EV8+Y9Hu3ZVEcj8BcsyQTgDAk8ibCLI+QD9lP2g/gfoX7TPwJ8Y/DvxPHPJ4e8c6Ld6FqIgZVmWC5haJ2jZgwWRQ25WwdrBTjirvwf+GVh8FPhL4X8G6VLd3GmeEtItNFs5btlaeSG2hSFGkKqqlyqAkhQM5wB0ro6KACiiigAoorzb9oD9rnwB+zFd6FZ+L9Yu4dX8UPLHo2jaVpF7rWsauYVDTG3sbKKa5mWNWUuyRkIGG4jIoA9Jorx74d/t9/CD4n/AAA8Q/FHTvGtjaeBPCN1c2OuaprFtcaMNGuLfaJobmK8jilhkQuqlHQNuYLjPFUvgV/wUS+Ev7RvxduvAXhnXNcTxjaaH/wkzaTrfhXV9AuJtL81IRfRC/tYBNbmSRFEkZZSTwTg0Ae3UV4D4R/4KgfA7xz4+0Tw9pvjK4kl8Uam+i6Fqk2galb6Dr18m8G1stWkt1sLqbMbgJDO7MUYAEipPHf/AAU1+Cvwz+LnivwFrfivULLxp4Ms4dQ1DRf+Ea1WS8uIJgxjezjS2Jv8iOQ4tPOIEchIARsAHvVFeSfDn9u/4P8AxV/Zhb4z6P8AEDw//wAKwhjlkuPEF9KdOtrLy5PKkScXAjeCRZPlKSqr5IGORmj8Hf8AgoT8Jvjr8aZfh3oPiHU4vGqaX/bkOk6z4c1PQ57+w3BftVr9tt4VuockfPAXXnOcUAe00V8vePP+CzX7OHwxsfHU2vePr3TJPhpqJ0zxNaS+FdZ+26TKAhLvbC0MzQDzYs3CI0P72P5/nXO58Ifi98PPiN+3z46s9C+I3xE1DxtpnhLTP7R8FahDfW3h3TrJ5ZZINTtI5rdIXmmLlHmilfIiVSAUNAH0LRXzt4u/4KvfAPwL4i1ax1Px1JDZ6Bqv9h6tr0eganN4b0i/3BDa3WsJbtp9vKHZVKS3ClWIBAPFfQ8My3EKyRsro4DKynIYHoQaAHUV8vXP/BZb9na00DxRqD+NNcx4J1W50XXrRfBeutqGkXNssbXHnWgs/tCRRiWPdOY/KXeAXzxXZ/ET/go58FvhZ8IfAfxA1jxvAPA3xMvrXTvD2v2WnXmoaddz3JAgWSe3idLYMeN05jUEMCQVIAB7dRXh/wALP+CkPwU+Mt98S4dC8c2xHwetra+8X3Goafd6Za6RbXMc0sFx591FHFLDJHbyussLOhVQ27DKTD8IP+ClfwZ+OHxC0LwrofijUbbXPFdtJe+HoNc8N6poKeJoI13vLp0t9bQx3yKhDk2zSDb83TmgD3aivzO/Z0+Lfwv/AGH/APgsH+3Ze6p5Xhuz1m08A6kdP0TRrm/u7+4bT9Sa5nisbKKSeQ7mDyvHEQGkLucuWP2n4Y/b5+DPjD9mGD4z2PxH8Ln4X3IGzxDPdfZrYOZfJELCQK6zeaRH5LKJN5C7dxxQB69RXjPwX/bo+E/7T/xO8RfDrQdX1CTxdoenLf6n4c8QeGtS0K+awlbyxcLb6hbwtPbMxC+bGrxncoz8wz8Lf8EtP2yfgp/wTz+D/wC0jo/ijV08J6F4c+P/AI1jhsdJ0O+1JNC05L0RQyTR2UEptbULCyLLKEj/AHTDd8poA/U+ivmv9rn9oP4U6poHwHvNZ+K/jbwlpPj7x5oU/g7VvBTXj2Pi+9aVXtNLu7q2t5ofsN55gDxzPEsyK2HARiPA9D8IaV4Y/wCDqjVbnTdNsbC4139mD+0NSlt4Fje/uf8AhKIoPOlIALyeVDCm5snbEgzhRQB+iFFfGPg79tTwB8J/2Q/2mPi18P8Axh8WPi1/wiHirXrrUtL8QaRq1zdeGtahs7dn0S2tJLWGe2sIT5LbdvlxefMzSgBisXwV/wCC13w0i/YF8H/GT4uSeMfBEM/hfQ9U8T6i/wAMvFFtoVre38EO4Wlw9k6T25uJNkckUsylWjPmMHVmAPtOivMPib+2J4C+Dur/AA80/wARXniCwv8A4q3qab4Ztl8MapPNe3LQmfyZEjt2Ns4iV3YXAjKLHIW27Gx6fQAUV4X+1z+3Lpv7FvjbwCfGPhzV4vh34wvm0jUvG8To2m+Er2Ro0slv1+/HBcOzp9pP7uJxGHIEm5ZPjn+3BpPwv+P/AII+FPhzRb/x98RvGMsV3PpGlzIg8PaKJAtxrF9K3ywW6DIjU/PPJiOMH5mUA9woqvqmq22h6ZcXt7cQWdnZxNPcXE8gjigjUFmdmOAqgAkk8ACvBPh1/wAFS/gh8VfiR4U8LaL4o1qbUPHkksfhi6ufCWs2ek+JTFG0rmx1Ga1SzulEaM26GZwQMgmgD6DorwD49f8ABUL4H/s1eJfEGleK/F96l14Qjhm8RvpPhzVNbtvDCS4MTajPZW00ViGBBH2l48qc9Oa6X4tftyfDP4KxeGxrGuaje33jCybU9F0vQNA1HxBquo2aqjPcpY2EE9z5CiRN0pj2LvUEgkUAetUV4N46/wCCmvwQ+HX7JKfHXUfGpl+FJnFtLr2naNqGpJZyGUwFbiG3gkmtysw8pvNjTZIQjbWYA2vB3/BR34L+Pv2jLH4UaV42guPHGr2095pVo2nXkVprkUCb5msb14ha3nlrlmFvLIVCsSBtOAD2+ivB/jx/wUx+Cn7Nup+IrTxT4wnM/g1Yn8S/2LoOpa8nhdZE3xtqTWFvOtirIQwNyYwVIOcHNavxs/b/APhD+zt4X+HmveL/ABjDpnhz4q6haaX4Y1uKwu7zSr+e7VWtg93BE8FukquGWSd40Kq7btqMQAex0V8U/tY/8FJ/2dfjB+yr8YLK/wDjJ8Tfh7ofgi60/R/Fnifwfoet6drfhOW7YTWskUy2LuiTCMKJ1R4isyjf+9Td9LftCftSeBP2WdA03UPHGuf2WNbvRp2lWdvZXGo6jq90VLCC0s7aOS4uZdqsdkUbNgE4xQB6BRXmv7O/7Xfw9/aqXXk8Ea89/qHhW5Sz1zSr7TrrStW0SZ1LIl3Y3cUVzbl1BK+bGu4AkZxWj+0B+0n4I/Zb8Ew+IPHmv2+g6bd3sOm2YMUtxc6hdzHbFbW1vCrzXEznO2OJGc4OBwaAO5oryT4Lfty/DP8AaCfxTb+F9a1S41nwTCs+u6BfeHtS0zxBpkbKzxtJpd1bxXuJAp8vEJ8zGE3EisW1/wCClXwYv/2LD+0PB4rvZvhAizySa7H4e1NnhWC6ks5me0Fv9qRUnikRi0QA27vu4NAHutFfH/7d/wDwVFX9kb9o79nnwhY6Br+taN8WdUuTrN/Z+DdZ1loNPjsLiaJbMWcTGS7eZIyYVSV0hWR3jRSr17F45/bp+Gnwz+HXhjxJ4g1TXtGi8aTva6DpF34X1WLxFq8ybt0UGjm2/tF5AFLFBb7guGxtIJAPXqK8O8Df8FI/gn8QvgB4u+KFl46tLLwR4B1OfRfEd/rFhd6PJot/AIjLaT293FFOk6+dEPLMe4tIqgFjir3wS/b5+Fn7QPxKl8GaBruq2ni+Ox/tVND8Q+HNT8Oald2W4L9qgt9Rt4JJ4MkDzYlZMn71AHsdFfMWsf8ABY39nbQNH8Y3l3451KH/AIV9qs+jeI7Q+E9ZN/o88Co0zzWotPPW3QSRlrnZ5A3jMnNa+q/8FW/2fdG8YeDdFl+JOnSS/ECeztNBv7exvLjSby4vIlmtbdtQjia0imlidHSKWVHZXUhcEUAfQ1Fea/Hz9rnwF+zRqGjWHivVdR/tnxF5p0rRtG0S/wBe1jUVi2+a8NjYQz3Mkce9d7rGVTcNxGRWt8Av2h/Bn7UXw3t/FvgPXrbxDoNxNLa+fEkkUkE8TmOWCaKRVlhmRwVaORVdT1AoA7SiiigAooooAivb2HTbOW4uJY4LeBDJLLIwVI1AyWYngAAZJNfhR+wl4d/YU+PH7On7QqfHHxh8BvD/AIs1T4zeJ9U0/wAR3WraNaeLYbBL6K5tZrK4lDXBiYo2wIGSQM6gNuIP7uUUAfnJ+0/+2T8NP+Cln/BPH4b+DtSs9K0nx7+1Nlfh5odzrKre6PNFNK9vrnnARvF9lSAXHyruaTbbL5jSfNj/ALBP7U2hWnwE/aS/Z28Z67ot1+0V8MotdfxhfR36zy+PTJau8etxncxyYTDHLbg5tDGsW2NFRB+mdcP+0x4V8RePP2ePG+heEYdFn8Ta5ol3p2mpq95LaWImmiaNWmliildUG7J2xsTjHGcgA/GzwN+0l8LPi3/wa9+H/gN4U1XRfFHxh8WeEINC0z4f6YiTeILvU5L9XWb7CMSiMP8AvzcsojwpfeeM+y/ta+H779lT/gqb8GfHHxN+KHjT4K+BJPgRF4Dh8e6NDpt5p9hr8OorPc2l3LqVheW1utxCYikxWN3NvsDbS4r7f/4JUfs2eNv2Of2Bvh18LPH48LP4h8Cad/ZLXHh/Up76yvYkYlJQ01vbujENymwgY4ds8fQ9AH49/tg/sreGvF3/AASM/aa1r4C+Mvib8epvHvjTSvFviq5vrCDb4ja1urCW+OnR2ljZ2t1G1tGGcwI6O0LruLKVr74/Z7/bk/Z0/bT+KHh1/h7rnhvx14t0TS7qaxu7HR5Lm58MW8ohW4gluPKP9nvJthVoZHjaQxAbW2cfRlFAH5Jf8E2fina+NP8AgjH8S/2XNBvrm0/aJ0fS/iF4dk8M+TNHfaRfXV1q1zaTTsqkW8Li5h2TuQjOwVWLcVyP7IemfA79pz9kT4AfCnxp+0z8bbbxR4Gm8ND/AIVJHo+iQax4X1zTvJVIXgt9CXU0ghmVs3EknMWZJJeWav2booA/ND4B/tCeFP2Iv+Czf7XFr8Yb9/CWpfFyTwzq/gW9vrWSQeK7C10020ltYuis80sU2U+zIC5YnYrc1uf8G43jnTPE3wQ/aCs7eeGHVbT46eK7u80p5Y/tumJPcIYhPErExltjgZ4JjfBO01+idFAH5+f8Fk9en/Yj+O3wQ/a70zSdR1e28AX0/gbxrY6bF5l1qWh6uNkGFHLmHUFtiijJLT9DS/GXVz/wTX/4JXXHin4k+A9E+Jni3xt4ptPEvjuHU7fztEsNZ1G/inkvrs+TKVstNZIFjdYmZUsbfG0gMv6BUUAfkp4B/aOm+Kn/AAXu+AHifWPiN8PPF+h6/wDDrX9K0PWfDfh660PS9QmL20rWcFzdXtwupMCysHg2KMldpdXC2f8Agnd4l0z9oH4Vf8FNNG8D6ppfizVfEXxA8VNpltpV5FcyXyXOlCG3kjCMdySyo6I4+VijAE4NfrFRQB+IXxR/bz+G3i7/AIIn/sk+HrPWWfVvhv4o+HWk+M4zbyJH4Om0q4tIbsajI4VbZg8J2o53sDuVSiu6+zftTeJtO+A3/BarxB8Q/Hnxn8Y/ArwF8RvhfpVh4R8faRBo0+i37W11NJcaZLdalp97DC7eYlwgQxhxyWYsor9V6KAPmD/glL8Ffhx8Hfgl4zuvhh448dfETQ/HnjnU/Ft9rvia2ig+26jdrAbp7NYbO0g+yM6b1MEXlb3l2MRwvpHxf8H/ABy1rxk0/gH4ifCjw14f8lFWy8QfDvUNcvBIM72NxDrdmhU8YXyQR3Zq9XooA8Es/h3+1Cl5Ebj4wfASWAODKkfwe1ZHdc8gMfEzAHHQkHHoele90UUAFFFFABRRRQAV+bP7Tng7Rv8Agt1+3xovwwtrKy1L4F/sw+IY9a8a+IFiDPrniZEIi0C0nHKxRJJvu2Q5JKx/KQrV7D/wVF/a78W6Pq/hj9nX4H3sSfH74yRyLZ32zzYvAmiKdt5r1yAflEa7kgDEeZMQF3FCh92/Y3/ZJ8JfsO/s5+G/hp4LtpI9H8PwYkuZzuutUuXO+e7uH/jmlkLOzerYGAAAAen0VBqWpW+jadPd3c8NraWsbTTzzOEjhRQSzMx4CgAkk8ACqXgrxvo3xK8I6dr/AId1fTNf0HWLdLuw1LTbpLq0voXGUliljJR0YEEMpII6GgDUooooAK+A/wDgrJN8Jb39qH4Wf8JJ8aNd/Zp+Lfh3RNV1PwX8SJJbOHw+kcjwQ3Wm3n2xhbzmTEcggfYWER2yA5U/flFAH41/Hjxp8Rv2lP8Agj9p/jvxB4L0/Ux4K+Pdjrni3UfB/hyW3h+JmgaZqaRSeIEsApeZZ0SKRgdwK22/IVQq/Ynxl/aG+Ef/AAUb+AHxi0r4Ca74c8e/FjUfhT4h0bR9f0exeR9NF1bBI7J9TEW23Z7lrZ/szSK5MO/yz5RK/aFFAH4yfsh6Z8Dv2nP2RPgB8KfGn7TPxttvFHgabw0P+FSR6PokGseF9c07yVSF4LfQl1NIIZlbNxJJzFmSSXlmr6V+FHxS8D6l/wAHIPxcsRr3hqbxFZfBvRtPji+1QtdwSR6hdT3UC87gyxvbySIOQpRiMAGv0GooA/HP9lP9s34efBX/AIJxftk+JrDwx4U+MehaX+0L4jnfw+WivNLhsb3VoPseoXirHMUsEVfPEoifItzs5Usut/w07L8Xf+C5n7InivVfiV8N/F/hnWvD/izS9F1fwxoF3o+l3Fw9nblrKO+ubyePUpPMeLHkrHsZwpUu2F/XaigD86P+Cauu/DH48/8ABQj9v7w3LP4J8YHX/Fmm2upaZL9mvv7T06PR4LSaOWI7vNt1n8+J1YFA5dTyxBtfDv4j+GtT/wCDgb42eEdD8SaBbeIj8FNF0uzsor2NJbe5hvL2RogincGijngkZQMqjqcYr9DaKAPxU+APx08EfDP/AIN1PF/7MnimKKy/aGs/DXiLwXL8M5oM+JtQ1y7urtbWeCyUGW5jeWeCcXUatHgFi42sR+rn7Evw2174NfsZfCPwh4qm+0+KPCngvRtH1ibzPN828t7GGGdt38WZEY575r0+igD8o/8Agmp+2x8Fv2Vf2lv26bX4keN/Cng/V7741apdRQarMsFzrVuIIlWG2Vhuu5A/mAQRb5AZB8n7wZ8I1LwhD+yf/wAG+n7N/hv4sW1l4F/tz406TrUOgeImjtpbXSpvEkt9smgkOEC2bebIhyEVzvwcgfol/wAEuv2Pviz+yp8Tv2hdX+I8Hw7Fl8YPH934500+G9dvL+Wy+0Kkf2WZJ7K3HyrEp8xWO4sRsUAE/YNAHwf/AMF7v2e5/jT/AMEv/inq3w48JWfifxJrieH9S1b+xbOOXUPFWkadqUV35G9Buukjha4eONiRh5Ngy+G87/bf+PPgX/gpZ8bP2OdG+APiPSfG+v8Ag/4taV471y50RzK3hLQbKCc30OoFB/oTzb4YRbz7Hdxt2HBx+mlFAH5u/C39pX4afsq/8Fuv2vdV+KHibw74CtvEmi+CrTRNb8QzJp9jdPbadcPd2kV5Ltj87FxaOYA+9gVYKduR4z8B/jMn7GH7CHxk+K+vfC611v4e/GX9pi71/wAG2finT3TSPDOl3d3B9m8S3yvA8ttaRy2rXK7YsofIKEbw4/YiigD8mfgN8f5/ib/wcM/DzxLrfj/wH4t0zxH8GNT0bQNb8P8Ah268P6bq7rqUFw1rbSXV7c/2iU3M/mwFY+HULuikxd/YE/bK+C37LfgT9svRfiXreg+H9a1r44/EHUotC1Lba6h40tGvHhUWEbDfflmilgxAJCrqVIHGf1ZooA/E/wAS6RdfsP8A/BGj/gnh4T+Mes2fhbxRpXxr8I6veWuszpaT6fZJq1zeuJUYgotpazQpKSMR4AYgkZ+ktP8Air4Y1b/g6vextfEWh3F6n7M/9jtbx30TSC9/4SMXv2XaGz532Uify/veV8+NvNfo9RQB+Wf/AAT+8b6L+0B+zV/wUk8OeCdY0rxTrmsfFHxvPY2Wm3cc8t1Fd6Na29tKgU8xyzQTIjj5WMbYJxXe/wDBPjxb8K/+Cl//AARh8K/s/Qax/aOpxfCOy8GeKrRLOYyeGL+2sIbF0uGKBIbmO4TzI4nIdhFvVSqk1+h9eBft5+Bf2hPFuk+CLv8AZ38T/D/w7r+j648utxeM47uXTNR06S0ngZfLtlMjyxyyRTRrvjUvCu5tuVYA+Xv+COfjbxz+3Lr/AIZ8c/E/SdQ03Uf2atBuPhe0V4GH9peLEk+z6zqa/wALqLa3tI43A4a7vVwK/R6vOf2Tf2eLb9lj4A6B4Lh1G51y8sElutW1i5QLca7qVxK9xe30oHAee5lllIHA34HAFejUAfNH/BRn45anY+FrL4N+C/Adn8SPiL8YLO7sLHS9Zsnk8Oabp6hI7vUdWk2lRaQiZAYgfMneRI0HzFl+cf2Fv2ddW/4Id/FrTPAPiGLUPiZ8P/jPe6fptp8SYtNkm1vSNbjto7aHS9TVd7f2awjxZyA7bbcYZOCsp/SWigDz/wDaw8Q6B4S/Za+JWq+LNG1XxF4W0zwrql3rOk6XF5t9qdlHaSvPbwLvTdLJGHRBvXLMPmHWvzQ/YV+Jmm/DD9qf9n34X/CD4waD+1H8Dr9Lqax0LWdOtNQ8TfA9LbTpvs9w99Au63ARzZiK7SOVRI0aE5IH630UAflZ/wAE/wD9pj4VfsXv+1L8I/2i77T9A8YeK/i14m1yTRNf0uS6fx9o2o+X9nktIfLdtSilhBi8pFdsDYUAwKqftI3+k/szf8FltX8aeNvir42/Zx+Hnjn4VaRpHg7xdp2l6TDpJNpcStPo076rpt3HZyDfHMsQEJwCDklVH6vUUAfjl/wUB8DfCL9nD/g3m/aem8CfErxZ400f4qeLZtdGteLkhtH1rWr29sHuE05IrS0he3YwSSqLaIx5+0FW2qQvun/BRv41fDCy/br/AOCfGoWfijwXBp1x4q1O60a4ivrdIG0240WWCF4WBCiCSVraNCvysxjUZOBX6M0UAflJ+1T+3t/ws+1/a9+F/hGx+Gvwq8TWR1fQr3w9qXg281rxd8TcaYkB1ZYLWe1WO2kjIijvJWuVSOAPKEjTbXlvxJ+Ofw/tP+CJ3/BN8a/4r8KHTk+JHw8W+W71CB4lgsWAvxKCxAS3X5Zt3EeQGxkCv2tooA/Pn/g47HgrwL/wRx+P2vhPDWlav470/SrE6iiQxXXiGVL2A20RkAD3DLEJCgy21A5GFBNUP22fifoPw8/4KpfspftA69qVhN8CT4T8QaND40WRZ9E0G+v4YpLe5muBlLeK5hQxrOSFPIZguTX6K0UAfAP7FDW37Q//AAWf+OPxv+H80OqfCSfwFovhE+I7E7tL8VazFO87y2sw/d3S29uUiaZCyguFDHkBP+Cts83wl/4KA/sVfGTxHFOnwg+G2v8Aia08XaiYWmtNDuNS0pLbTb25ABEcMcwkzO+FiLAlhuzX3/RQB+evwO1nS/2s/wDgvNffGL4WXtl4j+GXhT4Njwjrfi7SZfO0jW9Un1U3MNnBcJmK7aGFC7vGziMsqEhuK+LbP9qLwx8P/wDg2x+NvwG1U6jD8YPAZ8UaTr3hRLKRtR0kXGvXd4l1cLgLDbeTOrec7BGxtUs7Kh/dyigD82f+Chfx38K+DL/9gz423GsWc3wo8PeL86r4otX8/TdNivdEuLWCeaVMhIjK20yH5VI+Yiqf7SX7TPhD4e/8FcvgL+0P4o1Sey+A2r/DnX/Cml+Lb6wuI9J0nVzqCN5sskkYW2juYY9sNwcJOgBRmjIY/plRQB+Yf/BVHxR4L+PX7K3w2+K3wc0UeIvh74G/aH8M+PPiPd6D4dnRPEWn2agXt+EEIOpoqPZhp0EqFbYjefIIXoPjF8S/C37f3/BXX9krxD8Edd0fx7pnwjh8Tax4y8UeH7oXenaRZXdhHbQWMt1FmMzzTH/j3LeYiozMoHJ/RyigD8s/2L/jV8OdbP8AwUuv7fxR4OnP/CYapcXt0t/bnNiuiQwI7vnmATrcoCTt3+YByTXgniL4r/D7wn/wa1/s5GfxB4TshF4j8KDH2uBSl3BrkM94MA8TRxCaSX+JV3lupr9x6KAPyu/bX8QWPwX/AOC1Ol/FPxp8XvF/wV+Gnjj4QW2g+GviLokOkXWjtdx6lLczabPcajYXtvAZo3inRlEYfZgOxO0fVP8AwSm+D3wz+G/w9+JGu/C/4g+OviZpvxE8cXnifWNf8RWsFvFqOqzw2/2meyFvZWdvJA+EJkgjaNpBIoclGVfqiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKK8R/a8/bgsf2PvD+satf8Aw9+J3jDSfC+hy+Jtf1Dw9pdubLRNNi8wyzyT3dxbxTOixSO1vbNNcKihjEFdC3hHxr8U3HjP9qX4u/2P4u8cQeGfEn7PUPiWzgsvEuo2cNndG5vVjvbREmX7HOYkiy8AjY7QWySSQD7lrhv2lfjNP+z18BfFfjW18K+J/HN54d0+S7tvD/h2wkvtU1iYcR28EUasxZnKgkKQoyx4U1wv7P8A8dLX4b/8E0/BPxL8b6pqFzZaD8MrHxNr+pTGS7upY4dKjubmdjy8shCux6sxPcmub8P/APBTrw/P8J9c8ZeI/h18UvBWjWEejvoz6pZ6fd/8Jk+rTvb2MOlyWF5cxTzyTKiNCzpJH58JkVFfdQB+R/7FX/BUT9qf9mT4j/Ej4jeL/wDgnp+0B8Sviz8U9S+0av4lksdX05LTT4uLPS7O3/sibyLWBO3mMZGy7EkKF+iP+Ijv9qb/AKRj/H//AL+6v/8AKOvu+7/4KPWugeHYP7f+EPxk8M+MNW8Sr4U0HwdqNhpn9reJrxrJr7dZSxXz2MkC26Ss87XSRxGGRXZGXFUPEf8AwVY8FeF/hn4T8SXHg74kyN4l8e/8K0u9Ig021m1Pw5rm+RPs95CtyQwzHw9q06sro4JRg1AH5sftef8ABdX9sX9on9mTxx4C8Nf8E8fjt4J1Xxlo1zoq65NYaxqf9nR3EbRSSJANJh3SBHbYTIArYJDAbT+r/wDwTk+HF78Hf+CfHwL8KalZz6fqfhv4f6Dpt9bT2zW00NxDp0CSrJEwDI+9W3K3IbOeayvh7/wUB0j4h+C/G15D8PvilaeKPh/4kj8Kav4PbSILvWor+WGCeAA2s81p5EkNzDILhrhYUR8ySRgHHIa5/wAFb/BPhX9mXxh8TtW8E/EvTbX4d+N4PAHizQns7CbV9A1Kae0gQukV48E8W6/szutZpiVnBVWwwUA+q6K+P7/9vjVvHf7X3wU8KR+HvjH8LLDxB4x8Q+Hrqw8ReEdNW08YrZ+Hn1CJxO14bi3tfnEsU8ETs8tpLBKsXzV0mmf8FUPBmpeKNJb/AIRD4iQfD7X/ABU3grTfiHLZWf8Awjd7qwumslhXF0b0Rvdo0CXDWq27vjEpDAkA+nKK+fvhX/wUK0j40/Hm78G+Gvh/8SdU0fTvEmp+EL7xlBa2Emg6dqmnpO1zBcBbs3sC77d4kmltVhkkaNVc+YhP0DQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAfIP7df/AAS1vP23/HPjObUvHGhp4T8b+Cf+ERl0fW/CK65L4emU3bLqOlTSXSR2dw7XMfmt5EjuLWHbJEyI6tj/AOCc/wASIvFt/qq/FrwcDefB6D4VCH/hAbjbHJFvb+0s/wBq5ILyynyOMKUHmEqWb7AooA8e+Gv7O3i34b/sNaH8KrXx5ZR+LPD/AIUh8NWni2Dw4nkq8FuIIro6fNNKjHaqlo2kKsd33QQB89eE/wDgjVLpPgPxtbTeOPC+h674g8ReHvF+hR+DfBR0Pwz4W1jRbtryC+i0iS9uQ8txKwF1idBMkaACMrvr7mooA+R/2p/+CaGtftpfDfwgnxJ8YeAfFPjfwP4jbxDpk2o/DqK98JlXtJLSSym0a4u5HmgdJDIS94ZVmVHSSMKqiv4h/wCCWky/Bv4U+F/CevfDbwG/w9+Itl8RtQTQPhvDpukapc224CCCxtbuH7MrBgDJJLcSfKMs2Bj7AooA+M/iF/wTJ+IHjfxb8XtVj+L3hq2j+Jvj3SfG0Wmy+B559PSLT7GCwXS9Si/tNf7RtZbe0tjIoNvmWNnxtYRryt7/AMEXNX0v9mD4w/DDwz8SPCHh3TPit8R9M+JEbw/D/ZBodzayabPNax28F/CjQyT6XbsuNjIjyqxldhKv3tRQB4P+0B+yR4i+Nv7SnwD+IVv4y0XSB8F9T1DVLvT5PDst1/bz3mnS6fKscovE+ygRXEzLlJsOYydwUq/lnhT/AIJS6toHh7w18O7n4mWd78CfB3jRPGuk+Fh4WEesiWLUW1O3sZtT+1GOSziuyGCrZpKyIqNKwzn7LooA+Tfh9/wTh8SaN+27pfxl8QePvCV9eaNdalJu0DwIuga14htbqKeKCx1i+jvHiv7e1WZTEPssTb7eFyxIbd9ZUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQB//9k=" alt="Expected Value Formula for Qn35" />
+<br/><br/>
+Based on your solutions from Questions 32 to 34, the expected present value of this investment is $<input type="number" step="0.01" min="-99999999" max="99999999" name="ansQ35" id="ansQ35">.
+<br/><br/>
+<button onclick="funCheck('ansQ35','resQ35',756300,756400)">Check Q35 Solution</button>&nbsp &nbsp &nbsp<a id="resQ35"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q35 Explanation</button>
+<div class="panel">
+  <p>0.25 x -$5,436,875 + 0.5 x $1,690,203 + 0.25 x $5,081,864 = $756,349</p>
+</div>
+</br></br></br>
+
+Q36. <strong>Variance </strong>and<strong> standard deviation </strong>(i.e., square root of variance) describe the dispersion of possible outcomes.
+<br/><br/>
+<span id="q36-formula"></span><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAkACQAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCABaAx8DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9/KKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigDzX9r/wDaZsv2Of2cfFPxM1Pwx4u8XaV4Qtft1/p3hm1gudSNuGAk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AASNvvht8GdA0zRfiBo2leM/BnxCl+Ifhe6svCjx+GPDU0lgbCTTbXRzes8enNC8zGFbwMJZ5HV04A0v2sP+CV9z+1/f/DrxT4x8Q/DTxX8QvAK6jAX8W/DSDXvCt/b3xgMsH9kyXaSRiNreJopPtjTId4aR1dloA6Ob/gqz4Mvrr4SQaD4M+JPiq4+NFvrH9gRaZYWYeG90vcLzT7oTXUZt50kR4yz/ALhXjbdMoG6ul8Bft/6P8VvgBpXjjwv4A+KGv32q6zf+HP8AhFrTR4f7XsNSsZriC7truRp1sbXy5LWZDNNdJAzbFWVmkQNyWj/8E2pvBfxY/Z41vwv4i8G+GdA+BK64ZNA0zwNDYWurPqyFbj7OlrcQw2KKWZlHkzEliXZ2LM3FaL/wSs+INl8OtN0i/wDi94N1maz+JOvfEG7tL34ezS+H9ZGry3VxNZ3ennVSZvJuLuSWCQzYjKRFo3ZNxAOyf/grp4CX4S/DHxgvhD4lzWXxP8ZXfw+t7KDTLaa/0XXLY3iyWd3ClySTvsblQ9uZ48x5LBWDHL8H/t+XXj/9rr4c2Wq2PxQ+E3h/WfAfijX7/wAL+MPDGmWqyPpmp29m9zc3S3clxbtCqmWNY43t7iC/jk83KbRyXgL/AII6a/8ACn4YfC/wh4c+J3hiy0T4UfGO/wDinpMT+BGG+3uTe7NKZIdQiiTyxqN2BNGiIQIMQII2EnsH7Qf7B1z+0J+2J4a+Ieo+KNMi8H6X4F13wLqvhhtDkkutVt9W8ozyJfC6VYSv2e2CqbeTgTAnMimIAi+Cn/BTTwx8Y/HXgTSp/A/xK8GaX8WLaW68Ca/4isLODTvFyx27XW2AQ3UtxbyNbK8yR3kNu7ojFQSMVofshf8ABQrSP20dTsZ/C/w/+JNj4O1zSbjWdE8Y6ja2B0LWoYZ4YWjR7e7mnt52MwZYLuGCRkjlIX922OH+EX/BNnxd4Y1j4SxeM/izZ+L/AA98A7WaHwJa2vhFdMvY5zp8mnQXWpTm6mju5YbWWRVEMNsjO29kJAxe/Y3/AOCdOvfs3/tHav8AErxD438I6zq+s6A2i6jb+EvA48JW3iK4aeCU6tqkSXlxFdagPJKLNGkCqs8w2YYBQD6rooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD/9k=" alt="Variance Formula for Qn36" />
+<br/><br/>
+Based on your solutions from Questions 32 to 35, the standard deviation of the present value of this investment is $<input type="number" step="0.01" min="-99999999" max="99999999" name="ansQ36" id="ansQ36">.
+<br/><br/>
+<button onclick="funCheck('ansQ36','resQ36',3834000,3835000)">Check Q36 Solution</button>&nbsp &nbsp &nbsp<a id="resQ36"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q36 Explanation</button>
+<div class="panel">
+  <p>SQRT(0.25 x (-$5,436,875 - $756,349)<sup>2</sup> + 0.5 x ($1,690,203 - $756,349)<sup>2</sup> + 0.25 x ($5,081,864- $756,349)<sup>2</sup>) = $3,834,393</p>
+</div>
+</br></br></br>
+
+<!-- ===== SECTION 4: OPTION VALUATION ===== -->
+
+<h1 id="option-valuation">Option Valuation</h1>
+
+A mining company is considering whether to invest in a newly discovered mine. The mine is expected to yield 100 kg of gold annually. There is a 0.25 probability the mine contains 300 kg of gold (i.e., last three years), 0.5 probability it contains 500 kg of gold (i.e., last five years) and 0.25 probability it contains 600 kg of gold (i.e., last six years). It costs $17 million to purchase the mine. Furthermore, the operating cost in the first year is $1 million and is estimated to increase 10% each year. The price of the newly extracted gold is currently $50,000 per kg and is estimated to increase 5% annually (i.e., the price of the newly extracted gold in the first year of operations is estimated to be $52,500 per kg). Assume that the company uses an annual interest of 7% in their decision making.
+<br/><br/>
+Suppose the mining company can perform a comprehensive analysis to determine the amount of gold the mine contains. The analysis costs $200,000. For simplicity, we assume that the results are available immediately. However, it is highly likely that the mine will no longer be available for purchase if the results are positive. Hence, the gold mine company will want to purchase an <strong>option</strong> to retain the right to purchase the gold mine for $17 million after the analysis is completed.
+<br/><br/>
+
+Q37. Suppose the mining company conducts the analysis and it reveals that the gold mine contains only 300 kg of gold. Hence, the company does not purchase the mine since it is unprofitable (see Question 33). Assuming that the option (i.e., right to purchase mine for $17 million) can be obtained for free, the company loses $<input type="number" step="0.01" min="-99999999" max="99999999" name="ansQ37" id="ansQ37"> under this scenario.
+<br/><br/>
+<button onclick="funCheck('ansQ37','resQ37',200000,200000)">Check Q37 Solution</button>&nbsp &nbsp &nbsp<a id="resQ37"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q37 Explanation</button>
+<div class="panel">
+  <p>Here, the company only loses the $200,000 it paid for the analysis</p>
+</div>
+</br></br></br>
+
+Q38. Suppose the mining company conducts the analysis and it reveals that the gold mine contains 500 kg of gold. Since it is profitable (see Question 32), the company will purchase the mine for $17 million. Assuming that the option (i.e., right to purchase mine for $17 million) is free, the present value of the investment (including the cost of analysis) is $<input type="number" step="0.01" min="-99999999" max="99999999" name="ansQ38" id="ansQ38"> under this scenario.
+<br/><br/>
+<button onclick="funCheck('ansQ38','resQ38',1480000,1500000)">Check Q38 Solution</button>&nbsp &nbsp &nbsp<a id="resQ38"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q38 Explanation</button>
+<div class="panel">
+  <p>$1,690,203 - $200,000 = $1,490,203</p>
+</div>
+</br></br></br>
+
+Q39. Suppose the mining company conducts the analysis and it reveals that the gold mine contains 600 kg of gold. Since it is profitable (see Question 34), the company will purchase the mine for $17 million. Assuming that the option (i.e., right to purchase mine for $17 million) is free, the present value of the investment (including the cost of analysis) is $<input type="number" step="0.01" min="-99999999" max="99999999" name="ansQ39" id="ansQ39"> under this scenario.
+<br/><br/>
+<button onclick="funCheck('ansQ39','resQ39',4880000,4890000)">Check Q39 Solution</button>&nbsp &nbsp &nbsp<a id="resQ39"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q39 Explanation</button>
+<div class="panel">
+  <p>$5,081,864 - $200,000 = $4,881,864</p>
+</div>
+</br></br></br>
+
+Q40. Suppose the mining company obtains the option for free, pays $200,000 for the analysis and purchases the mine for $17 million only if the analysis reveals that the gold mine contains at least 500 kg of gold. Based on your solutions from Questions 37 to 39, the expected present value of the above course of action is $<input type="number" step="0.01" min="-99999999" max="99999999" name="ansQ40" id="ansQ40">.
+<br/><br/>
+<button onclick="funCheck('ansQ40','resQ40',1915000,1916000)">Check Q40 Solution</button>&nbsp &nbsp &nbsp<a id="resQ40"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q40 Explanation</button>
+<div class="panel">
+  <p>0.25 x -$200,000 + 0.5 x $1,490,203 + 0.25 x $4,881,864 = $1,915,568</p>
+</div>
+</br></br></br>
+
+Q41. Based on your solutions from Questions 35 and 40, the option which allows the company to purchase the mine for $17 million after the analysis results are available is worth $<input type="number" step="0.01" min="-99999999" max="99999999" name="ansQ41" id="ansQ41">.
+<br/><br/>
+<button onclick="funCheck('ansQ41','resQ41',1159000,1159500)">Check Q41 Solution</button>&nbsp &nbsp &nbsp<a id="resQ41"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q41 Explanation</button>
+<div class="panel">
+  <p>$1,915,568 - $756,349 = $1,159,219</p>
+</div>
+</br></br></br>
+
+Q42. Suppose the mining company conducts the analysis (which costs $200,000) and purchases the option for $1,159,219.
+<br/><br/>
+Q42a. Under the scenario where the gold mine contains only 300 kg of gold, the company loses $<input type="number" step="0.01" min="-99999999" max="99999999" name="ansQ42a" id="ansQ42a">.
+<br/><br/>
+<button onclick="funCheck('ansQ42a','resQ42a',1359218,1359219)">Check Q42a Solution</button>&nbsp &nbsp &nbsp<a id="resQ42a"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q42a Explanation</button>
+<div class="panel">
+  <p>$200,000 + $1,159,219 = $1,359,219</p>
+</div>
+</br></br></br>
+
+Q42b. Under the scenario where the gold mine contains 500 kg of gold, the present value of the investment (including the cost of analysis and option) is $<input type="number" step="0.01" min="-99999999" max="99999999" name="ansQ42b" id="ansQ42b">.
+<br/><br/>
+<button onclick="funCheck('ansQ42b','resQ42b',330500,331500)">Check Q42b Solution</button>&nbsp &nbsp &nbsp<a id="resQ42b"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q42b Explanation</button>
+<div class="panel">
+  <p>$1,690,203 - $200,000 - $1,159,219 = $330,984</p>
+</div>
+</br></br></br>
+
+Q42c. Under the scenario where the gold mine contains 600 kg of gold, the present value of the investment (including the cost of analysis and option) is $<input type="number" step="0.01" min="-99999999" max="99999999" name="ansQ42c" id="ansQ42c">.
+<br/><br/>
+<button onclick="funCheck('ansQ42c','resQ42c',3722000,3723000)">Check Q42c Solution</button>&nbsp &nbsp &nbsp<a id="resQ42c"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q42c Explanation</button>
+<div class="panel">
+  <p>$5,081,864 - $200,000 - $1,159,219 = $3,722,645</p>
+</div>
+</br></br></br>
+
+Q42d. The expected present value of the above course of action is $<input type="number" step="0.01" min="-99999999" max="99999999" name="ansQ42d" id="ansQ42d">.
+<br/><br/>
+<button onclick="funCheck('ansQ42d','resQ42d',756300,756400)">Check Q42d Solution</button>&nbsp &nbsp &nbsp<a id="resQ42d"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q42d Explanation</button>
+<div class="panel">
+  <p>0.25 x -$1,359,219 + 0.5 x $330,984 + 0.25 x $3,722,645 = $756,349</p>
+</div>
+</br></br></br>
+
+Q42e. The standard deviation of the present value of the above course of action is $<input type="number" step="0.01" min="-99999999" max="99999999" name="ansQ42e" id="ansQ42e">.
+<br/><br/>
+<button onclick="funCheck('ansQ42e','resQ42e',1846000,1847000)">Check Q42e Solution</button>&nbsp &nbsp &nbsp<a id="resQ42e"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q42e Explanation</button>
+<div class="panel">
+  <p>SQRT(0.25 x (-$1,359,219 - $756,349)<sup>2</sup> + 0.5 x ($330,984 - $756,349)<sup>2</sup> + 0.25 x ($3,722,645 - $756,349)<sup>2</sup>) = $1,846,375</p>
+</div>
+</br></br></br>
+
+Q43. Suppose the analysis costs $200,000 and the option costs $1,159,219. Consider the following two courses of actions:
+<br/><br/>
+a) Purchase the mine for $17 million immediately.
+<br/><br/>
+b) Purchase the option, conduct the analysis and purchase the mine only if the analysis reveals that the gold mine contains at least 500 kg of gold
+<br/><br/>
+Based on your solutions from Questions 35, 36 and 42, the first course of action (i.e., purchase immediately) is preferred. <select id="ansQ43" name="ansQ43" style="height:40px; padding:5px;"><option value="">-- Select --</option><option value="True">True</option><option value="False">False</option></select>
+<br/><br/>
+<button onclick="checktrue('ansQ43','resQ43','False')">Check Q43 Solution</button>&nbsp &nbsp &nbsp<a id="resQ43"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q43 Explanation</button>
+<div class="panel">
+  <p>False. The latter course of action is preferred since it has the same expected presented value but lower standard deviation (i.e., less dispersion and hence less risk).</p>
+</div>
+</br></br></br>
+
+<hr style="margin-top:40px; border:none; border-top:1px solid #ccc;">
+<p style="text-align:center; color:#666; font-size:0.9em;">Original e-learning content by <a href="https://www.tanchinhon.com/e-learning/engineering-economy/risk-and-uncertainty" target="_blank">tanchinhon.com</a></p>
+
+<script>
+function funCheck(ans, res, lb, ub) {
+    var val = parseFloat(document.getElementById(ans).value);
+    if (val >= lb && val <= ub) {
+        document.getElementById(res).innerHTML = "<b style='color:green'>Correct!</b>";
+    } else {
+        document.getElementById(res).innerHTML = "<b style='color:red'>Wrong!</b>";
+    }
+}
+function checktrue(ans, res, val) {
+    var a = document.getElementById(ans).value;
+    if (a === val) {
+        document.getElementById(res).innerHTML = "<b style='color:green'>Correct!</b>";
+    } else {
+        document.getElementById(res).innerHTML = "<b style='color:red'>Wrong!</b>";
+    }
+}
+var acc = document.getElementsByClassName("accordion");
+for (var i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") { panel.style.display = "none"; }
+        else { panel.style.display = "block"; }
+    });
+}
+</script>
+
+<style>
+    h2 { text-align: center; }
+    button { height: 40px; padding: 5px 10px; }
+    .panel { padding: 0 18px; background-color: white; display: none; overflow: hidden; }
+    img { max-width: 100%; height: auto; }
+</style>
+
+</body>
+</html>
