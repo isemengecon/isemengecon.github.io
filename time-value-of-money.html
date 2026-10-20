@@ -1,344 +1,436 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Topic 1: Time Value of Money</title>
-<style>
-  body { font-family: Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; }
-  h1 { color: #2c3e50; }
-  h2 { color: #34495e; border-bottom: 2px solid #3498db; padding-bottom: 5px; }
-  h3 { color: #555; }
-  .toc { background: #f0f4f8; border: 1px solid #c8d8e8; border-radius: 6px; padding: 15px 20px; margin-bottom: 30px; }
-  .toc h3 { margin-top: 0; color: #2c3e50; }
-  .toc ul { margin: 0; padding-left: 20px; }
-  .toc li { margin: 5px 0; }
-  .toc a { color: #2980b9; text-decoration: none; }
-  .toc a:hover { text-decoration: underline; }
-  input[type="text"] { width: 120px; padding: 4px; font-size: 14px; }
-  button { height: 36px; padding: 5px 12px; cursor: pointer; background: #3498db; color: white; border: none; border-radius: 4px; font-size: 14px; }
-  button:hover { background: #2980b9; }
-  .result { margin-left: 10px; font-size: 14px; }
-  .accordion { background: #f7f7f7; border: 1px solid #ddd; border-radius: 4px; cursor: pointer; padding: 10px 15px; text-align: left; font-size: 14px; width: auto; display: block; margin-top: 8px; color: #333; }
-  .accordion:hover { background: #ebebeb; }
-  .accordion.active { background: #e8f4fd; border-color: #3498db; }
-  .panel { padding: 10px 18px; background: #fff; border: 1px solid #ddd; border-top: none; border-radius: 0 0 4px 4px; display: none; overflow: hidden; margin-bottom: 8px; }
-  .frac { display: inline-block; position: relative; vertical-align: middle; text-align: center; }
-  .frac > span { display: block; padding: 0.1em; }
-  .frac span.bottom { border-top: thin solid black; }
-  .frac span.symbol { display: none; }
-  .video-section { background: #f9f3e3; border-left: 4px solid #e67e22; padding: 12px 16px; margin: 20px 0; border-radius: 0 4px 4px 0; }
-  .video-section p { margin: 4px 0; }
-  .video-section a { color: #d35400; }
-  .question-block { margin-bottom: 20px; }
-  table { border-collapse: collapse; margin: 10px 0; }
-  td, th { border: 1px solid #ccc; padding: 6px 12px; }
-  th { background: #f0f0f0; }
-  img { max-width: 100%; height: auto; }
-</style>
 </head>
 <body>
 
 <h1>Topic 1: Time Value of Money</h1>
 
-<div class="toc">
-  <h3>Table of Contents</h3>
+<div style="background:#f0f4f8; border:1px solid #c8d8e8; border-radius:6px; padding:15px 20px; margin-bottom:30px;">
+  <b>Contents</b>
   <ul>
-    <li><a href="#single">Single Cash Flow</a> (Q1–Q5)</li>
-    <li><a href="#uniform">Uniform Cash Flow</a> (Q6–Q12)</li>
-    <li><a href="#loan">Loan Payments</a> (Q13–Q17)</li>
+    <li><a href="#single">Single Cash Flow</a> (Q1&ndash;Q5)</li>
+    <li><a href="#uniform">Uniform Cash Flow</a> (Q6&ndash;Q12)</li>
+    <li><a href="#loan">Loan Payments</a> (Q13&ndash;Q17)</li>
     <li><a href="#increasing">Increasing Cash Flows</a></li>
-    <li><a href="#cashflow">Cash Flow Problems</a> (Q18–Q21)</li>
+    <li><a href="#cashflow">Cash Flow Problem</a> (Q18&ndash;Q21)</li>
   </ul>
 </div>
 
-<!-- ===== SECTION 1: SINGLE CASH FLOW ===== -->
-<h2 id="single">Single Cash Flow</h2>
+<!-- ===== SINGLE CASH FLOW ===== -->
+<h1 id="single">Single Cash Flow</h1>
+Suppose you open a new savings account with an initial deposit of $100. The account pays 2% interest each year. If you do nothing:
+<br/><br/>
 
-<p>An investment of $100 is made today at an annual interest rate of 2%.</p>
+Q1. You will have $<input type="number" step="0.01" min="0" max="999" name="ansQ1" id="ansQ1"> in your bank account after one year.
+<br/><br/>
+<button style="height:40px" onclick="funCheck('ansQ1', 'resQ1', 102, 102)">Check Q1 Solution</button> &nbsp &nbsp &nbsp <a id="resQ1"></a>
+<br/><br/><br/>
 
-<div class="question-block">
-<p><b>Q1.</b> What is the value of this investment one year from now?</p>
-<p>$<input type="text" id="q1ans"> <button onclick="funCheck('q1ans','q1res',102,102)">Check</button> <span id="q1res" class="result"></span></p>
-<button class="accordion">Show Explanation</button>
-<div class="panel"><p>After 1 year: $100 × (1 + 0.02)<sup>1</sup> = $100 × 1.02 = <b>$102</b></p></div>
+Q2. You will have $<input type="number" step="0.01" min="0" max="999" name="ansQ2" id="ansQ2"> in your bank account after two years.
+<br/><br/>
+<button style="height:40px" onclick="funCheck('ansQ2', 'resQ2', 104.04, 104.04)">Check Q2 Solution</button> &nbsp &nbsp &nbsp <a id="resQ2"></a>
+<br/><br/><br/>
+
+Q3. You will have $<input type="number" step="0.01" min="0" max="999" name="ansQ3" id="ansQ3"> in your bank account after three years.
+<br/><br/>
+<button style="height:40px" onclick="funCheck('ansQ3', 'resQ3', 106.12, 106.12)">Check Q3 Solution</button> &nbsp &nbsp &nbsp <a id="resQ3"></a>
+<br/><br/><br/>
+
+Q4. Observe from Questions 1, 2 and 3 that the account balance after N periods can be computed as follows:
+<h2 style="text-align:center">F = P &times (1+i)<sup>N</sup></h2>
+where F is the future account balance, P is the present account balance and i is the per period interest rate. Using the formula above, your account balance after twenty years is  $<input type="number" step="0.01" min="0" max="999" name="ansQ4" id="ansQ4">.
+<br/><br/>
+<button style="height:40px" onclick="funCheck('ansQ4', 'resQ4', 148, 148.6)">Check Q4 Solution</button> &nbsp &nbsp &nbsp <a id="resQ4"></a>
+<br/><br/><br/>
+
+Q5. Furthermore, it follows from the previous equation that the present amount P required such that a future value F is achieved after N periods can be obtained by applying the following formula:
+<h2 style="text-align:center">P = F &times (1+i)<sup>-N</sup></h2>
+Using the formula above, the initial deposit required for your account balance to be $100,000 ten years from now is $<input type="number" step="0.01" min="0" max="999" name="ansQ5" id="ansQ5">.
+<br/><br/>
+<button style="height:40px" onclick="funCheck('ansQ5', 'resQ5', 82034, 82035)">Check Q5 Solution</button> &nbsp &nbsp &nbsp <a id="resQ5"></a>
+<br/><br/><br/>
+
+<div style="background:#fef9f0; border-left:4px solid #e67e22; padding:12px 16px; margin:20px 0;">
+  <b>After completing this question set, review the video for the mathematical proofs:</b><br/>
+  <a href="https://www.youtube.com/watch?v=0J8Iyxh2rIg" target="_blank">https://www.youtube.com/watch?v=0J8Iyxh2rIg</a>
 </div>
 
-<div class="question-block">
-<p><b>Q2.</b> What is the value of this investment two years from now?</p>
-<p>$<input type="text" id="q2ans"> <button onclick="funCheck('q2ans','q2res',104.04,104.04)">Check</button> <span id="q2res" class="result"></span></p>
-<button class="accordion">Show Explanation</button>
-<div class="panel"><p>After 2 years: $100 × (1.02)<sup>2</sup> = $100 × 1.0404 = <b>$104.04</b></p></div>
-</div>
+<!-- ===== UNIFORM CASH FLOW ===== -->
+<h1 id="uniform">Uniform Cash Flow</h1>
+Suppose you deposit $100 into a savings account at the end of each year for three years. The bank pays an interest of 2% each year.
+<br/><br/>
 
-<div class="question-block">
-<p><b>Q3.</b> What is the value of this investment three years from now?</p>
-<p>$<input type="text" id="q3ans"> <button onclick="funCheck('q3ans','q3res',106.12,106.12)">Check</button> <span id="q3res" class="result"></span></p>
-<button class="accordion">Show Explanation</button>
-<div class="panel"><p>After 3 years: $100 × (1.02)<sup>3</sup> = $100 × 1.0612 = <b>$106.12</b></p></div>
-</div>
+Q6.  Your account balance immediately after the first deposit is $<input type="number" step="0.01" min="0" max="999" name="ansQ6" id="ansQ6">.
+<br/><br/>
+<button onclick="funCheck('ansQ6', 'resQ6', 100, 100)">Check Q6 Solution</button> &nbsp &nbsp &nbsp <a id="resQ6"></a>
+<br/><br/><br/>
 
-<div class="question-block">
-<p><b>Q4.</b> Suppose instead the investment is made for 20 years at an annual interest rate of 2%. What is the value of this investment 20 years from now? Round to the nearest dollar.</p>
-<p>$<input type="text" id="q4ans"> <button onclick="funCheck('q4ans','q4res',148,148.6)">Check</button> <span id="q4res" class="result"></span></p>
-<button class="accordion">Show Explanation</button>
-<div class="panel"><p>$100 × (1.02)<sup>20</sup> = $100 × 1.4859... ≈ <b>$149</b> (accept $148–$149)</p></div>
-</div>
-
-<div class="question-block">
-<p><b>Q5.</b> Suppose instead the investment is $50,000 made for 20 years at an annual interest rate of 2.5%. What is the value of this investment 20 years from now? Round to the nearest dollar.</p>
-<p>$<input type="text" id="q5ans"> <button onclick="funCheck('q5ans','q5res',82034,82035)">Check</button> <span id="q5res" class="result"></span></p>
-<button class="accordion">Show Explanation</button>
-<div class="panel"><p>$50,000 × (1.025)<sup>20</sup> = $50,000 × 1.6386... ≈ <b>$82,034</b></p></div>
-</div>
-
-<div class="video-section">
-  <p><b>After completing this question set, review the video for the mathematical proofs:</b></p>
-  <p><a href="https://www.youtube.com/watch?v=0J8Iyxh2rIg" target="_blank">https://www.youtube.com/watch?v=0J8Iyxh2rIg</a></p>
-</div>
-
-<!-- ===== SECTION 2: UNIFORM CASH FLOW ===== -->
-<h2 id="uniform">Uniform Cash Flow</h2>
-
-<p>An investment of $100 is made each year for three years. The annual interest rate is 2%.</p>
-
-<div class="question-block">
-<p><b>Q6.</b> What is the value of the first $100 payment immediately after it is made (at the end of year 1)?</p>
-<p>$<input type="text" id="q6ans"> <button onclick="funCheck('q6ans','q6res',100,100)">Check</button> <span id="q6res" class="result"></span></p>
-<button class="accordion">Show Explanation</button>
-<div class="panel"><p>The first payment has just been made, so its value right now is exactly <b>$100</b>.</p></div>
-</div>
-
-<div class="question-block">
-<p><b>Q7.</b> What is the value of the first $100 payment one year after it is made (at the end of year 2)?</p>
-<p>$<input type="text" id="q7ans"> <button onclick="funCheck('q7ans','q7res',102,102)">Check</button> <span id="q7res" class="result"></span></p>
-<button class="accordion">Show Explanation</button>
-<div class="panel"><p>$100 × (1.02)<sup>1</sup> = <b>$102</b></p></div>
-</div>
-
-<div class="question-block">
-<p><b>Q8.</b> At the end of year 2, the second $100 payment is also made. What is the combined value of both the first payment (which has now grown for 1 year) and the second payment at the end of year 2?</p>
-<p>$<input type="text" id="q8ans"> <button onclick="funCheck('q8ans','q8res',202,202)">Check</button> <span id="q8res" class="result"></span></p>
-<button class="accordion">Show Explanation</button>
-<div class="panel"><p>First payment grown: $102 + second payment: $100 = <b>$202</b></p></div>
-</div>
-
-<div class="question-block">
-<p><b>Q9.</b> What is the value of this combined sum one year later (at the end of year 3)?</p>
-<p>$<input type="text" id="q9ans"> <button onclick="funCheck('q9ans','q9res',206,206.04)">Check</button> <span id="q9res" class="result"></span></p>
-<button class="accordion">Show Explanation</button>
-<div class="panel"><p>$202 × (1.02)<sup>1</sup> = <b>$206.04</b></p></div>
-</div>
-
-<div class="question-block">
-<p><b>Q10.</b> At the end of year 3, the third $100 payment is made. What is the combined value of all three payments at the end of year 3?</p>
-<p>$<input type="text" id="q10ans"> <button onclick="funCheck('q10ans','q10res',306,306.04)">Check</button> <span id="q10res" class="result"></span></p>
-<button class="accordion">Show Explanation</button>
-<div class="panel"><p>$206.04 + $100 = <b>$306.04</b></p></div>
-</div>
-
-<div class="question-block">
-<p><b>Q11.</b> Using the formula for the future value of a uniform series:
-<br>FV = A × <span class="frac"><span class="top">(1+i)<sup>N</sup> − 1</span><span class="symbol">/</span><span class="bottom">i</span></span>
-<br>where A = $100, i = 2%, N = 25 years, what is the future value? Round to the nearest dollar.</p>
-<p>$<input type="text" id="q11ans"> <button onclick="funCheck('q11ans','q11res',2429,2430)">Check</button> <span id="q11res" class="result"></span></p>
-<button class="accordion">Show Explanation</button>
-<div class="panel"><p>FV = 100 × ((1.02)<sup>25</sup> − 1) / 0.02 = 100 × (1.6406 − 1) / 0.02 = 100 × 32.03 = <b>$2,429</b></p></div>
-</div>
-
-<div class="question-block">
-<p><b>Q12.</b> Using the same formula with A = $200, i = 2%, N = 30 years, what is the future value? Round to the nearest dollar.</p>
-<p>$<input type="text" id="q12ans"> <button onclick="funCheck('q12ans','q12res',9132,9133)">Check</button> <span id="q12res" class="result"></span></p>
-<button class="accordion">Show Explanation</button>
-<div class="panel"><p>FV = 200 × ((1.02)<sup>30</sup> − 1) / 0.02 = 200 × 40.568 = <b>$9,132</b></p></div>
-</div>
-
-<div class="video-section">
-  <p><b>After completing this question set, review the videos for the mathematical proofs:</b></p>
-  <p><a href="https://www.youtube.com/watch?v=G7_ZY8g1syA" target="_blank">https://www.youtube.com/watch?v=G7_ZY8g1syA</a></p>
-  <p><a href="https://www.youtube.com/watch?v=uKaRKHAxyDc" target="_blank">https://www.youtube.com/watch?v=uKaRKHAxyDc</a></p>
-</div>
-
-<!-- ===== SECTION 3: LOAN PAYMENTS ===== -->
-<h2 id="loan">Loan Payments</h2>
-
-<p>A borrower makes five equal annual payments of $100 at an annual interest rate of 2%.</p>
-
-<div class="question-block">
-<p><b>Q13.</b> Using the formula provided in Question 11, these five payments are equivalent to a single payment of $_____ five years from now.</p>
-<p>$<input type="text" id="q13ans"> <button onclick="funCheck('q13ans','q13res',110408,110409)">Check</button> <span id="q13res" class="result"></span></p>
-<button class="accordion">Show Explanation</button>
-<div class="panel"><p>FV = 100 × ((1.02)<sup>5</sup> − 1) / 0.02 = 100 × 5.2040 = $520.40 — but with the values from Q11 context (A=$20,000, i=4%, N=5): FV = 20000 × ((1.04)<sup>5</sup>−1)/0.04 = <b>$110,408</b></p></div>
-</div>
-
-<div class="question-block">
-<p><b>Q14.</b> Using the formula provided in Question 5 and your solution to Question 13, these five payments are equivalent to a single payment of $_____ immediately.</p>
-<p>$<input type="text" id="q14ans"> <button onclick="funCheck('q14ans','q14res',100000,100000)">Check</button> <span id="q14res" class="result"></span></p>
-<button class="accordion">Show Explanation</button>
-<div class="panel"><p>PV = FV / (1+i)<sup>N</sup> = 110,408 / (1.04)<sup>5</sup> = <b>$100,000</b></p></div>
-</div>
-
-<div class="question-block">
-<p><b>Q15.</b> It follows from combining the formulas in Q5 and Q11 that the present value formula for a uniform series is:
-<br>PV = A × <span class="frac"><span class="top">(1+i)<sup>N</sup> − 1</span><span class="symbol">/</span><span class="bottom">i × (1+i)<sup>N</sup></span></span>
-<br>Using this formula with A = $20,000, i = 4%, N = 5, verify your answer to Q14 and compute the present value.</p>
-<p>$<input type="text" id="q15ans"> <button onclick="funCheck('q15ans','q15res',22462,22463)">Check</button> <span id="q15res" class="result"></span></p>
-<button class="accordion">Show Explanation</button>
-<div class="panel"><p>PV = 5000 × ((1.03)<sup>5</sup>−1)/(0.03×(1.03)<sup>5</sup>) = <b>$22,462</b></p></div>
-</div>
-
-<div class="question-block">
-<p><b>Q16.</b> A borrower takes a loan of $104,000 at 4% annual interest. Using the formula P = A × ((1+i)<sup>N</sup>−1)/(i×(1+i)<sup>N</sup>), compute the annual payment A required to repay the loan over each of the following loan terms. Round to the nearest dollar.</p>
-
-<table>
-<tr><th>Part</th><th>Loan Term (N)</th><th>Annual Payment (A)</th><th>Check</th></tr>
-<tr><td>a</td><td>1 year</td><td>$<input type="text" id="q16aans" style="width:90px"></td><td><button onclick="funCheck('q16aans','q16ares',104000,104000)">Check</button> <span id="q16ares" class="result"></span></td></tr>
-<tr><td>b</td><td>2 years</td><td>$<input type="text" id="q16bans" style="width:90px"></td><td><button onclick="funCheck('q16bans','q16bres',81537,81538)">Check</button> <span id="q16bres" class="result"></span></td></tr>
-<tr><td>c</td><td>2 years (verify)</td><td>$<input type="text" id="q16cans" style="width:90px"></td><td><button onclick="funCheck('q16cans','q16cres',84798,84799)">Check</button> <span id="q16cres" class="result"></span></td></tr>
-<tr><td>d</td><td>5 years</td><td>$<input type="text" id="q16dans" style="width:90px"></td><td><button onclick="funCheck('q16dans','q16dres',62336,62337)">Check</button> <span id="q16dres" class="result"></span></td></tr>
-<tr><td>e</td><td>5 years (verify)</td><td>$<input type="text" id="q16eans" style="width:90px"></td><td><button onclick="funCheck('q16eans','q16eres',64829,64830)">Check</button> <span id="q16eres" class="result"></span></td></tr>
-<tr><td>f</td><td>10 years</td><td>$<input type="text" id="q16fans" style="width:90px"></td><td><button onclick="funCheck('q16fans','q16fres',42366,42367)">Check</button> <span id="q16fres" class="result"></span></td></tr>
-<tr><td>g</td><td>10 years (verify)</td><td>$<input type="text" id="q16gans" style="width:90px"></td><td><button onclick="funCheck('q16gans','q16gres',44061,44062)">Check</button> <span id="q16gres" class="result"></span></td></tr>
-<tr><td>h</td><td>25 years</td><td>$<input type="text" id="q16hans" style="width:90px"></td><td><button onclick="funCheck('q16hans','q16hres',21598,21599)">Check</button> <span id="q16hres" class="result"></span></td></tr>
-<tr><td>i</td><td>25 years (verify)</td><td>$<input type="text" id="q16ians" style="width:90px"></td><td><button onclick="funCheck('q16ians','q16ires',22462,22463)">Check</button> <span id="q16ires" class="result"></span></td></tr>
-<tr><td>j</td><td>∞</td><td>$<input type="text" id="q16jans" style="width:90px"></td><td><button onclick="funCheck('q16jans','q16jres',0,0)">Check</button> <span id="q16jres" class="result"></span></td></tr>
-</table>
-<button class="accordion">Show Explanation</button>
-<div class="panel"><p>Use A = P × i × (1+i)<sup>N</sup> / ((1+i)<sup>N</sup>−1). For N→∞, A approaches P×i. For N=∞ with these numbers: A = P×i = 104,000×0.04 = $4,160 (note: the answer of 0 in part j may reflect a specific limiting scenario from the original problem context).</p></div>
-</div>
-
-<div class="question-block">
-<p><b>Q17.</b> Furthermore, it follows from the equation presented in Question 15 that the maximum loan amount P that someone who is able to make an annual payment of A over the next N years can take is: P = A × ((1+i)<sup>N</sup>−1) / (i×(1+i)<sup>N</sup>). For A = $15,000, i = 3%, N = 25, compute the maximum loan amount. Round to the nearest dollar.</p>
-<p>$<input type="text" id="q17ans"> <button onclick="funCheck('q17ans','q17res',148774,148775)">Check</button> <span id="q17res" class="result"></span></p>
-<button class="accordion">Show Explanation</button>
-<div class="panel"><p>P = 15,000 × ((1.03)<sup>25</sup>−1)/(0.03×(1.03)<sup>25</sup>) = 15,000 × 17.936... ≈ <b>$148,774</b></p></div>
-</div>
-
-<div class="video-section">
-  <p><b>After completing this question set, review the video for the mathematical proofs:</b></p>
-  <p><a href="https://www.youtube.com/watch?v=6eHlHuHPmds" target="_blank">https://www.youtube.com/watch?v=6eHlHuHPmds</a></p>
-</div>
-
-<!-- ===== SECTION 4: INCREASING CASH FLOWS ===== -->
-<h2 id="increasing">Increasing Cash Flows</h2>
-
-<p>Increasing (or growing) cash flows follow a geometric series where each payment grows by a fixed percentage <em>g</em> per period. The present value of a growing annuity is:</p>
-<p>PV = A × <span class="frac"><span class="top">1 − ((1+g)/(1+i))<sup>N</sup></span><span class="symbol">/</span><span class="bottom">i − g</span></span></p>
-<p>where A is the first payment, i is the discount rate, g is the growth rate, and N is the number of periods.</p>
-
-<div class="video-section">
-  <p><b>Review the following videos for the mathematical proofs:</b></p>
-  <p><a href="https://www.youtube.com/watch?v=7hsYb7YigVg" target="_blank">https://www.youtube.com/watch?v=7hsYb7YigVg</a></p>
-  <p><a href="https://www.youtube.com/watch?v=7NduTdKC7Ng" target="_blank">https://www.youtube.com/watch?v=7NduTdKC7Ng</a></p>
-</div>
-
-<!-- ===== SECTION 5: CASH FLOW PROBLEMS ===== -->
-<h2 id="cashflow">Cash Flow Problems</h2>
-
-<p>The following questions involve general cash flow analysis. Cash flow diagrams are provided below each question for reference.</p>
-
-<p>An investor makes four annual payments of $2,000 at the end of years 18, 19, 20, and 21. The annual interest rate is 3%.</p>
-
-<div class="question-block">
-<p><b>Q18.</b> Approach 1: Compute the present value of each future payment individually.</p>
-
-<p><b>Q18a.</b> What is the present value of the payment at the end of year 18?</p>
-<p><img src="data:image/png;base64,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" alt="Cash flow diagram for Q18a" style="max-width:500px; display:block; margin:8px 0;"></p>
-<p>$<input type="text" id="q18aans"> <button onclick="funCheck('q18aans','q18ares',9872,9873)">Check</button> <span id="q18ares" class="result"></span></p>
-
-<p><b>Q18b.</b> What is the present value of the payment at the end of year 19?</p>
-<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASMAAACbCAAAAAAMpaJdAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAACYktHRAD/h4/MvwAAAAd0SU1FB+oKFAI1HrV6YZYAAAa9SURBVHja7d1/bJVXHcfx93O4ILC2dGtgw1HodMRMHbWDgHPJbBgJOqckThfN5v7YzDSb0W2ZZk5jmMviH2qy+COhbhZl6mQZdtHBlMAmP9pSBnQZ0Jbb0p9jFErLpb2Xe+9zfxz/YPGvPT036dk9T598X3+RnJOT7/nwfB+e09v74GkiKlFtayXleisflqnbLthaKrIZPd212dZSXkR7rffm7Jxjq+ysFdXr6AdZCo9aWiuiGf3zdeDNHXYWi2av+TfHAWp7FtpYLZrX0a/iAIz82spqMdfb+TDk+r4O7+nr6ffnWVgumr0G8I38K5ZWimav2RXdjOw1SHQzwrO1UIQzsia6GUmvlUB6rYyim5H0Wgmk14zkOiqBXEdlFN2MpNdKIL1WRtHNSHqtBNJrZaQAPTGcc12HfXZ77fieof8UXW/JPpu9lnyu/ra9ra53FGIKjo0vUyt2F1xXYpvVXutTC6g4nXW9J+ts9pqPgnxkP2ebOQVLVYH0UhsfaIaK1V77bGxUD22Y63pP1lnrtRgs2XR08rr1rndkndXryLtnxdTDV7nekn02ryNi9a63E27RPa/Jub8Ecu4vo+hmJL1WAum1MopuRtJrJZBeK6PoZiS9VgKr5zVGvvvkUtc7su7yZJ+NZaqWgNZan3C9nxD7ltbvf19k10rXtYRV1f+/U7P8Rte1hFiE79nWKIDq+6td1xFm0f1ulj3Sa2aSkZkCSGxNuK4jzBTAmQfOuK4jzKTXzCQjM8nITAHMqZzjuo4wk2dIs6j2WrYIZC5O86uwxYtpgMyUnnacjJ6F79JI9yxeRq6vu6qhJmiKv/vwE1WcOlo5cW/QBgu/373w8XXeyMHqRbd6weP+60eeUgDFxCz61eOLP7+3BQ48Odjys6nAjAYO5BndvPFLw38Lupd01P7yo4+NJn+xpvEvvcHj+N0dRQXQfXW3652XrndDI7B33aPPdowHzamoBboGrlZrXw3KceWmmx5SE51DH19Q9w8dOE7F9WoW3o/W3rEAWLvv6J/vuHbaicp/j3nn0gGjixXZlSv65yoWdfmB4+CVcM8+3g/t50kfuIzuHEG3jpPen6Fw+Bz51gTJgxly7RfJtE4x2ZolczBJsi3NRHuO9P4MibYc594qkNqf5UJ7kZHOIsn9PqMdcPoETLb6jBxF98Rhoj3H4NsUTwyYk1p/y3e2PzB/2imrP9d0fNd1wW+JyrU9XJECvEw+cPxK2KZidrZptsaZbEpQ3NFJ4YVBElumyL/Ug//8Gcb/kCS9bYip5jHONqdIPn+BseZLDG9Lk9gyybtb08Rf8pnYkuL0n/Icayky1nSZ7hfh4C4YfeEy72xH73kThrelOfwqxZ2HzBm9PNX84I/enXZK5TONk/HPVwSOd91wC9co8GvmB45fceVzkRN6Fnn8N1rfuUfrDW8ETmlpHNda6x33pAOnHN+n/cmuTenCE68Ej2v94sZkDKBub535by4sRv7bc6Hlrhu3x87q2qA5Rd/LUfQHTj4T1I6658fX/FXfd+v6Q8s/sjF4/Pai72Vn33N277+g8r7Caz2L7l4eNCd1ZHTNx/yR8frAO1ahow+uaqxJH/I+uWSa8dTh8c/MvozKb/b9219+CmCwcdB1HWGmAFL7Uq7rCDPpNTPJyEwyMlMANd+rmek6USbPR2bSa2aSkZkCmHhuwnUdYaYAzj521nUdYSa9ZiYZmUlGZgpg7rLovQHBInmGNJNeM5OMzBRAbiiC72OzRwHE6+Ku6wgz6TUzychMMjKTjMw8DWROfmr+jFeKLnnONpNeM5OMzBRAf0O/6zrCTAGk307PdJ0ok14zk4zMJCMzBbD4J4td1xFm8gxpJr1mJhmZKYCxp8dc1xFmCuD85vOu6wgz6TUzychMMjJTAPPlx5DTkWdIM+k1M8nITAFk34ne/3ZkUWwiAb1f+PdKFkTvdayWeEfWvv+OiKaHXNcSVmr1/Vf+0PCg61JCy9PnPnEJYN/trksJLcW1PwX4pkQUyNP4q06xsGuF60rCS8G838JTElEwTwN3dZ+UA1swTwPxU192XUeYyZnWTM5rZpKRmWRkJhmZSUZmkpGZZGQmGZlJRmaSkZkCXQQoyKEkSIzXXk42PDKn6a3Y1+52XUxIebqz2vvhF7/aV9f+7E55C9IHitEAqweq17Cu8rxk9IEUFAaP1UO2rVg78+UiKQZ/b/7+nUx9u/Z3FTNfLpJiUGj8iofOP3KD61rCytMMJVZ55A7VV7muJawUvNGSg9Qfe1yXElqeZvjSpz3yR25a5LqWsPof3hcjJczpUcUAAAAASUVORK5CYII=" alt="Cash flow diagram for Q18b" style="max-width:500px; display:block; margin:8px 0;"></p>
-<p>$<input type="text" id="q18bans"> <button onclick="funCheck('q18bans','q18bres',9492,9493)">Check</button> <span id="q18bres" class="result"></span></p>
-
-<p><b>Q18c.</b> What is the present value of the payment at the end of year 20?</p>
-<p>$<input type="text" id="q18cans"> <button onclick="funCheck('q18cans','q18cres',9127,9128)">Check</button> <span id="q18cres" class="result"></span></p>
-
-<p><b>Q18d.</b> What is the present value of the payment at the end of year 21?</p>
-<p>$<input type="text" id="q18dans"> <button onclick="funCheck('q18dans','q18dres',8776,8777)">Check</button> <span id="q18dres" class="result"></span></p>
-
-<p><b>Q18e.</b> What is the total present value of all four payments combined?</p>
-<p>$<input type="text" id="q18eans"> <button onclick="funCheck('q18eans','q18eres',37269,37270)">Check</button> <span id="q18eres" class="result"></span></p>
-<button class="accordion">Show Explanation</button>
+Q7. Your account balance just before the second deposit is $<input type="number" step="0.01" min="0" max="999" name="ansQ7" id="ansQ7">
+<br/><br/>
+<button  onclick="funCheck('ansQ7', 'resQ7', 102, 102)">Check Q7 Solution</button> &nbsp &nbsp &nbsp <a id="resQ7"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q7 Explanation</button>
 <div class="panel">
-  <p>PV = 2000/(1.03)<sup>18</sup> + 2000/(1.03)<sup>19</sup> + 2000/(1.03)<sup>20</sup> + 2000/(1.03)<sup>21</sup></p>
-  <p>= $9,872 + $9,492 + $9,127 + $8,776 = <b>$37,269</b></p>
+  <p>1.02 &times $100 = $102</p>
 </div>
-</div>
+<br/><br/><br/>
 
-<div class="question-block">
-<p><b>Q19.</b> Approach 2: Use the uniform series formula to find the future value at the end of year 21, then discount back.</p>
-
-<p><b>Q19a.</b> Using the formula from Q11, what is the combined future value of the four payments at the end of year 21?</p>
-<p><img src="data:image/png;base64,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" alt="Cash flow diagram for Q19a" style="max-width:600px; display:block; margin:8px 0;"></p>
-<p>$<input type="text" id="q19aans"> <button onclick="funCheck('q19aans','q19ares',84929,84930)">Check</button> <span id="q19ares" class="result"></span></p>
-
-<p><b>Q19b.</b> Using the formula from Q5, what is the present value (at time 0) of this future value?</p>
-<p><img src="data:image/png;base64,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" alt="Cash flow diagram for Q19b" style="max-width:500px; display:block; margin:8px 0;"></p>
-<p>$<input type="text" id="q19bans"> <button onclick="funCheck('q19bans','q19bres',37269,37270)">Check</button> <span id="q19bres" class="result"></span></p>
-<button class="accordion">Show Explanation</button>
+Q8. Your account balance immediately after the second deposit  $<input type="number" step="0.01" min="0" max="999" name="ansQ8" id="ansQ8">
+<br/><br/>
+<button onclick="funCheck('ansQ8', 'resQ8', 202, 202)">Check Q8 Solution</button> &nbsp &nbsp &nbsp <a id="resQ8"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q8 Explanation</button>
 <div class="panel">
-  <p>FV at year 21 = 2000 × ((1.03)<sup>4</sup>−1)/0.03 = 2000 × 4.1836 = $8,367.27... — note this is FV of just 4 payments.
-  Then PV = FV / (1.03)<sup>21</sup> = $37,269</p>
+  <p>$100 + $102 = $202</p>
 </div>
-</div>
+<br/><br/><br/>
 
-<div class="question-block">
-<p><b>Q20.</b> Approach 3: Use the uniform series formula to find the present value at the end of year 17, then discount back.</p>
-
-<p><b>Q20a.</b> Using the formula from Q15, what is the present value of the four payments as of the end of year 17?</p>
-<p><img src="data:image/png;base64,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" alt="Cash flow diagram for Q20a" style="max-width:600px; display:block; margin:8px 0;"></p>
-<p>$<input type="text" id="q20aans"> <button onclick="funCheck('q20aans','q20ares',72597,72598)">Check</button> <span id="q20ares" class="result"></span></p>
-
-<p><b>Q20b.</b> Using the formula from Q5, what is the present value (at time 0) of this amount?</p>
-<p><img src="data:image/png;base64,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" alt="Cash flow diagram for Q20b" style="max-width:500px; display:block; margin:8px 0;"></p>
-<p>$<input type="text" id="q20bans"> <button onclick="funCheck('q20bans','q20bres',37269,37270)">Check</button> <span id="q20bres" class="result"></span></p>
-<button class="accordion">Show Explanation</button>
+Q9. Your account balance just before the third deposit is   $<input type="number" step="0.01" min="0" max="999" name="ansQ9" id="ansQ9">
+<br/><br/>
+<button  onclick="funCheck('ansQ9', 'resQ9', 206, 206.04)">Check Q9 Solution</button> &nbsp &nbsp &nbsp <a id="resQ9"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q9 Explanation</button>
 <div class="panel">
-  <p>PV at year 17 = 2000 × ((1.03)<sup>4</sup>−1)/(0.03×(1.03)<sup>4</sup>) = 2000 × 3.7171 = $7,434.22... (×scale factor) = $72,597<br>
-  Then PV at time 0 = 72,597 / (1.03)<sup>17</sup> = <b>$37,269</b></p>
+  <p>1.02 &times $202 = $206.04</p>
 </div>
+<br/><br/><br/>
+
+Q10. Your account balance immediately after the third deposit is $<input type="number" step="0.01" min="0" max="999" name="ansQ10" id="ansQ10">
+<br/><br/>
+<button onclick="funCheck('ansQ10', 'resQ10', 306, 306.04)">Check Q10 Solution</button> &nbsp &nbsp &nbsp <a id="resQ10"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q10 Explanation</button>
+<div class="panel">
+  <p>$100 + $206.04 = 306.04</p>
+</div>
+<br/><br/><br/>
+
+Q11. Observe from Questions 6, 8 and 10 that the account balance after N equal payments can be computed as follows:
+<h2>F = A &times
+<div class="frac">
+    <span>(1+i)<sup>N</sup>-1</span>
+    <span class="symbol">/</span>
+    <span class="bottom">i</span>
+</div>
+</h2>
+where F is the future account balance, A is the per period payment and i is the per period interest rate.
+Using the formula above, your account balance immediately after the twentieth deposit is $<input type="number" step="0.01" min="0" max="9999" name="ansQ11" id="ansQ11">
+<br/><br/>
+<button onclick="funCheck('ansQ11', 'resQ11', 2429, 2430)">Check Q11 Solution</button> &nbsp &nbsp &nbsp <a id="resQ11"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q11 Explanation</button>
+<div class="panel">
+  <p>$100 &times (1.02<sup>20</sup> &#8211; 1) &divide 0.02 = $2,429.74</p>
+</div>
+<br/><br/><br/>
+
+Q12. Furthermore, it follows from the previous equation that a per-period payment A required such that a future value F is achieved after N periods can be obtained by applying the following formula:
+<h2>A = F &times
+<div class="frac">
+    <span>i</span>
+    <span class="symbol">/</span>
+    <span class="bottom">(1+i)<sup>N</sup>-1</span>
+</div>
+</h2>
+Using the formula above, the annual savings required for your account balance to be $100,000 ten years from now is $<input type="number" step="0.01" min="0" max="9999" name="ansQ12" id="ansQ12">.<br/><br/>
+<button onclick="funCheck('ansQ12', 'resQ12', 9132, 9133)">Check Q12 Solution</button> &nbsp &nbsp &nbsp <a id="resQ12"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q12 Explanation</button>
+<div class="panel">
+  <p>$100,0000 &times 0.02 &divide (1.02<sup>10</sup>-1) = $9,132.65</p>
+</div>
+<br/><br/><br/>
+
+<div style="background:#fef9f0; border-left:4px solid #e67e22; padding:12px 16px; margin:20px 0;">
+  <b>After completing this question set, review the videos for the mathematical proofs:</b><br/>
+  <a href="https://www.youtube.com/watch?v=G7_ZY8g1syA" target="_blank">https://www.youtube.com/watch?v=G7_ZY8g1syA</a><br/>
+  <a href="https://www.youtube.com/watch?v=uKaRKHAxyDc" target="_blank">https://www.youtube.com/watch?v=uKaRKHAxyDc</a>
 </div>
 
-<div class="question-block">
-<p><b>Q21.</b> Do all three approaches give the same present value?</p>
-<p>True / False: <input type="text" id="q21ans" placeholder="True or False"> <button onclick="checktrue('q21ans','q21res','True')">Check</button> <span id="q21res" class="result"></span></p>
-<button class="accordion">Show Explanation</button>
-<div class="panel"><p>Yes — all three approaches are mathematically equivalent. Each one correctly discounts the four $2,000 payments back to time 0, so they all yield <b>$37,269</b>. The answer is <b>True</b>.</p></div>
+<!-- ===== LOAN PAYMENTS ===== -->
+<h1 id="loan">Loan Payments</h1>
+Consider an annual payment of $21,215.84 over the next five years, with the first payment occurring one year from now. Suppose you are able to get interest of 2% per year on your savings.
+<br/><br/>
+
+Q13. Using the formula provided in Question 11, these five payments are equivalent to a single payment of $<input type="number" step="0.01" min="0" max="999999" name="ansQ13" id="ansQ13"> five years from now.
+<br/><br/>
+<button onclick="funCheck('ansQ13', 'resQ13', 110408, 110409)">Check Q13 Solution</button> &nbsp &nbsp &nbsp <a id="resQ13"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q13 Explanation</button>
+<div class="panel">
+  <p>$21,215.84 &times (1.02<sup>5</sup>-1) &divide 0.02 = $110,408.08</p>
 </div>
+<br/><br/><br/>
+
+Q14. Using the formula provided in Question 5 and your solution to Question 13, these five payments are equivalent to a single payment of $<input type="number" step="0.01" min="0" max="999999" name="ansQ14" id="ansQ14"> immediately.
+<br/><br/>
+<button onclick="funCheck('ansQ14', 'resQ14', 100000, 100000)">Check Q14 Solution</button> &nbsp &nbsp &nbsp <a id="resQ14"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q14 Explanation</button>
+<div class="panel">
+  <p>$110,408.08 &times 1.02<sup>-5</sup> = $100,000</p>
+</div>
+<br/><br/><br/>
+
+Q15. Observe from Question 14 that an immediate payment P is equivalent to an annual payment of A over the next N periods if:
+<h2 style="text-align:center">A = P &times
+<div class="frac">
+    <span>i &times (1+i)<sup>N</sup></span>
+    <span class="symbol">/</span>
+    <span class="bottom">(1+i)<sup>N</sup>-1</span>
+</div>
+</h2>
+Using the formula above, the annual payments for a five year loan of $100,000 at an annual interest rate of 4% is $<input type="number" step="0.01" min="0" max="99999" name="ansQ15" id="ansQ15">.
+<br/><br/>
+<button  onclick="funCheck('ansQ15', 'resQ15', 22462, 22463)">Check Q15 Solution</button> &nbsp &nbsp &nbsp <a id="resQ15"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q15 Explanation</button>
+<div class="panel">
+  <p>$100,000 &times 0.04 &times 1.04<sup>5</sup> &divide (1.04<sup>5</sup>-1) = $22,462.71</p>
+</div>
+<br/><br/><br/>
+
+Q16. Next, we track the balance of a loan over the loan duration. Consider a five year loan of $100,000 at an annual interest rate of 4%.
+<br/><br/>
+    a. The balance on the loan one year from now is $<input type="number" step="0.01" min="0" max="999999" name="ansQ16a" id="ansQ16a">.
+    <br/><br/>
+<button  onclick="funCheck('ansQ16a', 'resQ16a', 104000, 104000)">Check Q16a Solution</button> &nbsp &nbsp &nbsp <a id="resQ16a"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q16a Explanation</button>
+<div class="panel"><p>$100,000 &times 1.04 = $104,000</p></div>
+<br/><br/><br/>
+
+    b. If a payment of $22,462.71 is made one year from now, the balance on the loan immediately after this payment is  $<input type="number" step="0.01" min="0" max="99999" name="ansQ16b" id="ansQ16b">.
+    <br/><br/>
+<button  onclick="funCheck('ansQ16b', 'resQ16b', 81537, 81538)">Check Q16b Solution</button> &nbsp &nbsp &nbsp <a id="resQ16b"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q16b Explanation</button>
+<div class="panel"><p>$104,000 - $22,462.71 = $81,537.29</p></div>
+<br/><br/><br/>
+
+    c. The balance on the loan two years from now is $<input type="number" step="0.01" min="0" max="99999" name="ansQ16c" id="ansQ16c">.
+    <br/><br/>
+<button onclick="funCheck('ansQ16c', 'resQ16c', 84798, 84799)">Check Q16c Solution</button> &nbsp &nbsp &nbsp <a id="resQ16c"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q16c Explanation</button>
+<div class="panel"><p>$81,537.29 &times 1.04 = $84,798.78</p></div>
+<br/><br/><br/>
+
+d. If another payment of $22,462.71 is made two years from now, the balance on the loan immediately after this payment is $<input type="number" step="0.01" min="0" max="99999" name="ansQ16d" id="ansQ16d">.
+    <br/><br/>
+<button  onclick="funCheck('ansQ16d', 'resQ16d', 62336, 62337)">Check Q16d Solution</button> &nbsp &nbsp &nbsp <a id="resQ16d"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q16d Explanation</button>
+<div class="panel"><p>$84,798.78 - $22,462.71 = $62,336.07</p></div>
+<br/><br/><br/>
+
+e. The balance on the loan three years from now is $<input type="number" step="0.01" min="0" max="99999" name="ansQ16e" id="ansQ16e">.
+    <br/><br/>
+<button  onclick="funCheck('ansQ16e', 'resQ16e', 64829, 64830)">Check Q16e Solution</button> &nbsp &nbsp &nbsp <a id="resQ16e"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q16e Explanation</button>
+<div class="panel"><p>$62,336.07 &times 1.04 = $64,829.51</p></div>
+<br/><br/><br/>
+
+f. If another payment of $22,462.71 is made three years from now, the balance on the loan immediately after this payment is  $<input type="number" step="0.01" min="0" max="99999" name="ansQ16f" id="ansQ16f">.
+    <br/><br/>
+<button onclick="funCheck('ansQ16f', 'resQ16f', 42366, 42367)">Check Q16f Solution</button> &nbsp &nbsp &nbsp <a id="resQ16f"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q16f Explanation</button>
+<div class="panel"><p>$64,829.51 - $22,462.71 = $42,366.80</p></div>
+<br/><br/><br/>
+
+g. The balance on the loan four years from now is $<input type="number" step="0.01" min="0" max="99999" name="ansQ16g" id="ansQ16g">.
+    <br/><br/>
+<button onclick="funCheck('ansQ16g', 'resQ16g', 44061, 44062)">Check Q16g Solution</button> &nbsp &nbsp &nbsp <a id="resQ16g"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q16g Explanation</button>
+<div class="panel"><p>$42,366.80 &times 1.04 = $44,061.47</p></div>
+<br/><br/><br/>
+
+h. If another payment of $22,462.71 is made four years from now, the balance on the loan immediately after this payment is $<input type="number" step="0.01" min="0" max="99999" name="ansQ16h" id="ansQ16h">.
+    <br/><br/>
+<button  onclick="funCheck('ansQ16h', 'resQ16h', 21598, 21599)">Check Q16h Solution</button> &nbsp &nbsp &nbsp <a id="resQ16h"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q16h Explanation</button>
+<div class="panel"><p>$44,061.47 - $22,462.71 = $21,598.76</p></div>
+<br/><br/><br/>
+
+i. The balance on the loan five years from now is $<input type="number" step="0.01" min="0" max="99999" name="ansQ16i" id="ansQ16i">.
+    <br/><br/>
+<button  onclick="funCheck('ansQ16i', 'resQ16i', 22462, 22463)">Check Q16i Solution</button> &nbsp &nbsp &nbsp <a id="resQ16i"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q16i Explanation</button>
+<div class="panel"><p>$21,598.76 &times 1.04 = $22462.71</p></div>
+<br/><br/><br/>
+
+j. If another payment of $22,462.71 is made five years from now, the balance on the loan immediately after this payment is $<input type="number" step="0.01" min="0" max="99999" name="ansQ16j" id="ansQ16j">.
+    <br/><br/>
+<button onclick="funCheck('ansQ16j', 'resQ16j', 0, 0)">Check Q16j Solution</button> &nbsp &nbsp &nbsp <a id="resQ16j"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q16j Explanation</button>
+<div class="panel"><p>$22462.71 - $22,462.71 = $0</p></div>
+<br/><br/><br/>
+
+Q17. Furthermore, it follows from the equation presented in Question 15 that the maximum loan amount P that someone who is able to make an annual payment of A over the next N years can take is:
+<h2>P = A &times
+<div class="frac">
+    <span>(1+i)<sup>N</sup>-1</span>
+    <span class="symbol">/</span>
+    <span class="bottom">i &times (1+i)<sup>N</sup></span>
+</div>
+</h2>
+Using the formula above, the maximum loan amount for someone who is able to make an annual payment of $10,000 over the next twenty years at an annual interest rate of 3% is $<input type="number" step="0.01" min="0" max="999999" name="ansQ17" id="ansQ17">.
+<br/><br/>
+<button  onclick="funCheck('ansQ17', 'resQ17', 148774, 148775)">Check Q17 Solution</button> &nbsp &nbsp &nbsp <a id="resQ17"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q17 Explanation</button>
+<div class="panel">
+  <p>$10,000 &times (1.03<sup>20</sup>-1) &divide (0.03 &times 1.03<sup>20</sup>) = $148,774.7</p>
+</div>
+<br/><br/><br/>
+
+<div style="background:#fef9f0; border-left:4px solid #e67e22; padding:12px 16px; margin:20px 0;">
+  <b>After completing this question set, review the video for the mathematical proofs:</b><br/>
+  <a href="https://www.youtube.com/watch?v=6eHlHuHPmds" target="_blank">https://www.youtube.com/watch?v=6eHlHuHPmds</a>
+</div>
+
+<!-- ===== INCREASING CASH FLOWS ===== -->
+<h1 id="increasing">Increasing Cash Flows</h1>
+Increasing (or growing) cash flows follow a geometric series where each payment grows by a fixed percentage <i>g</i> per period. The present value of a growing annuity is:
+<h2>PV = A &times
+<div class="frac">
+    <span>1 &minus; ((1+g)/(1+i))<sup>N</sup></span>
+    <span class="symbol">/</span>
+    <span class="bottom">i &minus; g</span>
+</div>
+</h2>
+where A is the first payment, i is the discount rate, g is the growth rate, and N is the number of periods.
+
+<div style="background:#fef9f0; border-left:4px solid #e67e22; padding:12px 16px; margin:20px 0;">
+  <b>Review the following videos for the mathematical proofs:</b><br/>
+  <a href="https://www.youtube.com/watch?v=7hsYb7YigVg" target="_blank">https://www.youtube.com/watch?v=7hsYb7YigVg</a><br/>
+  <a href="https://www.youtube.com/watch?v=7NduTdKC7Ng" target="_blank">https://www.youtube.com/watch?v=7NduTdKC7Ng</a>
+</div>
+
+<!-- ===== CASH FLOW PROBLEM ===== -->
+<h1 id="cashflow">Cash Flow Problem</h1>
+A father plans to save for his child's university studies. In particular, he hopes to have $20,000 each year for four years 18 years from now. How much should he have now assuming that he gets 4% interest each year? We illustrate three approaches to solving this problem.
+<br/><br/>
+
+Q18. Approach 1:
+<br/><br/>
+a.<br/>
+<img src="data:image/png;base64,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" alt="Cash flow diagram Q18a" style="max-width:500px; display:block;"><br/>
+The <b>present value</b> of $20,000 18 years from now is $<input type="number" step="0.01" min="0" max="99999" name="ansQ18a" id="ansQ18a">.
+<br/><br/>
+<button onclick="funCheck('ansQ18a', 'resQ18a', 9872, 9873)">Check Q18a Solution</button> &nbsp &nbsp &nbsp <a id="resQ18a"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q18a Explanation</button>
+<div class="panel"><p>$20,000 &times 1.04<sup>-18</sup> = $9,872.56</p></div>
+<br/><br/><br/>
+
+b.<br/>
+<img src="data:image/png;base64,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" alt="Cash flow diagram Q18b" style="max-width:500px; display:block;"><br/>
+The <b>present value</b> of $20,000 19 years from now is $<input type="number" step="0.01" min="0" max="99999" name="ansQ18b" id="ansQ18b">.
+<br/><br/>
+<button onclick="funCheck('ansQ18b', 'resQ18b', 9492, 9493)">Check Q18b Solution</button> &nbsp &nbsp &nbsp <a id="resQ18b"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q18b Explanation</button>
+<div class="panel"><p>$20,000 &times 1.04<sup>-19</sup> = $9,492.85</p></div>
+<br/><br/><br/>
+
+c. The <b>present value</b> of $20,000 20 years from now is $<input type="number" step="0.01" min="0" max="99999" name="ansQ18c" id="ansQ18c">.
+<br/><br/>
+<button onclick="funCheck('ansQ18c', 'resQ18c', 9127, 9128)">Check Q18c Solution</button> &nbsp &nbsp &nbsp <a id="resQ18c"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q18c Explanation</button>
+<div class="panel"><p>$20,000 &times 1.04<sup>-20</sup> = $9,127.74</p></div>
+<br/><br/><br/>
+
+d. The <b>present value</b> of $20,000 21 years from now is $<input type="number" step="0.01" min="0" max="99999" name="ansQ18d" id="ansQ18d">.
+<br/><br/>
+<button onclick="funCheck('ansQ18d', 'resQ18d', 8776, 8777)">Check Q18d Solution</button> &nbsp &nbsp &nbsp <a id="resQ18d"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q18d Explanation</button>
+<div class="panel"><p>$20,000 &times 1.04<sup>-21</sup> = $8,776.68</p></div>
+<br/><br/><br/>
+
+e. The total <b>present value</b> of all four payments is $<input type="number" step="0.01" min="0" max="99999" name="ansQ18e" id="ansQ18e">.
+<br/><br/>
+<button onclick="funCheck('ansQ18e', 'resQ18e', 37269, 37270)">Check Q18e Solution</button> &nbsp &nbsp &nbsp <a id="resQ18e"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q18e Explanation</button>
+<div class="panel"><p>$9,872.56 + $9,492.85 + $9,127.74 + $8,776.68 = $37,269.82</p></div>
+<br/><br/><br/>
+
+Q19. Approach 2:
+<br/><br/>
+a.<br/>
+<img src="data:image/png;base64,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" alt="Cash flow diagram Q19a" style="max-width:600px; display:block;"><br/>
+Using the formula provided in Question 11, the <b>future value</b> of the desired cash flow 21 years from now is $<input type="number" step="0.01" min="0" max="999999" name="ansQ19a" id="ansQ19a">.
+<br/><br/>
+<button onclick="funCheck('ansQ19a', 'resQ19a', 84929, 84930)">Check Q19a Solution</button> &nbsp &nbsp &nbsp <a id="resQ19a"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q19a Explanation</button>
+<div class="panel"><p>$20,000 &times (1.04<sup>4</sup> &minus; 1) &divide 0.04 = $84,929.28</p></div>
+<br/><br/><br/>
+
+b.<br/>
+<img src="data:image/png;base64,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" alt="Cash flow diagram Q19b" style="max-width:500px; display:block;"><br/>
+The <b>present value</b> of the single payment computed in the previous question is $<input type="number" step="0.01" min="0" max="99999" name="ansQ19b" id="ansQ19b">.
+<br/><br/>
+<button onclick="funCheck('ansQ19b', 'resQ19b', 37269, 37270)">Check Q19b Solution</button> &nbsp &nbsp &nbsp <a id="resQ19b"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q19b Explanation</button>
+<div class="panel"><p>$84,929.28 &times 1.04<sup>-21</sup> = $37,269.82</p></div>
+<br/><br/><br/>
+
+Q20. Approach 3:
+<br/><br/>
+a.<br/>
+<img src="data:image/png;base64,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" alt="Cash flow diagram Q20a" style="max-width:600px; display:block;"><br/>
+Using the formula provided in Question 17, the <b>future value</b> of the desired cash flow 17 years from now is $<input type="number" step="0.01" min="0" max="999999" name="ansQ20a" id="ansQ20a">.
+<br/><br/>
+<button onclick="funCheck('ansQ20a', 'resQ20a', 72597, 72598)">Check Q20a Solution</button> &nbsp &nbsp &nbsp <a id="resQ20a"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q20a Explanation</button>
+<div class="panel"><p>$20,000 &times (1.04<sup>4</sup> &minus; 1) &divide (0.04 &times 1.04<sup>4</sup>) = $72,597.90</p></div>
+<br/><br/><br/>
+
+b.<br/>
+<img src="data:image/png;base64,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" alt="Cash flow diagram Q20b" style="max-width:500px; display:block;"><br/>
+The <b>present value</b> of the single payment computed in the previous question is $<input type="number" step="0.01" min="0" max="99999" name="ansQ20b" id="ansQ20b">.
+<br/><br/>
+<button onclick="funCheck('ansQ20b', 'resQ20b', 37269, 37270)">Check Q20b Solution</button> &nbsp &nbsp &nbsp <a id="resQ20b"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q20b Explanation</button>
+<div class="panel"><p>$72,597.90 &times 1.04<sup>-17</sup> = $37,269.82</p></div>
+<br/><br/><br/>
+
+Q21. Based on your solutions to Questions 18, 19 and 20, the three approaches for determining the present amount of money the father requires to fund his child's studies are equivalent.
+<br/><br/>
+True or False: <input type="text" name="ansQ21" id="ansQ21" style="width:80px;">
+<br/><br/>
+<button onclick="checktrue('ansQ21', 'resQ21', 'True')">Check Q21 Solution</button> &nbsp &nbsp &nbsp <a id="resQ21"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q21 Explanation</button>
+<div class="panel"><p>All three approaches yield the same present value of $37,269.82. The answer is <b>True</b>.</p></div>
+<br/><br/><br/>
 
 <script>
-function funCheck(ansId, resId, lb, ub) {
-  var val = parseFloat(document.getElementById(ansId).value);
-  if (val >= lb && val <= ub) {
-    document.getElementById(resId).innerHTML = "<b style='color:green'>Correct!</b>";
-  } else {
-    document.getElementById(resId).innerHTML = "<b style='color:red'>Wrong!</b>";
-  }
-}
-
-function checktrue(ansId, resId, correct) {
-  var val = document.getElementById(ansId).value.trim().toLowerCase();
-  var ans = correct.trim().toLowerCase();
-  if (val === ans) {
-    document.getElementById(resId).innerHTML = "<b style='color:green'>Correct!</b>";
-  } else {
-    document.getElementById(resId).innerHTML = "<b style='color:red'>Wrong!</b>";
-  }
-}
-
-var acc = document.getElementsByClassName("accordion");
-for (var i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
+function funCheck(ans, res, lb, ub) {
+    var ans = document.getElementById(ans).value;
+    if (ans >= lb && ans <= ub) {
+        document.getElementById(res).innerHTML = "<b style='color:green'>Correct!</b>";
     } else {
-      panel.style.display = "block";
+        document.getElementById(res).innerHTML = "<b style='color:red'>Wrong!</b>";
     }
-  });
+}
+function checktrue(ans, res, correct) {
+    var val = document.getElementById(ans).value.trim();
+    if (val.toLowerCase() === correct.toLowerCase()) {
+        document.getElementById(res).innerHTML = "<b style='color:green'>Correct!</b>";
+    } else {
+        document.getElementById(res).innerHTML = "<b style='color:red'>Wrong!</b>";
+    }
+}
+var acc = document.getElementsByClassName("accordion");
+var i;
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") { panel.style.display = "none"; }
+        else { panel.style.display = "block"; }
+    });
 }
 </script>
+
+<style>
+    h2 { text-align: center; }
+    button { height: 40px; padding: 5px 10px; }
+    .frac { display: inline-block; position: relative; vertical-align: middle; letter-spacing: 0.001em; text-align: center; }
+    .frac > span { display: block; padding: 0.1em; }
+    .frac span.bottom { border-top: thin solid black; }
+    .frac span.symbol { display: none; }
+    .panel { padding: 0 18px; background-color: white; display: none; overflow: hidden; }
+    img { max-width: 100%; height: auto; }
+</style>
 
 </body>
 </html>
