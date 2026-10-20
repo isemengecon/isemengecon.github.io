@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Topic 3: Inflation and Foreign Exchange</title>
+</head>
+<body>
+
+<h1 style="text-align:center; border-bottom:2px solid #333; padding-bottom:10px; margin-bottom:5px;">Cost Analysis and Engineering Economy</h1>
+
+<h1>Topic 3: Inflation and Foreign Exchange</h1>
+
+<div style="background:#f0f4f8; border:1px solid #c8d8e8; border-radius:6px; padding:15px 20px; margin-bottom:30px;">
+  <b>Contents</b>
+  <ul>
+    <li><a href="#inflation">Inflation</a> (Q1&ndash;Q6)</li>
+    <li><a href="#purchasing-power">Purchasing Power</a> (Q7&ndash;Q12)</li>
+    <li><a href="#foreign-exchange">Foreign Exchange</a> (Q13&ndash;Q25)</li>
+  </ul>
+</div>
+
+<!-- ==================== SECTION 1: INFLATION ==================== -->
+<h1 id="inflation">Inflation</h1>
+
+Suppose the average price of a car in years 2000, 2001 and 2005 are as follows:
+<br/><br/>
+
+<table>
+  <tr><th>Y2000</th><th>Y2001</th><th>Y2005</th></tr>
+  <tr><td>$100,000</td><td>$110,000</td><td>$161,051</td></tr>
+</table>
+
+<br/>
+
+Q1. From 2000 to 2001, the average price of a car increased by <input type="number" step="0.01" min="0" max="9999999" name="ansQ1" id="ansQ1">%.
+<br/><br/>
+<button onclick="funCheck('ansQ1','resQ1',10,10)">Check Q1 Solution</button> &nbsp &nbsp &nbsp <a id="resQ1"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q1 Explanation</button>
+<div class="panel">
+  <p>($110,000 &minus; $100,000) &divide; $100,000 = 0.1 = 10%</p>
+</div>
+</br></br></br>
+
+Q2. If prices increased by 10% between 2001 and 2002, the average price of a car in 2002 is $<input type="number" step="0.01" min="0" max="9999999" name="ansQ2" id="ansQ2">.
+<br/><br/>
+<button onclick="funCheck('ansQ2','resQ2',121000,121000)">Check Q2 Solution</button> &nbsp &nbsp &nbsp <a id="resQ2"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q2 Explanation</button>
+<div class="panel">
+  <p>$110,000 &times; 1.1 = $121,000</p>
+</div>
+</br></br></br>
+
+Q3. If prices increased by 10% between 2002 and 2003, the average price of a car in 2003 is $<input type="number" step="0.01" min="0" max="9999999" name="ansQ3" id="ansQ3">.
+<br/><br/>
+<button onclick="funCheck('ansQ3','resQ3',133100,133100)">Check Q3 Solution</button> &nbsp &nbsp &nbsp <a id="resQ3"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q3 Explanation</button>
+<div class="panel">
+  <p>$121,000 &times; 1.1 = $133,100</p>
+</div>
+</br></br></br>
+
+Q4. If prices increased by 10% between 2003 and 2004, the average price of a car in 2004 is $<input type="number" step="0.01" min="0" max="9999999" name="ansQ4" id="ansQ4">.
+<br/><br/>
+<button onclick="funCheck('ansQ4','resQ4',146410,146410)">Check Q4 Solution</button> &nbsp &nbsp &nbsp <a id="resQ4"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q4 Explanation</button>
+<div class="panel">
+  <p>$133,100 &times; 1.1 = $146,410</p>
+</div>
+</br></br></br>
+
+Q5. If prices increased by 10% between 2004 and 2005, the average price of a car in 2005 is $<input type="number" step="0.01" min="0" max="9999999" name="ansQ5" id="ansQ5">.
+<br/><br/>
+<button onclick="funCheck('ansQ5','resQ5',161051,161051)">Check Q5 Solution</button> &nbsp &nbsp &nbsp <a id="resQ5"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q5 Explanation</button>
+<div class="panel">
+  <p>$146,410 &times; 1.1 = $161,051</p>
+</div>
+</br></br></br>
+
+Q6. Based on your solutions to Questions 1 to 5, observe that the annual inflation rate f between years a and b (b &gt; a) can be computed as follows:
+
+<h2 style="text-align:center">f &nbsp;=&nbsp; <div class="frac"><span>P<sub>b</sub></span><span class="bottom">P<sub>a</sub></span></div><sup style="font-size:0.75em; line-height:1;">1/(b&minus;a)</sup> &nbsp;&minus;&nbsp; 1 &nbsp;&times;&nbsp; 100%</h2>
+
+where P<sub>a</sub> and P<sub>b</sub> are price of item in years a and b, respectively.<br/><br/>
+
+Suppose that the average price of a car in Y2010 is $180,000. Using the formula above, the annual inflation rate between 2000 and 2010 is <input type="number" step="0.01" min="0" max="9999999" name="ansQ6" id="ansQ6">%.
+<br/><br/>
+<button onclick="funCheck('ansQ6','resQ6',6,6.055)">Check Q6 Solution</button> &nbsp &nbsp &nbsp <a id="resQ6"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q6 Explanation</button>
+<div class="panel">
+  <p>[($180,000 &divide; $100,000)<sup>1/(2010&minus;2000)</sup> &minus; 1] &times; 100% = 6.05%</p>
+</div>
+</br></br></br>
+
+<!-- ==================== SECTION 2: PURCHASING POWER ==================== -->
+<h1 id="purchasing-power">Purchasing Power</h1>
+
+Suppose you loan your friend $3,500 in year 2012. After two years, your friend repays your loan with an interest of $500. Suppose prices increase by 5% annually during this period.
+<br/><br/>
+
+Q7. The amount of money that you receive from your friend in 2014 is $<input type="number" step="0.01" min="0" max="9999999" name="ansQ7" id="ansQ7">.
+<br/><br/>
+<button onclick="funCheck('ansQ7','resQ7',4000,4000)">Check Q7 Solution</button> &nbsp &nbsp &nbsp <a id="resQ7"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q7 Explanation</button>
+<div class="panel">
+  <p>$3,500 + $500 = $4,000</p>
+</div>
+</br></br></br>
+
+Q8. The annual interest rate of this loan is <input type="number" step="0.01" min="0" max="1000" name="ansQ8" id="ansQ8">%.
+<br/><br/>
+<button onclick="funCheck('ansQ8','resQ8',6.9,6.91)">Check Q8 Solution</button> &nbsp &nbsp &nbsp <a id="resQ8"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q8 Explanation</button>
+<div class="panel">
+  <p>$3,500 &times; (1+i)<sup>2</sup> = $4,000 &rArr; i = ($4,000 &divide; $3,500)<sup>0.5</sup> &minus; 1 = 0.069 = 6.9%</p>
+</div>
+</br></br></br>
+
+Q9. An item that costs $4,000 in 2014 can be purchased for $<input type="number" step="0.01" min="0" max="9999" name="ansQ9" id="ansQ9"> in 2012.
+<br/><br/>
+<button onclick="funCheck('ansQ9','resQ9',3628,3628.12)">Check Q9 Solution</button> &nbsp &nbsp &nbsp <a id="resQ9"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q9 Explanation</button>
+<div class="panel">
+  <p>2012 price &times; 1.05 &times; 1.05 = $4,000 &rArr; 2012 price = $4,000 &divide; 1.05<sup>2</sup> = $3,628.11</p>
+</div>
+</br></br></br>
+
+Q10. The act of delaying your purchase by 2 years to offer this loan to your friend has increased your purchasing power by <input type="number" step="0.01" min="0" max="9999" name="ansQ10" id="ansQ10">%.
+<br/><br/>
+<button onclick="funCheck('ansQ10','resQ10',3.6,3.7)">Check Q10 Solution</button> &nbsp &nbsp &nbsp <a id="resQ10"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q10 Explanation</button>
+<div class="panel">
+  <p>($3,628.11 &divide; $3,500) &minus; 1 = 0.0366 = 3.66%</p>
+</div>
+</br></br></br>
+
+Q11. The annual increase in purchasing power by delaying your purchase to offer this loan to your friend is <input type="number" step="0.01" min="0" max="9999" name="ansQ11" id="ansQ11">%.
+<br/><br/>
+<button onclick="funCheck('ansQ11','resQ11',1.8,1.82)">Check Q11 Solution</button> &nbsp &nbsp &nbsp <a id="resQ11"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q11 Explanation</button>
+<div class="panel">
+  <p>(1+i)<sup>2</sup> = 1.0366 &rArr; i = 1.0366<sup>0.5</sup> &minus; 1 = 0.0181 = 1.81%</p>
+</div>
+</br></br></br>
+
+Q12. Based on your solution to Questions 8 and 11, the annual increase in purchasing power can be computed as follows:
+
+<h2 style="text-align:center">i<sub>r</sub> &nbsp;=&nbsp; <div class="frac"><span>i<sub>m</sub> &minus; f</span><span class="bottom">1 + f</span></div></h2>
+
+where i<sub>r</sub> is the annual increase in purchasing power, i<sub>m</sub> is the annual interest rate and f is the annual inflation rate.
+<br/><br/>
+<select id="ansQ12" name="ansQ12" style="height:40px; padding:5px;"><option value="">-- Select --</option><option value="True">True</option><option value="False">False</option></select>
+<br/><br/>
+<button onclick="checktrue('ansQ12','resQ12','True')">Check Q12 Solution</button> &nbsp &nbsp &nbsp <a id="resQ12"></a>
+</br></br></br>
+
+<!-- ==================== SECTION 3: FOREIGN EXCHANGE ==================== -->
+<h1 id="foreign-exchange">Foreign Exchange</h1>
+
+An American multi-national corporation, which manufactures in China, sells 100,000 of its products in Singapore annually. In 2008, the products are priced at SGD 10 while unit material cost and labor cost are CNY 3 and CNY 2, respectively. In 2008, the USD/SGD rate is 1.462 and the USD/CNY rate is 6.849. Find the percentage increase in profits (in USD) in 2009 assuming:
+<ul>
+  <li>4% annual price increase in Singapore</li>
+  <li>1% annual material cost increase in China</li>
+  <li>6% annual labor cost increase in China</li>
+  <li>3% annual drop in USD/SGD rate</li>
+  <li>2% annual increase in USD/CNY rate</li>
+</ul>
+
+Q13. Total revenue in 2008 is SGD <input type="number" step="0.01" min="0" max="9999999" name="ansQ13" id="ansQ13">.
+<br/><br/>
+<button onclick="funCheck('ansQ13','resQ13',1000000,1000000)">Check Q13 Solution</button> &nbsp &nbsp &nbsp <a id="resQ13"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q13 Explanation</button>
+<div class="panel">
+  <p>100,000 &times; 10 = 1,000,000</p>
+</div>
+</br></br></br>
+
+Q14. Total revenue in 2008 is USD <input type="number" step="0.01" min="0" max="9999999" name="ansQ14" id="ansQ14">.
+<br/><br/>
+<button onclick="funCheck('ansQ14','resQ14',683994,683995)">Check Q14 Solution</button> &nbsp &nbsp &nbsp <a id="resQ14"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q14 Explanation</button>
+<div class="panel">
+  <p>1,000,000 &divide; 1.462 = 683,994.53</p>
+</div>
+</br></br></br>
+
+Q15. Total cost in 2008 is CNY <input type="number" step="0.01" min="0" max="9999999" name="ansQ15" id="ansQ15">.
+<br/><br/>
+<button onclick="funCheck('ansQ15','resQ15',500000,500000)">Check Q15 Solution</button> &nbsp &nbsp &nbsp <a id="resQ15"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q15 Explanation</button>
+<div class="panel">
+  <p>100,000 &times; (3 + 2) = 500,000</p>
+</div>
+</br></br></br>
+
+Q16. Total cost in 2008 is USD <input type="number" step="0.01" min="0" max="9999999" name="ansQ16" id="ansQ16">.
+<br/><br/>
+<button onclick="funCheck('ansQ16','resQ16',73003,73004)">Check Q16 Solution</button> &nbsp &nbsp &nbsp <a id="resQ16"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q16 Explanation</button>
+<div class="panel">
+  <p>500,000 &divide; 6.849 = 73,003.36</p>
+</div>
+</br></br></br>
+
+Q17. Total profit in 2008 is USD <input type="number" step="0.01" min="0" max="9999999" name="ansQ17" id="ansQ17">.
+<br/><br/>
+<button onclick="funCheck('ansQ17','resQ17',610991,610992)">Check Q17 Solution</button> &nbsp &nbsp &nbsp <a id="resQ17"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q17 Explanation</button>
+<div class="panel">
+  <p>683,994.53 &minus; 73,003.36 = 610,991.17</p>
+</div>
+</br></br></br>
+
+Q18. Total revenue in 2009 is SGD <input type="number" step="0.01" min="0" max="9999999" name="ansQ18" id="ansQ18">.
+<br/><br/>
+<button onclick="funCheck('ansQ18','resQ18',1040000,1040000)">Check Q18 Solution</button> &nbsp &nbsp &nbsp <a id="resQ18"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q18 Explanation</button>
+<div class="panel">
+  <p>100,000 &times; 10 &times; 1.04 = 1,040,000</p>
+</div>
+</br></br></br>
+
+Q19. The USD/SGD rate in 2009 is <input type="number" step="0.001" min="0" max="9999999" name="ansQ19" id="ansQ19"> (to 3 decimal places).
+<br/><br/>
+<button onclick="funCheck('ansQ19','resQ19',1.418,1.418)">Check Q19 Solution</button> &nbsp &nbsp &nbsp <a id="resQ19"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q19 Explanation</button>
+<div class="panel">
+  <p>(1.462 &minus; rate) &divide; 1.462 = 0.03 &rArr; rate = 1.462 &times; (1 &minus; 0.03) = 1.418</p>
+</div>
+</br></br></br>
+
+Q20. Total revenue in 2009 is USD <input type="number" step="0.01" min="0" max="9999999" name="ansQ20" id="ansQ20">.
+<br/><br/>
+<button onclick="funCheck('ansQ20','resQ20',733354,733428)">Check Q20 Solution</button> &nbsp &nbsp &nbsp <a id="resQ20"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q20 Explanation</button>
+<div class="panel">
+  <p>1,040,000 &divide; 1.418 = 733,427.36</p>
+</div>
+</br></br></br>
+
+Q21. Total cost in 2009 is CNY <input type="number" step="0.01" min="0" max="9999999" name="ansQ21" id="ansQ21">.
+<br/><br/>
+<button onclick="funCheck('ansQ21','resQ21',515000,515000)">Check Q21 Solution</button> &nbsp &nbsp &nbsp <a id="resQ21"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q21 Explanation</button>
+<div class="panel">
+  <p>100,000 &times; (3 &times; 1.01 + 2 &times; 1.06) = 515,000</p>
+</div>
+</br></br></br>
+
+Q22. The USD/CNY rate in 2009 is <input type="number" step="0.001" min="0" max="9999999" name="ansQ22" id="ansQ22"> (to 3 decimal places).
+<br/><br/>
+<button onclick="funCheck('ansQ22','resQ22',6.986,6.986)">Check Q22 Solution</button> &nbsp &nbsp &nbsp <a id="resQ22"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q22 Explanation</button>
+<div class="panel">
+  <p>6.849 &times; 1.02 = 6.986</p>
+</div>
+</br></br></br>
+
+Q23. Total cost in 2009 is USD <input type="number" step="0.01" min="0" max="9999999" name="ansQ23" id="ansQ23">.
+<br/><br/>
+<button onclick="funCheck('ansQ23','resQ23',73718,73719)">Check Q23 Solution</button> &nbsp &nbsp &nbsp <a id="resQ23"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q23 Explanation</button>
+<div class="panel">
+  <p>515,000 &divide; 6.986 = 73,718.87</p>
+</div>
+</br></br></br>
+
+Q24. Total profit in 2009 is USD <input type="number" step="0.01" min="0" max="9999999" name="ansQ24" id="ansQ24">.
+<br/><br/>
+<button onclick="funCheck('ansQ24','resQ24',659708,659709)">Check Q24 Solution</button> &nbsp &nbsp &nbsp <a id="resQ24"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q24 Explanation</button>
+<div class="panel">
+  <p>733,427.36 &minus; 73,718.87 = 659,708.49</p>
+</div>
+</br></br></br>
+
+Q25. Percentage increase in profits (in USD) in 2009 is <input type="number" step="0.01" min="0" max="9999999" name="ansQ25" id="ansQ25">%.
+<br/><br/>
+<button onclick="funCheck('ansQ25','resQ25',7.9,8)">Check Q25 Solution</button> &nbsp &nbsp &nbsp <a id="resQ25"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q25 Explanation</button>
+<div class="panel">
+  <p>(659,708.49 &minus; 610,991.17) &divide; 610,991.17 = 0.0797 = 7.97%</p>
+</div>
+</br></br></br>
+
+<script>
+function funCheck(ans, res, lb, ub) {
+    var val = parseFloat(document.getElementById(ans).value);
+    if (val >= lb && val <= ub) {
+        document.getElementById(res).innerHTML = "<b style='color:green'>Correct!</b>";
+    } else {
+        document.getElementById(res).innerHTML = "<b style='color:red'>Wrong!</b>";
+    }
+}
+function checktrue(ans, res, val) {
+    var a = document.getElementById(ans).value;
+    if (a === val) {
+        document.getElementById(res).innerHTML = "<b style='color:green'>Correct!</b>";
+    } else {
+        document.getElementById(res).innerHTML = "<b style='color:red'>Wrong!</b>";
+    }
+}
+var acc = document.getElementsByClassName("accordion");
+for (var i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") { panel.style.display = "none"; }
+        else { panel.style.display = "block"; }
+    });
+}
+</script>
+
+<style>
+    h2 { text-align: center; }
+    button { height: 40px; padding: 5px 10px; }
+    .frac { display: inline-block; position: relative; vertical-align: middle; letter-spacing: 0.001em; text-align: center; }
+    .frac > span { display: block; padding: 0.1em; }
+    .frac span.bottom { border-top: thin solid black; }
+    .frac span.symbol { display: none; }
+    .panel { padding: 0 18px; background-color: white; display: none; overflow: hidden; }
+    table { border-collapse: collapse; margin: 10px 0; }
+    th, td { border: 1px solid #999; padding: 8px 20px; text-align: center; }
+    th { background-color: #e8eef4; font-weight: bold; }
+    img { max-width: 100%; height: auto; }
+</style>
+
+</body>
+</html>
