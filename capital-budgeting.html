@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Topic 7: Capital Budgeting</title>
+</head>
+<body>
+
+<h1 style="text-align:center; border-bottom:2px solid #333; padding-bottom:10px; margin-bottom:5px;">Cost Analysis and Engineering Economy</h1>
+
+<h1>Topic 7: Capital Budgeting</h1>
+
+<div style="background:#f0f4f8; border:1px solid #c8d8e8; border-radius:6px; padding:15px 20px; margin-bottom:30px;">
+  <b>Contents</b>
+  <ul>
+    <li><a href="#bonds">Bonds</a> (Q1&ndash;Q8)</li>
+    <li><a href="#shares">Shares</a> (Q9&ndash;Q14)</li>
+    <li><a href="#cost-of-capital">Cost of Capital</a> (Q15&ndash;Q22)</li>
+    <li><a href="#capital-allocation">Capital Allocation</a> (Q23&ndash;Q26)</li>
+  </ul>
+</div>
+
+<!-- ===== SECTION 1: BONDS ===== -->
+
+<h1 id="bonds">Bonds</h1>
+
+Companies often raise capital by issuing bonds. A bond is a specific type of loan where the company only makes interest payments at the end of each period. The principal remains the same throughout the bond period and is only paid upon maturity. From the company&rsquo;s perspective, the cash-flow associated with a bond is illustrated below:
+<br/><br/>
+&bull; M: Face value (or par value). The price at which the bond is sold to investors when it was initially issued. This is also the amount that is redeemed upon maturity.
+<br/><br/>
+&bull; C: Coupon. Amount paid at the end of each period (i.e., interest).
+<br/><br/>
+&bull; N: Number of periods until maturity.
+<br/><br/>
+<span id="bond-diagram"></span><img src="data:image/png;base64,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8goQIECgRwK1+axep/eUHvW1austINktaf/Om3dyiiyy2MhlW0QZkxY+97mVqUAM65btdmunnfa+HHxOZMdqzvr1N+dh3csvv7SkfSMsAgQmh0CdPqvX5j1lchx6WlmwgGS3YNCiqmv8Bv+ii5aPle/G6+ecc35aQzEGg//yL/9bUQEUVU/MqYgUPNUWieyKFQfy8tH1xwzdNWu+ml5fvvxThnWL6gL1ECDQnUCdPqvX5j2lu6601SQXOPiKK66Y5ATlbP6b3vQfDznkkAce+GGE98orr2ze/O2f//yZ3/7t3/793/9P8UqM5u7Yce9NN21ctWpNutda3Iz3mmtWHXXUH5SwOccc88477/x+inPPnic3b956yCGvi0e0MV6JfH3btjsvu+x//NM/PZiCj+T4sssuLmFDhESAwKQSeMMbXh8n3jhrRat/9rOn4/n8+fOaCsRn9bVrN6RfxWf1P/qj08oGVaf3lGR7/fXr0pNly5aWTVs8ZRM4aHh4uGwxiScLxDhonozbgiXGdK+++soy32stMtoYn873QG7RlnPP/bgJDP4ECBAoiUCMLORvzyKkONleeOHiOXOOSV89xZktbil8223fzLcoi8/qq1ZdWZLgR4dRm/eUaFqs2JMauHv3ztKCC6wkApLdknTEmGHENNZ16/6+RZoY59aYvVCqFRiaNiauTovBj7hMbaymxrvIxRdftGDB6WXvEvERIDCZBGr2Wb027ymS3cn0VzjRtkp2JyrYh+1jaOH737/n3nt/sGfP3jx+EIsVnHzyH55yynurNbc13jZifYlIfHPWGznuCSfMOemk90hz+3As2QUBAl0I1Oyzej3eUyS7XRzJk3YTye6k7XoNJ0CAAIFxCPisPg6s3heV7PbeuD57kOzWpy+1hAABAgQITBIBye4k6ehCmmnpsUIYVUKAAAECBAgQIFBGAcluGXtFTAQIECBAgAABAoUISHYLYVQJAQIECBAgQIBAGQUku2XsFTERIECAAAECBAgUIiDZLYRRJQQIECBAgAABAmUUkOyWsVfERIAAAQIECBAgUIiAZLcQRpUQIECAAAECBAiUUUCyW8ZeERMBAgQIECBAgEAhApLdQhhVQoAAAQIECBAgUEYByW4Ze0VMBAgQIECAAAEChQhIdgthVAkBAgQIECBAgEAZBSS7ZewVMREgQIAAAQIECBQiINkthFElBAgQIECAAAECZRSQ7JaxV8REgAABAgQIECBQiIBktxBGlRAgQIAAAQIECJRRQLJbxl4REwECBAgQIECAQCECkt1CGFVCgAABAgQIECBQRgHJbhl7RUwECBAgQIAAAQKFCEh2C2FUCQECBAgQIECAQBkFJLtl7BUxESBAgAABAgQIFCIg2S2EUSUECBAgQIAAAQJlFJDslrFXxESAAAECBAgQIFCIgGS3EEaVECBAgAABAgQIlFFAslvGXhETAQIECBAgQIBAIQKS3UIYVUKAAAECBAgQIFBGAcluGXtFTAQIECBAgAABAoUISHYLYVQJAQIECBAgQIBAGQUku2XsFTERIECAAAECBAgUIiDZLYRRJQQIECBAgAABAmUUkOyWsVfERIAAAQIECBAgUIiAZLcQRpUQIECAAAECBAiUUUCyW8ZeERMBAgQIECBAgEAhApLdQhhVQoAAAQIECBAgUEYByW4Ze0VMBAgQIECAAAEChQhIdgthVAkBAgQIECBAgEAZBSS7ZewVMREgQIAAAQIECBQiINkthFElBAgQIECAAAECZRSQ7JaxV8REgAABAgQIECBQiIBktxBGlRAgQIAAAQIECJRRQLJbxl4REwECBAgQIECAQCECkt1CGFVCgAABAgQIECBQRgHJbhl7RUwECBAgQIAAAQKFCBw0PDxcSEUqIUCAAAECBAj0R2D27LlpR7t37+zPHmMvt9/+zaGhH+3Z82T8pJ1Onz5t1qyjTjnlvaed9r7DDz+sF5Fcc80Na9duyDV32N4XXnhxwYJF+/e/lDZcuXLF2Wd/tBfhVaJOI7uV6CZBEiBAgAABAgMTiDR3/vyFV165asuWbTnTjWiefXbfjh33xeuRWW7dur0X8T355N7Gah9+eKiTvdxyyzdyphvljzrqrZ1sVdcykt269qx2ESBAgAABAhMViCHSZcuWRzobeW2LuiKzvOyyL8Qo7ET3N2r7hx76d9ltYwo71r4i5ltv3dT42+OPn1N4YBWqULJboc4SKgECBAgQINA/gcgaly79dIzdpl1OmXLowoVn3HDDmnvu+W5MJ4ifjRvXLl/+qZjMkArEfINix3efeGJvym7zLvbufapt+7/85b9NW82aNSP+nTv3uLab1LuAZLfe/at1BAgQIECAQJcCn/3s5XnSwrx5J2/dumnVqitPPfXkPD03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" alt="Cash flow of a bond from the company&rsquo;s perspective" width="466" />
+<br/><br/>
+
+Q1. Consider a bond with face value $1 million (i.e., M = $1 million) and an annual coupon rate of 5% (i.e., C = $50,000). Suppose an investor paid $1 million for this bond. Which of the following statements are true?
+<br/><br/>
+a. If the bond is redeemed after one year (i.e., N=1), the investor&rsquo;s IRR is 5% per year. <select id="ansQ1a" name="ansQ1a" style="height:40px; padding:5px;"><option value="">-- Select --</option><option value="True">True</option><option value="False">False</option></select>
+<br/><br/>
+<button onclick="checktrue('ansQ1a','resQ1a','True')">Check Q1a Solution</button>&nbsp &nbsp &nbsp<a id="resQ1a"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q1a Explanation</button>
+<div class="panel">
+  <p>PV(5%) = -$1,000,000 + $(1,050,000)/1.05 = 0</p>
+</div>
+</br></br></br>
+b. If the bond is redeemed after two years (i.e., N=2), the investor&rsquo;s IRR is 5% per year. <select id="ansQ1b" name="ansQ1b" style="height:40px; padding:5px;"><option value="">-- Select --</option><option value="True">True</option><option value="False">False</option></select>
+<br/><br/>
+<button onclick="checktrue('ansQ1b','resQ1b','True')">Check Q1b Solution</button>&nbsp &nbsp &nbsp<a id="resQ1b"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q1b Explanation</button>
+<div class="panel">
+  <p>PV(5%) = -$1,000,000 + $50,000/1.05 + $1,050,000/1.05<sup>2</sup> = 0</p>
+</div>
+</br></br></br>
+c. If the bond is redeemed after three years (i.e., N=3), the investor&rsquo;s IRR is 5% per year. <select id="ansQ1c" name="ansQ1c" style="height:40px; padding:5px;"><option value="">-- Select --</option><option value="True">True</option><option value="False">False</option></select>
+<br/><br/>
+<button onclick="checktrue('ansQ1c','resQ1c','True')">Check Q1c Solution</button>&nbsp &nbsp &nbsp<a id="resQ1c"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q1c Explanation</button>
+<div class="panel">
+  <p>PV(5%) = -$1,000,000 + $50,000/1.05 + $50,000/1.05<sup>2</sup> + $1,050,000/1.05<sup>3</sup> = 0</p>
+</div>
+</br></br></br>
+Q2. Based on your solutions from Question 1, the investor&rsquo;s IRR is equivalent to the bond&rsquo;s coupon rate and is independent of the face value and the number of periods to maturity. <select id="ansQ2" name="ansQ2" style="height:40px; padding:5px;"><option value="">-- Select --</option><option value="True">True</option><option value="False">False</option></select>
+<br/><br/>
+<button onclick="checktrue('ansQ2','resQ2','True')">Check Q2 Solution</button>&nbsp &nbsp &nbsp<a id="resQ2"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q2 Explanation</button>
+<div class="panel">
+  <p>IRR only depends on coupon rate.</p>
+</div>
+</br></br></br>
+Q3. Consider a bond with a semi-annual coupon rate of 3% (i.e., coupon equivalent to 3% of face value is paid every six months). The annual IRR of an investor who purchased this bond at face value is <input type="number" step="0.01" min="-99999999" max="99999999" name="ansQ3" id="ansQ3">%.
+<br/><br/>
+<button onclick="funCheck('ansQ3','resQ3',6.09,6.09)">Check Q3 Solution</button>&nbsp &nbsp &nbsp<a id="resQ3"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q3 Explanation</button>
+<div class="panel">
+  <p>The semi-annual IRR is 3% per six months. Therefore, the effective annual IRR is 1.03<sup>2</sup> &ndash; 1 = 0.0609 = 6.09% per year</p>
+</div>
+</br></br></br>
+Q4. Consider a bond with face value $1 million. Based on your solutions from Question 2, if investors require an annual return of 4%, the coupon payments of this bond should be $<input type="number" step="0.01" min="-99999999" max="99999999" name="ansQ4" id="ansQ4">. Assume annual coupon payments.
+<br/><br/>
+<button onclick="funCheck('ansQ4','resQ4',40000,40000)">Check Q4 Solution</button>&nbsp &nbsp &nbsp<a id="resQ4"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q4 Explanation</button>
+<div class="panel">
+  <p>$1,000,000 x 0.04 = $40,000</p>
+</div>
+</br></br></br>
+Q5. Coupon payments (i.e., interest) are considered expenses which reduce the tax that a company pays. Assuming a tax rate of 17%, the tax savings resulting from paying $40,000 in coupon payments is $<input type="number" step="0.01" min="-99999999" max="99999999" name="ansQ5" id="ansQ5">.
+<br/><br/>
+<button onclick="funCheck('ansQ5','resQ5',6800,6800)">Check Q5 Solution</button>&nbsp &nbsp &nbsp<a id="resQ5"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q5 Explanation</button>
+<div class="panel">
+  <p>$40,000 x 0.17 = $6,800</p>
+</div>
+</br></br></br>
+Q6. Based on your solutions from Questions 4 and 5, the after-tax cost associated with a coupon payment of $40,000 under a 17% tax rate is $<input type="number" step="0.01" min="-99999999" max="99999999" name="ansQ6" id="ansQ6">.
+<br/><br/>
+<button onclick="funCheck('ansQ6','resQ6',33200,33200)">Check Q6 Solution</button>&nbsp &nbsp &nbsp<a id="resQ6"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q6 Explanation</button>
+<div class="panel">
+  <p>$40,000 - $6,800 = $33,200</p>
+</div>
+</br></br></br>
+Q7. Based on your solution from Question 6, the cost of obtaining capital by issuing a bond with 4% annual coupon payments after tax considerations is <input type="number" step="0.01" min="-99999999" max="99999999" name="ansQ7" id="ansQ7">% of the capital obtained (i.e., face value). Assume a 17% tax rate.
+<br/><br/>
+<button onclick="funCheck('ansQ7','resQ7',3.3,3.32)">Check Q7 Solution</button>&nbsp &nbsp &nbsp<a id="resQ7"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q7 Explanation</button>
+<div class="panel">
+  <p>$33,200 &divide; $1,000,000 = 0.0332</p>
+</div>
+</br></br></br>
+Q8. Based on your solution from Question 7, the annual after-tax cost of obtaining capital by issuing a bond is (1-t)i<sub>c</sub> where t is the tax rate and i<sub>c</sub> is the coupon rate. <select id="ansQ8" name="ansQ8" style="height:40px; padding:5px;"><option value="">-- Select --</option><option value="True">True</option><option value="False">False</option></select>
+<br/><br/>
+<button onclick="checktrue('ansQ8','resQ8','True')">Check Q8 Solution</button>&nbsp &nbsp &nbsp<a id="resQ8"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q8 Explanation</button>
+<div class="panel">
+  <p>Observe that the solution 0.0332 obtained in Question 7 equals (1 - 0.17) x 0.04.</p>
+</div>
+</br></br></br>
+<!-- ===== SECTION 2: SHARES ===== -->
+
+<h1 id="shares">Shares</h1>
+
+A company can also raise capital by issuing new shares to allow investors to be co-owners of the company. Investing in the shares of a company is risky since returns are not guaranteed and losses are possible.
+<br/><br/>
+
+Q9. Suppose Alex is able to get 2% returns on his bank savings while Bob is only able to get 1% returns on his bank savings. Assuming that Alex and Bob have the same risk attitude, who will find a risky investment with an expected return of 5% more attractive?
+<br/><br/>
+<button class="accordion" style="width:25%; height:auto; min-height:40px">a. Alex</button>
+<div class="panel">
+  <p><span style="color:red;">Wrong!</span> Bob would have been better off with the risky investment if the returns were greater than 1% but Alex is only better off if the returns were greater than 2%. Hence, Alex is more likely than Bob to prefer just investing in his savings account</p>
+</div><br>
+<button class="accordion" style="width:25%; height:auto; min-height:40px">b. Bob</button>
+<div class="panel">
+  <p><span style="color:green;">Correct!</span> Bob would have been better off with the risky investment if the returns were greater than 1% but Alex is only better off if the returns were greater than 2%. Hence, Alex is more likely than Bob to prefer just investing in his savings account</p>
+</div><br>
+<button class="accordion" style="width:25%; height:auto; min-height:40px">c. Equally attractive</button>
+<div class="panel">
+  <p><span style="color:red;">Wrong!</span> Bob would have been better off with the risky investment if the returns were greater than 1% but Alex is only better off if the returns were greater than 2%. Hence, Alex is more likely than Bob to prefer just investing in his savings account</p>
+</div>
+</br></br></br>
+Q10. Suppose investment X is considered to be more risky than investment Y. Which of the following relationship is expected:
+<br/><br/>
+<button class="accordion" style="width:25%; height:auto; min-height:40px">a. Expected returns of investment X is greater than expected returns of investment Y</button>
+<div class="panel">
+  <p><span style="color:green;">Correct!</span> Since investment X is riskier, it should have a higher expected return than investment Y.</p>
+</div><br>
+<button class="accordion" style="width:25%; height:auto; min-height:40px">b. Expected returns of investment X is less than expected returns of investment Y</button>
+<div class="panel">
+  <p><span style="color:red;">Wrong!</span> Since investment X is riskier, it should have a higher expected return than investment Y.</p>
+</div><br>
+<button class="accordion" style="width:25%; height:auto; min-height:40px">c. Investments X and Y have the same expected returns</button>
+<div class="panel">
+  <p><span style="color:red;">Wrong!</span> Since investment X is riskier, it should have a higher expected return than investment Y.</p>
+</div><br>
+<button class="accordion" style="width:25%; height:auto; min-height:40px">d. All of the above</button>
+<div class="panel">
+  <p><span style="color:red;">Wrong!</span> Since investment X is riskier, it should have a higher expected return than investment Y.</p>
+</div>
+</br></br></br>
+Q11. Based on your solutions from Questions 9 and 10, the expected returns of an investment depends on the alternative investment opportunities that are available and the riskiness of the investment. <select id="ansQ11" name="ansQ11" style="height:40px; padding:5px;"><option value="">-- Select --</option><option value="True">True</option><option value="False">False</option></select>
+<br/><br/>
+<button onclick="checktrue('ansQ11','resQ11','True')">Check Q11 Solution</button>&nbsp &nbsp &nbsp<a id="resQ11"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q11 Explanation</button>
+<div class="panel">
+  <p>Correct! See Questions 9 and 10.</p>
+</div>
+</br></br></br>
+Q12. Consider an investor with three possible investments:
+<br/><br/>
+&bull; Risk-free investment (e.g., bank savings) yielding a risk free return R<sub>F</sub>
+<br/><br/>
+&bull; Investment in the overall stock market (e.g., via an exchange traded fund) yielding an expected return R<sub>M</sub>
+<br/><br/>
+&bull; Investment in a specific company (e.g., shares of one company) yielding an expected return R<sub>S</sub>
+<br/><br/>
+The value &beta;<sub>S</sub> provides some indication of the risk associated with investing in a company. In particular, the returns that are expected of a company by its shareholders is often estimated as follows:
+<h2 id="q12-formula" style="text-align:center">R<sub>S</sub> = R<sub>F</sub> + &beta;<sub>S</sub>(R<sub>M</sub> &minus; R<sub>F</sub>)</h2>
+Assuming that R<sub>M</sub> is greater than R<sub>F</sub>, which of the following statements are true based on the formula above:
+<br/><br/>
+<button class="accordion" style="width:25%; height:auto; min-height:40px">a. R<sub>M</sub> is greater than R<sub>S</sub> if &beta;<sub>S</sub> is greater than 0</button>
+<div class="panel">
+  <p><span style="color:red;">Wrong!</span> See Question 14.</p>
+</div><br>
+<button class="accordion" style="width:25%; height:auto; min-height:40px">b. R<sub>S</sub> is greater than R<sub>M</sub> if &beta;<sub>S</sub> is greater than 0</button>
+<div class="panel">
+  <p><span style="color:red;">Wrong!</span> See Question 13.</p>
+</div><br>
+<button class="accordion" style="width:25%; height:auto; min-height:40px">c. R<sub>M</sub> is greater than R<sub>S</sub> if &beta;<sub>S</sub> is greater than 1</button>
+<div class="panel">
+  <p><span style="color:red;">Wrong!</span> See Question 14.</p>
+</div><br>
+<button class="accordion" style="width:25%; height:auto; min-height:40px">d. R<sub>S</sub> is greater than R<sub>M</sub> if &beta;<sub>S</sub> is greater than 1</button>
+<div class="panel">
+  <p><span style="color:green;">Correct!</span> Observe that &beta;<sub>S</sub> = (R<sub>S</sub> - R<sub>F</sub>) &divide; (R<sub>M</sub> - R<sub>F</sub>)</p>
+</div>
+</br></br></br>
+Q13. Suppose investors are able to get 2% returns on their investments risk free. Furthermore, the overall stock market is expected to generate 10% returns on investments. Based on the formula provided in Question 12, the returns that are expected for a company where &beta;<sub>S</sub> = 0.5 is <input type="number" step="0.01" min="-99999999" max="99999999" name="ansQ13" id="ansQ13">%.
+<br/><br/>
+<button onclick="funCheck('ansQ13','resQ13',6,6)">Check Q13 Solution</button>&nbsp &nbsp &nbsp<a id="resQ13"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q13 Explanation</button>
+<div class="panel">
+  <p>0.02 + 0.5 x (0.1 &ndash; 0.02) = 0.06 = 6%</p>
+</div>
+</br></br></br>
+Q14. Suppose investors are able to get 2% returns on their investments risk free. Furthermore, the overall stock market is expected to generate 10% returns on investments. Based on the formula provided in Question 12, the returns that are expected for a company where &beta;<sub>S</sub> = 1.5 is <input type="number" step="0.01" min="-99999999" max="99999999" name="ansQ14" id="ansQ14">%.
+<br/><br/>
+<button onclick="funCheck('ansQ14','resQ14',14,14)">Check Q14 Solution</button>&nbsp &nbsp &nbsp<a id="resQ14"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q14 Explanation</button>
+<div class="panel">
+  <p>0.02 + 1.5 x (0.1 &ndash; 0.02) = 0.14 = 14%</p>
+</div>
+</br></br></br>
+<!-- ===== SECTION 3: COST OF CAPITAL ===== -->
+
+<h1 id="cost-of-capital">Cost of Capital</h1>
+
+A company may obtain capital by issuing both bonds and shares. Here, we look at how the cost of obtaining this capital can be computed and used to determine if a company should undertake a project or not.
+<br/><br/>
+Suppose the company obtained $4 million by issuing $3 million worth of bonds and $1 million worth of shares. The bonds pay 4% annual coupon payments. Assume that investors are able to get 2% returns on their investments risk free, the overall stock market is expected to generate 10% returns on investments and &beta;<sub>S</sub> = 0.5 for this company. Tax rate is 17%.
+<br/><br/>
+
+Q15. Based on your solution from Question 7, the after-tax cost of capital obtained by issuing $3 million worth of bond is $<input type="number" step="0.01" min="-99999999" max="99999999" name="ansQ15" id="ansQ15"> per year.
+<br/><br/>
+<button onclick="funCheck('ansQ15','resQ15',99000,99600)">Check Q15 Solution</button>&nbsp &nbsp &nbsp<a id="resQ15"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q15 Explanation</button>
+<div class="panel">
+  <p>0.0332 x $3,000,000 = $99,600</p>
+</div>
+</br></br></br>
+Q16. Based on your solution from Question 13, the total after-corporate-tax profits expected by investors who purchased the $1 million shares is $<input type="number" step="0.01" min="-99999999" max="99999999" name="ansQ16" id="ansQ16"> per year.
+<br/><br/>
+<button onclick="funCheck('ansQ16','resQ16',60000,60000)">Check Q16 Solution</button>&nbsp &nbsp &nbsp<a id="resQ16"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q16 Explanation</button>
+<div class="panel">
+  <p>0.06 x $1,000,000 = $60,000</p>
+</div>
+</br></br></br>
+Q17. Based on your solutions from Questions 15 and 16, the $4 million capital should yield a minimum after-tax profit of $<input type="number" step="0.01" min="-99999999" max="99999999" name="ansQ17" id="ansQ17"> each year.
+<br/><br/>
+<button onclick="funCheck('ansQ17','resQ17',159000,159600)">Check Q17 Solution</button>&nbsp &nbsp &nbsp<a id="resQ17"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q17 Explanation</button>
+<div class="panel">
+  <p>$99,600 + $60,000 = $159,600</p>
+</div>
+</br></br></br>
+Q18. Based on your solution from Question 17, the minimum after-tax profit each year should be <input type="number" step="0.01" min="-99999999" max="99999999" name="ansQ18" id="ansQ18">% of the capital raised. This value is referred to as the <strong>weighted average cost of capital</strong> (WACC).
+<br/><br/>
+<button onclick="funCheck('ansQ18','resQ18',3.95,4)">Check Q18 Solution</button>&nbsp &nbsp &nbsp<a id="resQ18"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q18 Explanation</button>
+<div class="panel">
+  <p>$159,600 &divide; $4,000,000 = 0.0399</p>
+</div>
+</br></br></br>
+Q19. Based on your solution from Question 18, the weighted average cost of capital can be computed as follows:
+<h2 id="q19-formula" style="text-align:center">WACC = &lambda;(1 &minus; t)i<sub>c</sub> + (1 &minus; &lambda;)R<sub>S</sub></h2>
+where &lambda; is the fraction of capital obtained by bonds, i<sub>c</sub> is the bond coupon rate and R<sub>S</sub> is the expected returns expected by shareholders. <select id="ansQ19" name="ansQ19" style="height:40px; padding:5px;"><option value="">-- Select --</option><option value="True">True</option><option value="False">False</option></select>
+<br/><br/>
+<button onclick="checktrue('ansQ19','resQ19','True')">Check Q19 Solution</button>&nbsp &nbsp &nbsp<a id="resQ19"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q19 Explanation</button>
+<div class="panel">
+  <p>True. 0.0399 = 0.75 x (1-0.17) x 0.04 + 0.25 x 0.06</p>
+</div>
+</br></br></br>
+Q20. Based on your solution from Question 17, the $4 million capital should yield a minimum before-tax profit of $<input type="number" step="0.01" min="-99999999" max="99999999" name="ansQ20" id="ansQ20"> each year.
+<br/><br/>
+<button onclick="funCheck('ansQ20','resQ20',191500,192290)">Check Q20 Solution</button>&nbsp &nbsp &nbsp<a id="resQ20"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q20 Explanation</button>
+<div class="panel">
+  <p>$159,600&divide;(1-0.17) = $192,289.16</p>
+</div>
+</br></br></br>
+Q21. Based on your solution from Question 18, a project will be considered economically attractive to the company only if it yields returns of at least <input type="number" step="0.01" min="-99999999" max="99999999" name="ansQ21" id="ansQ21">% per year after tax.
+<br/><br/>
+<button onclick="funCheck('ansQ21','resQ21',3.95,4)">Check Q21 Solution</button>&nbsp &nbsp &nbsp<a id="resQ21"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q21 Explanation</button>
+<div class="panel">
+  <p>Only projects that yield a return that is greater than the cost of capital should be considered.</p>
+</div>
+</br></br></br>
+Q22. Based on your solution from Question 20, a project will be considered economically attractive to the company only if it yields returns of at least <input type="number" step="0.01" min="-99999999" max="99999999" name="ansQ22" id="ansQ22">% per year before tax.
+<br/><br/>
+<button onclick="funCheck('ansQ22','resQ22',4.78,4.81)">Check Q22 Solution</button>&nbsp &nbsp &nbsp<a id="resQ22"></a>&nbsp &nbsp &nbsp
+<button class="accordion">Q22 Explanation</button>
+<div class="panel">
+  <p>$192,289.16 &divide; $4,000,000 = 0.0481</p>
+</div>
+</br></br></br>
+<!-- ===== SECTION 4: CAPITAL ALLOCATION ===== -->
+
+<h1 id="capital-allocation">Capital Allocation</h1>
+
+Previously we have seen that for individual projects, a project should only be undertaken if its present value is greater than 0. Here, we consider the setting where the company has a fixed budget to undertake multiple projects. In particular, we are interested in obtaining a portfolio of projects that maximizes total present value. In this section, we review the equations that are associated with this problem.
+<br/><br/>
+For simplicity, we assume that all projects only require capital investments at period 0 and generate positive cash flows from period 1 onwards. Assume that there are N possible projects to select from. Let B<sub>j</sub> denote the present value of project j, C<sub>j</sub> denote the capital investment required for project j and C denote the total budget available. In addition, let x<sub>j</sub> denote a binary variable such that x<sub>j</sub>=0 if project j is not undertaken and x<sub>j</sub>=1 if project j is undertaken.
+<br/><br/>
+
+Q23. The total present value of the projects undertaken can be computed as follows:
+<br/><br/>
+<button class="accordion" style="width:25%; height:auto; min-height:40px">a. B<sub>1</sub> + B<sub>2</sub> + &hellip; + B<sub>N</sub></button>
+<div class="panel">
+  <p><span style="color:red;">Wrong!</span> This computes the total present value of all projects</p>
+</div><br>
+<button class="accordion" style="width:25%; height:auto; min-height:40px">b. C<sub>1</sub> + C<sub>2</sub> + &hellip; + C<sub>N</sub></button>
+<div class="panel">
+  <p><span style="color:red;">Wrong!</span> This computes the total capital required for all projects.</p>
+</div><br>
+<button class="accordion" style="width:25%; height:auto; min-height:40px">c. B<sub>1</sub>x<sub>1</sub> + B<sub>2</sub>x<sub>2</sub> + &hellip; + B<sub>N</sub>x<sub>N</sub></button>
+<div class="panel">
+  <p><span style="color:green;">Correct!</span> This computes the total present value of the projects undertaken.</p>
+</div><br>
+<button class="accordion" style="width:25%; height:auto; min-height:40px">d. C<sub>1</sub>x<sub>1</sub> + C<sub>2</sub>x<sub>2</sub> + &hellip; + C<sub>N</sub>x<sub>N</sub></button>
+<div class="panel">
+  <p><span style="color:red;">Wrong!</span> This computes the total capital required for the projects undertaken.</p>
+</div>
+</br></br></br>
+Q24. The following equation ensures that the total capital required does not exceed the budget available:
+<br/><br/>
+<button class="accordion" style="width:25%; height:auto; min-height:40px">a. C<sub>1</sub> + C<sub>2</sub> + &hellip; + C<sub>N</sub> &ge; C</button>
+<div class="panel">
+  <p><span style="color:red;">Wrong!</span> This states that total capital required for all projects is greater than or equals to budget available.</p>
+</div><br>
+<button class="accordion" style="width:25%; height:auto; min-height:40px">b. C<sub>1</sub> + C<sub>2</sub> + &hellip; + C<sub>N</sub> &le; C</button>
+<div class="panel">
+  <p><span style="color:red;">Wrong!</span> This states that total capital required for all projects is less than or equals to budget available.</p>
+</div><br>
+<button class="accordion" style="width:25%; height:auto; min-height:40px">c. C<sub>1</sub>x<sub>1</sub> + C<sub>2</sub>x<sub>2</sub> + &hellip; + C<sub>N</sub>x<sub>N</sub> &ge; C</button>
+<div class="panel">
+  <p><span style="color:red;">Wrong!</span> This ensures that the total capital required for the projects undertaken is greater than or equals to budget available.</p>
+</div><br>
+<button class="accordion" style="width:25%; height:auto; min-height:40px">d. C<sub>1</sub>x<sub>1</sub> + C<sub>2</sub>x<sub>2</sub> + &hellip; + C<sub>N</sub>x<sub>N</sub> &le; C</button>
+<div class="panel">
+  <p><span style="color:green;">Correct!</span> This ensures that the total capital required does not exceed the budget available.</p>
+</div>
+</br></br></br>
+Q25. Suppose that projects 1 and 2 are mutually exclusive (e.g., project 1 is to develop a piece of land into residential apartments while project 2 is to develop the same piece of land into a shopping mall). The following equation ensures that both projects cannot be undertaken simultaneously:
+<br/><br/>
+<button class="accordion" style="width:25%; height:auto; min-height:40px">a. x<sub>1</sub> + x<sub>2</sub> = 0</button>
+<div class="panel">
+  <p><span style="color:red;">Wrong!</span> This implies that both projects cannot be selected.</p>
+</div><br>
+<button class="accordion" style="width:25%; height:auto; min-height:40px">b. x<sub>1</sub> + x<sub>2</sub> &ge; 1</button>
+<div class="panel">
+  <p><span style="color:red;">Wrong!</span> This implies that at least one out of the two projects must be selected.</p>
+</div><br>
+<button class="accordion" style="width:25%; height:auto; min-height:40px">c. x<sub>1</sub> + x<sub>2</sub> &le; 1</button>
+<div class="panel">
+  <p><span style="color:green;">Correct!</span> This ensures that both projects cannot be undertaken simultaneously.</p>
+</div><br>
+<button class="accordion" style="width:25%; height:auto; min-height:40px">d. x<sub>1</sub> + x<sub>2</sub> = 1</button>
+<div class="panel">
+  <p><span style="color:red;">Wrong!</span> This implies that exactly one out of the two projects must be selected.</p>
+</div>
+</br></br></br>
+Q26. Suppose that project 3 (e.g., build a casino within the shopping mall) can only be undertaken if project 2 (e.g., build a shopping mall) is also undertaken. The following equation ensures that project 2 must be undertaken if project 3 is also undertaken:
+<br/><br/>
+<button class="accordion" style="width:25%; height:auto; min-height:40px">a. x<sub>2</sub> + x<sub>3</sub> &le; 0</button>
+<div class="panel">
+  <p><span style="color:red;">Wrong!</span> Observe that only x<sub>2</sub> = x<sub>3</sub> = 0 (i.e., do not undertake both projects) is consistent with this condition.</p>
+</div><br>
+<button class="accordion" style="width:25%; height:auto; min-height:40px">b. x<sub>2</sub> - x<sub>3</sub> &le; 0</button>
+<div class="panel">
+  <p><span style="color:red;">Wrong!</span> Observe that x<sub>2</sub> = 0 and x<sub>3</sub> = 1 (i.e., do not undertake project 2 but undertake project 3) is possible under this condition.</p>
+</div><br>
+<button class="accordion" style="width:25%; height:auto; min-height:40px">c. x<sub>2</sub> + x<sub>3</sub> &ge; 0</button>
+<div class="panel">
+  <p><span style="color:red;">Wrong!</span> Observe that x<sub>2</sub> = 0 and x<sub>3</sub> = 1 (i.e., do not undertake project 2 but undertake project 3) is possible under this condition.</p>
+</div><br>
+<button class="accordion" style="width:25%; height:auto; min-height:40px">d. x<sub>2</sub> - x<sub>3</sub> &ge; 0</button>
+<div class="panel">
+  <p><span style="color:green;">Correct!</span> Observe that if x<sub>3</sub> = 1 then x<sub>2</sub> must equals 1. If x<sub>3</sub> = 0 then x<sub>2</sub> can be either 0 or 1.</p>
+</div>
+</br></br></br>
+<hr style="margin-top:40px; border:none; border-top:1px solid #ccc;">
+<p style="text-align:center; color:#666; font-size:0.9em;">Original e-learning content by <a href="https://www.tanchinhon.com/e-learning/engineering-economy/capital-budgeting" target="_blank">tanchinhon.com</a></p>
+
+<script>
+function funCheck(ans, res, lb, ub) {
+    var val = parseFloat(document.getElementById(ans).value);
+    if (val >= lb && val <= ub) {
+        document.getElementById(res).innerHTML = "<b style='color:green'>Correct!</b>";
+    } else {
+        document.getElementById(res).innerHTML = "<b style='color:red'>Wrong!</b>";
+    }
+}
+function checktrue(ans, res, val) {
+    var a = document.getElementById(ans).value;
+    if (a === val) {
+        document.getElementById(res).innerHTML = "<b style='color:green'>Correct!</b>";
+    } else {
+        document.getElementById(res).innerHTML = "<b style='color:red'>Wrong!</b>";
+    }
+}
+var acc = document.getElementsByClassName("accordion");
+for (var i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") { panel.style.display = "none"; }
+        else { panel.style.display = "block"; }
+    });
+}
+</script>
+
+<style>
+    h2 { text-align: center; }
+    button { height: 40px; padding: 5px 10px; }
+    .panel { padding: 0 18px; background-color: white; display: none; overflow: hidden; }
+    img { max-width: 100%; height: auto; }
+</style>
+
+</body>
+</html>
