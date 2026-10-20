@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Topic 4: Depreciation and Taxes</title>
+</head>
+<body>
+<h1 style="text-align:center; border-bottom:2px solid #333; padding-bottom:10px; margin-bottom:5px;">Cost Analysis and Engineering Economy</h1>
+<h1>Topic 4: Depreciation and Taxes</h1>
+<div style="background:#f0f4f8; border:1px solid #c8d8e8; border-radius:6px; padding:15px 20px; margin-bottom:30px;">
+  <b>Contents</b>
+  <ul>
+    <li><a href="#straight-line">Straight Line Method</a> (Q1&ndash;Q7)</li>
+    <li><a href="#declining-balance">Declining Balance Method</a> (Q8&ndash;Q20)</li>
+    <li><a href="#db-switchover">DB with Switchover to SL</a> (Q21&ndash;Q40)</li>
+    <li><a href="#units-of-production">Units of Production Method</a> (Q41&ndash;Q44)</li>
+    <li><a href="#half-year-convention">Half Year Convention</a> (Q45&ndash;Q57)</li>
+    <li><a href="#income-tax">Income Tax</a> (Q58&ndash;Q61)</li>
+    <li><a href="#taxable-income">Taxable Income and After-Tax Cash Flow</a> (Q62&ndash;Q67)</li>
+  </ul>
+</div>
+
+<h1 id="straight-line">Straight Line Method</h1>
+
+The straight line (SL) method “estimates the value of the asset” by assuming that the asset drops by a fixed amount each year across its life. We shall refer to the estimated value of the asset as its book value. It is noted that, in practice, the true value of the asset (i.e., market value) can differ from its book value.
+<br/><br/>
+Let us consider the SL method using the following simple example: A laser surgical tool costs $200,000. This equipment is estimated to be valued at $10,000 at the end of five years.
+<br/><br/>
+
+Q1. Assuming that the value of the laser surgical tool drops by the same amount annually over the next five years, the tool drops in value by $<input type="number" step="0.01" min="0" max="9999999" name="ansQ1" id="ansQ1"> each year.
+<br/><br/>
+<button onclick="funCheck('ansQ1', 'resQ1', 38000,38000)">Check Q1 Solution</button> &nbsp &nbsp &nbsp <a id="resQ1"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q1 Explanation</button>
+<div class="panel">
+  <p>($200,000 - $10,000) ÷ 5 = $38,000</p>
+</div>
+</br></br></br>
+
+Q2. Based on your solution to Question 1, the annual depreciation (i.e., drop in book value) can be computed as follows:
+<h2>d =
+<div class="frac">
+    <span>B - SV<sub>N</sub></span>
+    <span class="symbol">/</span>
+    <span class="bottom">N</span>
+</div>
+</h2>
+where d is <b>annual depreciation</b>, B is the <b>cost basis</b> (i.e., initial cost of acquiring asset), N is <b>depreciable life</b> (i.e., number of years the asset will drop in estimated value) and SVN is the <b>salvage value</b> (book value at the end of its depreciable life).
+<select id="ansQ2" name="ansQ2" style="height:40px; padding:5px;"><option value="">-- Select --</option><option value="True">True</option><option value="False">False</option></select>
+<br/><br/>
+<button onclick="checktrue('ansQ2', 'resQ2', 'True')">Check Q2 Solution</button> &nbsp &nbsp &nbsp <a id="resQ2"></a>
+&nbsp &nbsp &nbsp
+<button class="accordion">Q2 Explanation</button>
+<div class="panel">
+  <p>See Question 1.</p>
+</div>
+</br></br></br>
+
+Q3. Based on your solution to Question 1, laser surgical tool is estimated to be worth $<input type="number" step="0.01" min="0" max="9999999" name="ansQ3" id="ansQ3"> after one year.
+<br/><br/>
+<button onclick="funCheck('ansQ3', 'resQ3', 162000,162000)">Check Q3 Solution</button> &nbsp &nbsp &nbsp <a id="resQ3"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q3 Explanation</button>
+<div class="panel">
+  <p>$200,000 - $38,000 = $162,000</p>
+</div>
+</br></br></br>
+
+Q4. Based on your solution to Question 1, laser surgical tool is estimated to be worth $<input type="number" step="0.01" min="0" max="9999999" name="ansQ4" id="ansQ4"> after two years.
+<br/><br/>
+<button onclick="funCheck('ansQ4', 'resQ4', 124000,124000)">Check Q4 Solution</button> &nbsp &nbsp &nbsp <a id="resQ4"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q4 Explanation</button>
+<div class="panel">
+  <p>$200,000 – 2 &times $38,000 = $124,000</p>
+</div>
+</br></br></br>
+
+Q5. Based on your solution to Question 1, laser surgical tool is estimated to be worth $<input type="number" step="0.01" min="0" max="9999999" name="ansQ5" id="ansQ5"> after three years.
+<br/><br/>
+<button onclick="funCheck('ansQ5', 'resQ5', 86000,86000)">Check Q5 Solution</button> &nbsp &nbsp &nbsp <a id="resQ5"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q5 Explanation</button>
+<div class="panel">
+  <p>$200,000 – 3 &times $38,000 = $86,000</p>
+</div>
+</br></br></br>
+
+Q6. Based on your solution to Question 1, laser surgical tool is estimated to be worth $<input type="number" step="0.01" min="0" max="9999999" name="ansQ6" id="ansQ6"> after four years.
+<br/><br/>
+<button onclick="funCheck('ansQ6', 'resQ6', 48000,48000)">Check Q6 Solution</button> &nbsp &nbsp &nbsp <a id="resQ6"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q6 Explanation</button>
+<div class="panel">
+  <p>$200,000 – 4 &times $38,000 = $48,000</p>
+</div>
+</br></br></br>
+
+Q7. Based on your solutions to Questions 3 to 6, the book value at year k (BV<sub>k</sub>) can be computed as follows:
+<h2>BV<sub>k</sub> =
+<div class="frac">
+    <span>(N - k)B + kSV<sub style="font-size: 18px;">N</sub></span>
+    <span class="symbol">/</span>
+    <span class="bottom">N</span>
+</div>
+</h2>
+where B is the cost basis (i.e., initial cost of acquiring asset), N is depreciable life (i.e., number of years the asset will drop in estimated value) and SV<sub>N</sub> is the salvage value (book value at the end of its depreciable life).
+<select id="ansQ7" name="ansQ7" style="height:40px; padding:5px;"><option value="">-- Select --</option><option value="True">True</option><option value="False">False</option></select>
+<br/><br/>
+<button onclick="checktrue('ansQ7', 'resQ7', 'True')">Check Q7 Solution</button> &nbsp &nbsp &nbsp <a id="resQ7"></a>
+&nbsp &nbsp &nbsp
+<button class="accordion">Q7 Explanation</button>
+<div class="panel">
+  <p>See Question 3 to 6.</p>
+</div>
+</br></br></br>
+
+<h1 id="declining-balance">Declining Balance Method</h1>
+
+The declining balance (DB) method “estimates the value of the asset” by assuming that the asset drops by the same proportion R each year across N years, where:
+<br/><br/>
+<img src="data:image/jpeg;base64,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Np7Q6TqeqwxRi6EsCb2ht55UWTaofaEVSrKTQB8G/wDBc7/gkP4T/YM/Yw0fxN8K/HXxM0rw9P4y0Ky8Q+E9X8QT6zpWus12vlXe24ZmgukkAPmRnBUsu0BjX7m1+Tf7b3/BO79u3/gpn8CLLSPif4t+Bfg+Hw1q2m6nZeE/CH2423iG4huYjJcXt5cKzxrHF5xigiUhnKl2+UV+slABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFAHn2j/ALLHgHw38d7/AOJml+HYNI8baxB9n1TUdPuJrQawoUKpvIY3WG6dVACPMjugA2kV6DRRQAUUUUAFeG/tyfsH+Hf2+dF8BaN4u1jW7Tw54J8XWPi+fSbIxrb+IZbQsYra73KWa3yxLIpXJ2nOVGPcqKACiiigAps0K3ELRyKro4KsrDIYHqCKdRQBk+BvAmifDDwfp3h7w3pGmaBoOjwLa2OnadapbWtnEvCpHGgCoo9AAK1qKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAP/9k=" style="max-width:400px;">
+<br/><br/>
+Let us consider the DB method using the simple example of a laser surgical tool that costs $200,000.
+<br/><br/>
+
+Q8. Assuming 200% DB and the laser surgical tool is to be depreciated across a period of five years, the asset drops by proportion <input type="number" step="0.01" min="0" max="9999999" name="ansQ8" id="ansQ8"> each year.
+<br/><br/>
+<button onclick="funCheck('ansQ8', 'resQ8', 0.4,0.4)">Check Q8 Solution</button> &nbsp &nbsp &nbsp <a id="resQ8"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q8 Explanation</button>
+<div class="panel">
+  <p>2 ÷ 5 = 0.4</p>
+</div>
+</br></br></br>
+
+Q9. Assuming 200% DB and the laser surgical tool is to be depreciated across a period of five years, the laser surgical tool is estimated to be depreciate by <input type="number" step="0.01" min="0" max="9999999" name="ansQ9" id="ansQ9"> in the first year.
+<br/><br/>
+<button onclick="funCheck('ansQ9', 'resQ9', 80000,80000)">Check Q9 Solution</button> &nbsp &nbsp &nbsp <a id="resQ9"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q9 Explanation</button>
+<div class="panel">
+  <p>$200,000 &times 0.4 = $80,000</p>
+</div>
+</br></br></br>
+
+Q10. Assuming 200% DB and the laser surgical tool is to be depreciated across a period of five years, the laser surgical tool is estimated to be worth <input type="number" step="0.01" min="0" max="9999999" name="ansQ10" id="ansQ10"> after one year.
+<br/><br/>
+<button onclick="funCheck('ansQ10', 'resQ10', 120000,120000)">Check Q10 Solution</button> &nbsp &nbsp &nbsp <a id="resQ10"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q10 Explanation</button>
+<div class="panel">
+  <p>$200,000 - $80,000 = $120,000</p>
+</div>
+</br></br></br>
+
+Q11. Assuming 200% DB and the laser surgical tool is to be depreciated across a period of five years, the laser surgical tool is estimated to be depreciate by <input type="number" step="0.01" min="0" max="9999999" name="ansQ11" id="ansQ11"> in the second year.
+<br/><br/>
+<button onclick="funCheck('ansQ11', 'resQ11', 48000,48000)">Check Q11 Solution</button> &nbsp &nbsp &nbsp <a id="resQ11"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q11 Explanation</button>
+<div class="panel">
+  <p>$120,000 &times 0.4 = $48,000</p>
+</div>
+</br></br></br>
+
+Q12. Assuming 200% DB and the laser surgical tool is to be depreciated across a period of five years, the laser surgical tool is estimated to be worth $<input type="number" step="0.01" min="0" max="9999999" name="ansQ12" id="ansQ12"> after two years.
+<br/><br/>
+<button onclick="funCheck('ansQ12', 'resQ12', 72000,72000)">Check Q12 Solution</button> &nbsp &nbsp &nbsp <a id="resQ12"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q12 Explanation</button>
+<div class="panel">
+  <p>$120,000 - $48,000 = $72,000</p>
+</div>
+</br></br></br>
+
+Q13. Assuming 200% DB and the laser surgical tool is to be depreciated across a period of five years, the laser surgical tool is estimated to be depreciate by $<input type="number" step="0.01" min="0" max="9999999" name="ansQ13" id="ansQ13"> in the third year.
+<br/><br/>
+<button onclick="funCheck('ansQ13', 'resQ13', 28800,28800)">Check Q13 Solution</button> &nbsp &nbsp &nbsp <a id="resQ13"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q13 Explanation</button>
+<div class="panel">
+  <p>$720,000 &times 0.4 = $28,800</p>
+</div>
+</br></br></br>
+
+Q14. Assuming 200% DB and the laser surgical tool is to be depreciated across a period of five years, the laser surgical tool is estimated to be worth $<input type="number" step="0.01" min="0" max="9999999" name="ansQ14" id="ansQ14"> after three years.
+<br/><br/>
+<button onclick="funCheck('ansQ14', 'resQ14', 43200,43200)">Check Q14 Solution</button> &nbsp &nbsp &nbsp <a id="resQ14"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q14 Explanation</button>
+<div class="panel">
+  <p>$72,000 - $28,800 = $43,200</p>
+</div>
+</br></br></br>
+
+Q15. Assuming 200% DB and the laser surgical tool is to be depreciated across a period of five years, the laser surgical tool is estimated to be depreciate by $<input type="number" step="0.01" min="0" max="9999999" name="ansQ15" id="ansQ15"> in the fourth year.
+<br/><br/>
+<button onclick="funCheck('ansQ15', 'resQ15', 17280,17280)">Check Q15 Solution</button> &nbsp &nbsp &nbsp <a id="resQ15"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q15 Explanation</button>
+<div class="panel">
+  <p>$43,200 &times 0.4 = $17,280</p>
+</div>
+</br></br></br>
+
+Q16. Assuming 200% DB and the laser surgical tool is to be depreciated across a period of five years, the laser surgical tool is estimated to be worth $<input type="number" step="0.01" min="0" max="9999999" name="ansQ16" id="ansQ16"> after four years.
+<br/><br/>
+<button onclick="funCheck('ansQ16', 'resQ16', 25920,25920)">Check Q16 Solution</button> &nbsp &nbsp &nbsp <a id="resQ16"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q16 Explanation</button>
+<div class="panel">
+  <p>$43,200 - $17,280 = $25,920</p>
+</div>
+</br></br></br>
+
+Q17. Assuming 200% DB and the laser surgical tool is to be depreciated across a period of five years, the laser surgical tool is estimated to be depreciate by $<input type="number" step="0.01" min="0" max="9999999" name="ansQ17" id="ansQ17"> in the fifth year.
+<br/><br/>
+<button onclick="funCheck('ansQ17', 'resQ17', 10368,10368)">Check Q17 Solution</button> &nbsp &nbsp &nbsp <a id="resQ17"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q17 Explanation</button>
+<div class="panel">
+  <p>$25,920 &times 0.4 = $10,368</p>
+</div>
+</br></br></br>
+
+Q18. Assuming 200% DB and the laser surgical tool is to be depreciated across a period of five years, the laser surgical tool is estimated to be worth $<input type="number" step="0.01" min="0" max="9999999" name="ansQ18" id="ansQ18"> after five years.
+<br/><br/>
+<button onclick="funCheck('ansQ18', 'resQ18', 15552,15552)">Check Q18 Solution</button> &nbsp &nbsp &nbsp <a id="resQ18"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q18 Explanation</button>
+<div class="panel">
+  <p>$25,920 - $10,368 = $15,552</p>
+</div>
+</br></br></br>
+
+Q19. Based on your solutions to Questions 9, 11, 13, 15 and 17, the depreciation amount in year k (dk) can be computed as follows:
+<h2>d<sub>k</sub> = B(1 - R)<sup>k-1</sup>R</h2>
+where B is the cost basis (i.e., initial cost of acquiring asset) and R is the annual proportional drop in book value.
+<select id="ansQ19" name="ansQ19" style="height:40px; padding:5px;"><option value="">-- Select --</option><option value="True">True</option><option value="False">False</option></select>
+<br/><br/>
+<button onclick="checktrue('ansQ19', 'resQ19', 'True')">Check Q19 Solution</button> &nbsp &nbsp &nbsp <a id="resQ19"></a>
+&nbsp &nbsp &nbsp
+<button class="accordion">Q19 Explanation</button>
+<div class="panel">
+  <p>See Questions 9, 11, 13, 15 and 17</p>
+</div>
+</br></br></br>
+
+Q20. Based on your solutions to Questions 10, 12, 14, 16 and 18, the book value at year k (BVk) can be computed as follows:
+<h2>BV<sub>k</sub> = B(1 - R)<sup>k</sup></h2>
+where B is the cost basis (i.e., initial cost of acquiring asset) and R is the annual proportional drop in book value.
+<select id="ansQ20" name="ansQ20" style="height:40px; padding:5px;"><option value="">-- Select --</option><option value="True">True</option><option value="False">False</option></select>
+<br/><br/>
+<button onclick="checktrue('ansQ20', 'resQ20', 'True')">Check Q20 Solution</button> &nbsp &nbsp &nbsp <a id="resQ20"></a>
+&nbsp &nbsp &nbsp
+<button class="accordion">Q20 Explanation</button>
+<div class="panel">
+  <p>See Questions 10, 12, 14, 16 and 18</p>
+</div>
+</br></br></br>
+
+<h1 id="db-switchover">DB with Switchover to SL</h1>
+
+The DB method with switchover to SL determines depreciation based on the SL and DB method, by selecting the higher depreciation amount.
+<br/><br/>
+Let us consider the DB method with switchover to SL method using the following simple example: A laser surgical tool costs $200,000. This equipment is estimated to be valued at $10,000 at the end of five years.
+<br/><br/>
+
+Q21. Recall from Question 2 that the depreciation of this equipment in the first year under the SL method is $<input type="number" step="0.01" min="0" max="9999999" name="ansQ21" id="ansQ21">.
+<br/><br/>
+<button onclick="funCheck('ansQ21', 'resQ21', 38000,38000)">Check Q21 Solution</button> &nbsp &nbsp &nbsp <a id="resQ21"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q21 Explanation</button>
+<div class="panel">
+  <p>($200,000 - $10,000) ÷ 5 = $38,000</p>
+</div>
+</br></br></br>
+
+Q22. Recall from Question 9 that the depreciation of this equipment in the first year under the 200% DB method is $<input type="number" step="0.01" min="0" max="9999999" name="ansQ22" id="ansQ22">.
+<br/><br/>
+<button onclick="funCheck('ansQ22', 'resQ22', 80000,80000)">Check Q22 Solution</button> &nbsp &nbsp &nbsp <a id="resQ22"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q22 Explanation</button>
+<div class="panel">
+  <p>$200,000 &times 0.4 = $80,000</p>
+</div>
+</br></br></br>
+
+Q23. The depreciation amount under the DB with switchover to SL method is equivalent to the larger of the depreciation amount based on the SL and DB method. Based on your solutions to Questions 21 and 22, the laser surgical tool depreciates by $<input type="number" step="0.01" min="0" max="9999999" name="ansQ23" id="ansQ23"> under the 200% DB with switchover to SL method in the first year.
+<br/><br/>
+<button onclick="funCheck('ansQ23', 'resQ23', 80000,80000)">Check Q23 Solution</button> &nbsp &nbsp &nbsp <a id="resQ23"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q23 Explanation</button>
+<div class="panel">
+  <p>max{$38000, $80000} = $80,000</p>
+</div>
+</br></br></br>
+
+Q24. Based on your solution to Question 23, the book value of the laser surgical tool is $<input type="number" step="0.01" min="0" max="9999999" name="ansQ24" id="ansQ24"> after one year.
+<br/><br/>
+<button onclick="funCheck('ansQ24', 'resQ24', 120000,120000)">Check Q24 Solution</button> &nbsp &nbsp &nbsp <a id="resQ24"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q24 Explanation</button>
+<div class="panel">
+  <p>$200,000 - $80,000 = $120,000</p>
+</div>
+</br></br></br>
+
+Q25. Based on your solution to Question 24, the estimated salvage value of $10,000 and assuming that the remaining book value drops by the same amount annually over the next four years, the depreciation of this equipment in the second year under the SL method is $<input type="number" step="0.01" min="0" max="9999999" name="ansQ25" id="ansQ25"> after one year.
+<br/><br/>
+<button onclick="funCheck('ansQ25', 'resQ25', 27500,27500)">Check Q25 Solution</button> &nbsp &nbsp &nbsp <a id="resQ25"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q25 Explanation</button>
+<div class="panel">
+  <p>($120,000 - $10,000) ÷ 4 =$27,500</p>
+</div>
+</br></br></br>
+
+Q26. Based on your solution to Question 24, the depreciation of this equipment in the second year under the 200% DB method is $<input type="number" step="0.01" min="0" max="9999999" name="ansQ26" id="ansQ26">.
+<br/><br/>
+<button onclick="funCheck('ansQ26', 'resQ26', 48000,48000)">Check Q26 Solution</button> &nbsp &nbsp &nbsp <a id="resQ26"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q26 Explanation</button>
+<div class="panel">
+  <p>$120,000 &times 0.4 = $48,000</p>
+</div>
+</br></br></br>
+
+Q27. Based on your solutions to Questions 25 and 26, the laser surgical tool depreciates by $<input type="number" step="0.01" min="0" max="9999999" name="ansQ27" id="ansQ27"> under the 200% DB with switchover to SL method in the second year.
+<br/><br/>
+<button onclick="funCheck('ansQ27', 'resQ27', 48000,48000)">Check Q27 Solution</button> &nbsp &nbsp &nbsp <a id="resQ27"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q27 Explanation</button>
+<div class="panel">
+  <p>max{$27500, $48000} = $48,000</p>
+</div>
+</br></br></br>
+
+Q28. Based on your solution to Question 27, the book value of the laser surgical tool is $<input type="number" step="0.01" min="0" max="9999999" name="ansQ28" id="ansQ28"> after two years.
+<br/><br/>
+<button onclick="funCheck('ansQ28', 'resQ28', 72000,72000)">Check Q28 Solution</button> &nbsp &nbsp &nbsp <a id="resQ28"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q28 Explanation</button>
+<div class="panel">
+  <p>$120,000 - $48,000 = $72,000</p>
+</div>
+</br></br></br>
+
+Q29. Based on your solution to Question 28, the estimated salvage value of $10,000 and assuming that the remaining book value drops by the same amount annually over the next three years, the depreciation of this equipment in the third year under the SL method is $<input type="number" step="0.01" min="0" max="9999999" name="ansQ29" id="ansQ29">.
+<br/><br/>
+<button onclick="funCheck('ansQ29', 'resQ29', 20666,20667)">Check Q29 Solution</button> &nbsp &nbsp &nbsp <a id="resQ29"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q29 Explanation</button>
+<div class="panel">
+  <p>($72,000 - $10,000) ÷ 3 = $20,666.67</p>
+</div>
+</br></br></br>
+
+Q30. Based on your solution to Question 28, the depreciation of this equipment in the third year under the 200% DB method is $<input type="number" step="0.01" min="0" max="9999999" name="ansQ30" id="ansQ30">.
+<br/><br/>
+<button onclick="funCheck('ansQ30', 'resQ30', 28800,28800)">Check Q30 Solution</button> &nbsp &nbsp &nbsp <a id="resQ30"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q30 Explanation</button>
+<div class="panel">
+  <p>$72,000 &times 0.4 = $28,800</p>
+</div>
+</br></br></br>
+
+Q31. Based on your solutions to Questions 29 and 30, the laser surgical tool depreciates by $<input type="number" step="0.01" min="0" max="9999999" name="ansQ31" id="ansQ31"> under the 200% DB with switchover to SL method in the third year.
+<br/><br/>
+<button onclick="funCheck('ansQ31', 'resQ31', 28800,28800)">Check Q31 Solution</button> &nbsp &nbsp &nbsp <a id="resQ31"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q31 Explanation</button>
+<div class="panel">
+  <p>max{$20666.67, $28800} = $28,800</p>
+</div>
+</br></br></br>
+
+Q32. Based on your solution to Question 31, the book value of the laser surgical tool is $<input type="number" step="0.01" min="0" max="9999999" name="ansQ32" id="ansQ32"> after three years.
+<br/><br/>
+<button onclick="funCheck('ansQ32', 'resQ32', 43200,43200)">Check Q32 Solution</button> &nbsp &nbsp &nbsp <a id="resQ32"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q32 Explanation</button>
+<div class="panel">
+  <p>$72,000 - $28,800 = $43,200</p>
+</div>
+</br></br></br>
+
+Q33. Based on your solution to Question 32, the estimated salvage value of $10,000 and assuming that the remaining book value drops by the same amount annually over the next two years, the depreciation of this equipment in the fourth year under the SL method is $<input type="number" step="0.01" min="0" max="9999999" name="ansQ33" id="ansQ33">.
+<br/><br/>
+<button onclick="funCheck('ansQ33', 'resQ33', 16600,16600)">Check Q33 Solution</button> &nbsp &nbsp &nbsp <a id="resQ33"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q33 Explanation</button>
+<div class="panel">
+  <p>($43,200 - $10,000) ÷ 2 = $16,600</p>
+</div>
+</br></br></br>
+
+Q34. Based on your solution to Question 32, the depreciation of this equipment in the fourth year under the 200% DB method is $<input type="number" step="0.01" min="0" max="9999999" name="ansQ34" id="ansQ34">.
+<br/><br/>
+<button onclick="funCheck('ansQ34', 'resQ34', 17280,17280)">Check Q34 Solution</button> &nbsp &nbsp &nbsp <a id="resQ34"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q34 Explanation</button>
+<div class="panel">
+  <p>$43,200 &times 0.4 = $17,280</p>
+</div>
+</br></br></br>
+
+Q35. Based on your solutions to Questions 33 and 34, the laser surgical tool depreciates by $<input type="number" step="0.01" min="0" max="9999999" name="ansQ35" id="ansQ35"> under the 200% DB with switchover to SL method in the fourth year.
+<br/><br/>
+<button onclick="funCheck('ansQ35', 'resQ35', 17280,17280)">Check Q35 Solution</button> &nbsp &nbsp &nbsp <a id="resQ35"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q35 Explanation</button>
+<div class="panel">
+  <p>max{$16600, $17280} = $17,280</p>
+</div>
+</br></br></br>
+
+Q36. Based on your solution to Question 35, the book value of the laser surgical tool is $<input type="number" step="0.01" min="0" max="9999999" name="ansQ36" id="ansQ36"> after four years.
+<br/><br/>
+<button onclick="funCheck('ansQ36', 'resQ36', 25920,25920)">Check Q36 Solution</button> &nbsp &nbsp &nbsp <a id="resQ36"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q36 Explanation</button>
+<div class="panel">
+  <p>$43,200 - $17,280 = $25,920</p>
+</div>
+</br></br></br>
+
+Q37. Based on your solution to Question 36 and the estimated salvage value of $10,000, the depreciation of this equipment in the fifth year under the SL method is $<input type="number" step="0.01" min="0" max="9999999" name="ansQ37" id="ansQ37">.
+<br/><br/>
+<button onclick="funCheck('ansQ37', 'resQ37', 15920,15920)">Check Q37 Solution</button> &nbsp &nbsp &nbsp <a id="resQ37"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q37 Explanation</button>
+<div class="panel">
+  <p>$25,920 - $10,000 = $15,920</p>
+</div>
+</br></br></br>
+
+Q38. Based on your solution to Question 36, the depreciation of this equipment in the fifth year under the 200% DB method is $<input type="number" step="0.01" min="0" max="9999999" name="ansQ38" id="ansQ38">.
+<br/><br/>
+<button onclick="funCheck('ansQ38', 'resQ38', 10368,10368)">Check Q38 Solution</button> &nbsp &nbsp &nbsp <a id="resQ38"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q38 Explanation</button>
+<div class="panel">
+  <p>$25,920 &times 0.4 = $10,368</p>
+</div>
+</br></br></br>
+
+Q39. Based on your solutions to Questions 37 and 38, the laser surgical tool depreciates by $<input type="number" step="0.01" min="0" max="9999999" name="ansQ39" id="ansQ39"> under the 200% DB with switchover to SL method in the fifth year.
+<br/><br/>
+<button onclick="funCheck('ansQ39', 'resQ39', 15920,15920)">Check Q39 Solution</button> &nbsp &nbsp &nbsp <a id="resQ39"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q39 Explanation</button>
+<div class="panel">
+  <p>max{$15920, $10368} = $15,920</p>
+</div>
+</br></br></br>
+
+Q40. Based on your solution to Question 39, the book value of the laser surgical tool is $<input type="number" step="0.01" min="0" max="9999999" name="ansQ40" id="ansQ40"> after five years.
+<br/><br/>
+<button onclick="funCheck('ansQ40', 'resQ40', 10000,10000)">Check Q40 Solution</button> &nbsp &nbsp &nbsp <a id="resQ40"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q40 Explanation</button>
+<div class="panel">
+  <p>$25,920 - $15,920 = $10,000</p>
+</div>
+</br></br></br>
+
+<h1 id="units-of-production">Units of Production Method</h1>
+
+The units-of-production method “estimates the value of the asset” by assuming that asset value drops by a fixed amount for each production unit of the asset. This approach is suitable for assets whose value is more dependent on usage (e.g., wear and tear) rather than age.
+<br/><br/>
+Let us consider the units-of-production using the following simple example: A laser surgical tool costs $200,000. It is estimated that this tool will have to be replaced after 40,000 hours of use with a salvage value of $10,000.
+<br/><br/>
+
+Q41. Assuming that asset value drops by a fixed amount after each hour of usage, the depreciation per hour of usage is $<input type="number" step="0.01" min="0" max="9999999" name="ansQ41" id="ansQ41">.
+<br/><br/>
+<button onclick="funCheck('ansQ41', 'resQ41', 4.7, 4.8)">Check Q41 Solution</button> &nbsp &nbsp &nbsp <a id="resQ41"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q41 Explanation</button>
+<div class="panel">
+  <p>($200,000 - $10,000) ÷ 40,000 = $4.75</p>
+</div>
+</br></br></br>
+
+Q42. Based on your solution to Question 41, the book value of the laser surgical tool after 10,000 hours of usage is $<input type="number" step="0.01" min="0" max="9999999" name="ansQ42" id="ansQ42">.
+<br/><br/>
+<button onclick="funCheck('ansQ42', 'resQ42', 152500,152500)">Check Q42 Solution</button> &nbsp &nbsp &nbsp <a id="resQ42"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q42 Explanation</button>
+<div class="panel">
+  <p>$200,000 – 10,000 &times $4.75 = $152,500</p>
+</div>
+</br></br></br>
+
+Q43. Based on your solution to Question 41, the depreciation (i.e., drop in book value) can be computed as follows:
+<h2>d =
+<div class="frac">
+    <span>B - SV<sub>M</sub></span>
+    <span class="symbol">/</span>
+    <span class="bottom">M</span>
+</div>
+</h2>
+where d is depreciation per production unit, B is the cost basis (i.e., initial cost of acquiring asset), M is the estimated lifetime production units and SVM is the salvage value (book value after producing M units).
+<select id="ansQ43" name="ansQ43" style="height:40px; padding:5px;"><option value="">-- Select --</option><option value="True">True</option><option value="False">False</option></select>
+<br/><br/>
+<button onclick="checktrue('ansQ43', 'resQ43', 'True')">Check Q43 Solution</button> &nbsp &nbsp &nbsp <a id="resQ43"></a>
+&nbsp &nbsp &nbsp
+<button class="accordion">Q43 Explanation</button>
+<div class="panel">
+  <p>See Question 41.</p>
+</div>
+</br></br></br>
+
+Q44. Based on your solution to Question 42, the book value after k units of production (BV<sub>k</sub>) can be computed as follows:
+<h2>BV<sub>k</sub> =
+<div class="frac">
+    <span>(M - k)B + kSV<sub>M</sub></span>
+    <span class="symbol">/</span>
+    <span class="bottom">M</span>
+</div>
+</h2>
+where B is the cost basis (i.e., initial cost of acquiring asset), M is the estimated lifetime production units and SVM is the salvage value (book value after producing M units).
+<select id="ansQ44" name="ansQ44" style="height:40px; padding:5px;"><option value="">-- Select --</option><option value="True">True</option><option value="False">False</option></select>
+<br/><br/>
+<button onclick="checktrue('ansQ44', 'resQ44', 'True')">Check Q44 Solution</button> &nbsp &nbsp &nbsp <a id="resQ44"></a>
+&nbsp &nbsp &nbsp
+<button class="accordion">Q44 Explanation</button>
+<div class="panel">
+  <p>See Question 42.</p>
+</div>
+</br></br></br>
+
+<h1 id="half-year-convention">Half Year Convention</h1>
+
+Depreciation is used in the computation of taxes. Taxes are typically charged at a fixed time of the year, which may not coincide with the purchase of assets. Hence, assets may not be exactly N years old at the point of tax computation. To simplify the task of computing depreciation for tax purposes, some governments assume that the asset is half year old in the first year, regardless of the actual purchase date. Hence, the depreciation amount is halved in the first year. Furthermore, the depreciation amount in the final year (i.e., year N+1 or year asset is sold, whichever comes first) is also halved.
+<br/><br/>
+Consider a $100,000 equipment with a three year depreciable life and zero salvage value.
+<br/><br/>
+
+Q45. The depreciation in the first year using the 200% DB method with switchover to SL under half year convention is $<input type="number" step="0.01" min="0" max="9999999" name="ansQ45" id="ansQ45">.
+<br/><br/>
+<button onclick="funCheck('ansQ45', 'resQ45', 33333,33334)">Check Q45 Solution</button> &nbsp &nbsp &nbsp <a id="resQ45"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q45 Explanation</button>
+<div class="panel">
+  <p>SL = 0.5 &times $100,000 ÷ 3 = $16,666.67; DB = 0.5 &times $100,000 &times 2 ÷ 3 = $33,333.33; d<sub>1</sub> = max{$16,666.67, $33,333.33} = $33,333.33</p>
+</div>
+</br></br></br>
+
+Q46. Based on your solution to Question 45, the book value of the equipment after the first year is $<input type="number" step="0.01" min="0" max="9999999" name="ansQ46" id="ansQ46">.
+<br/><br/>
+<button onclick="funCheck('ansQ46', 'resQ46', 66666,66667)">Check Q46 Solution</button> &nbsp &nbsp &nbsp <a id="resQ46"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q46 Explanation</button>
+<div class="panel">
+  <p>$100,000 - $33,333.33 = $66,666.67</p>
+</div>
+</br></br></br>
+
+Q47. After the first year, there are <input type="number" step="0.01" min="0" max="9999999" name="ansQ47" id="ansQ47"> depreciable years remaining.
+<br/><br/>
+<button onclick="funCheck('ansQ47', 'resQ47', 2.5,2.5)">Check Q47 Solution</button> &nbsp &nbsp &nbsp <a id="resQ47"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q47 Explanation</button>
+<div class="panel">
+  <p>3 – 0.5 = 2.5. Only half a year of depreciation was considered in the first year</p>
+</div>
+</br></br></br>
+
+Q48. Based on your solutions to Questions 46 and 47, the depreciation in the second year using the 200% DB method with switchover to SL under half year convention is $<input type="number" step="0.01" min="0" max="9999999" name="ansQ48" id="ansQ48">.
+<br/><br/>
+<button onclick="funCheck('ansQ48', 'resQ48', 44444,44445)">Check Q48 Solution</button> &nbsp &nbsp &nbsp <a id="resQ48"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q48 Explanation</button>
+<div class="panel">
+  <p>SL: $66,666.67 ÷ 2.5 = $26,666.67; DB = $66,666.67 &times 2 ÷ 3 = $44,444.45; d<sub>2</sub> = max{$26,666.67, $44,444.45} = $44,444.45. Note that full year depreciation is considered in the second year since the equipment has been owned for one full year since the last tax bill</p>
+</div>
+</br></br></br>
+
+Q49. Based on your solution to Question 48, the book value of the equipment after the second year is $<input type="number" step="0.01" min="0" max="9999999" name="ansQ49" id="ansQ49">.
+<br/><br/>
+<button onclick="funCheck('ansQ49', 'resQ49', 22222,22223)">Check Q49 Solution</button> &nbsp &nbsp &nbsp <a id="resQ49"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q49 Explanation</button>
+<div class="panel">
+  <p>$66,666.67 - $44,444.45 = $22,222.22</p>
+</div>
+</br></br></br>
+
+Q50. After the second year, there are <input type="number" step="0.01" min="0" max="9999999" name="ansQ50" id="ansQ50"> depreciable years remaining.
+<br/><br/>
+<button onclick="funCheck('ansQ50', 'resQ50', 1.5,1.5)">Check Q50 Solution</button> &nbsp &nbsp &nbsp <a id="resQ50"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q50 Explanation</button>
+<div class="panel">
+  <p>2.5 – 1 = 1.5. A full year of depreciation was considered in the second year</p>
+</div>
+</br></br></br>
+
+Q51. Based on your solutions to Questions 49 and 50, the depreciation in the third year using the 200% DB method with switchover to SL under half year convention is $<input type="number" step="0.01" min="0" max="9999999" name="ansQ51" id="ansQ51">.
+<br/><br/>
+<button onclick="funCheck('ansQ51', 'resQ51', 14814,14815)">Check Q51 Solution</button> &nbsp &nbsp &nbsp <a id="resQ51"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q51 Explanation</button>
+<div class="panel">
+  <p>SL: $22,222.22 ÷ 1.5 = $14,814.81; DB = $22,222.22 &times 2 ÷ 3 = $14,814.81; d<sub>3</sub> = max{$14,814.81, $14,814.81} = $14,814.81.</p>
+</div>
+</br></br></br>
+
+Q52. Based on your solution to Question 51, the book value of the equipment after the third year is $<input type="number" step="0.01" min="0" max="9999999" name="ansQ52" id="ansQ52">.
+<br/><br/>
+<button onclick="funCheck('ansQ52', 'resQ52', 7407,7408)">Check Q52 Solution</button> &nbsp &nbsp &nbsp <a id="resQ52"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q52 Explanation</button>
+<div class="panel">
+  <p>$22,222.22 - $14,814.81 = $7,407.41</p>
+</div>
+</br></br></br>
+
+Q53. After the third year, there are <input type="number" step="0.01" min="0" max="9999999" name="ansQ53" id="ansQ53"> depreciable years remaining.
+<br/><br/>
+<button onclick="funCheck('ansQ53', 'resQ53', 0.5,0.5)">Check Q53 Solution</button> &nbsp &nbsp &nbsp <a id="resQ53"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q53 Explanation</button>
+<div class="panel">
+  <p>1.5 – 1 = 0.5. A full year of depreciation was considered in the third year</p>
+</div>
+</br></br></br>
+
+Q54. Based on your solutions to Questions 52 and 53, the depreciation in the fourth year using the 200% DB method with switchover to SL under half year convention is $<input type="number" step="0.01" min="0" max="9999999" name="ansQ54" id="ansQ54">.
+<br/><br/>
+<button onclick="funCheck('ansQ54', 'resQ54', 7407,7408)">Check Q54 Solution</button> &nbsp &nbsp &nbsp <a id="resQ54"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q54 Explanation</button>
+<div class="panel">
+  <p>SL: 0.5 &times $7,407.41 ÷ 0.5 = $7,407.41; DB = 0.5 &times $7,407.41 &times 2 ÷ 3 = $2469.14; d<sub>3</sub> = max{$7,407.41, $2469.14} = $7,407.41.</p>
+</div>
+</br></br></br>
+
+Q55. Based on your solution to Question 54, the book value of the equipment after the fourth year is $<input type="number" step="0.01" min="0" max="9999999" name="ansQ55" id="ansQ55">.
+<br/><br/>
+<button onclick="funCheck('ansQ55', 'resQ55', 0,0)">Check Q55 Solution</button> &nbsp &nbsp &nbsp <a id="resQ55"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q55 Explanation</button>
+<div class="panel">
+  <p>$ 7,407.41 - $7,407.41 = $0</p>
+</div>
+</br></br></br>
+
+Q56. After the fourth year, there are <input type="number" step="0.01" min="0" max="9999999" name="ansQ56" id="ansQ56"> depreciable years remaining.
+<br/><br/>
+<button onclick="funCheck('ansQ56', 'resQ56', 0,0)">Check Q56 Solution</button> &nbsp &nbsp &nbsp <a id="resQ56"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q56 Explanation</button>
+<div class="panel">
+  <p>0.5 – 0.5 = 0. A half year of depreciation was considered in the fourth year since there only remains 0.5 depreciable years.</p>
+</div>
+</br></br></br>
+
+Q57. In the event, the asset is disposed before it is fully depreciated, only half a year of depreciation will be considered in the year of disposal (regardless of the actual disposal date). Based on your solutions to Questions 49 and 51, if the equipment is sold in the third year, the depreciation that year is $<input type="number" step="0.01" min="0" max="9999999" name="ansQ57a" id="ansQ57a"> with a corresponding book value of $<input type="number" step="0.01" min="0" max="9999999" name="ansQ57b" id="ansQ57b">.
+<br/><br/>
+<button onclick="funCheck('ansQ57a', 'resQ57a', 7407, 7408)">Check Q57a Solution</button> &nbsp &nbsp &nbsp <a id="resQ57a"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q57a Explanation</button>
+<div class="panel">
+  <p>$14,814.81 ÷ 2 = $7,407.41</p>
+</div>
+<br/><br/>
+<button onclick="funCheck('ansQ57b', 'resQ57b', 14814,14815)">Check Q57b Solution</button> &nbsp &nbsp &nbsp <a id="resQ57b"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q57b Explanation</button>
+<div class="panel">
+  <p> $22,222.22 - $7,407.41 = $14,814.81</p>
+</div>
+</br></br></br>
+
+<h1 id="income-tax">Income Tax</h1>
+
+Income tax is generally computed as a percentage of <b>taxable income</b>.
+<br/><br/>
+
+Q58. In Singapore, corporations pay a 17% <b>flat tax rate</b>. A Singapore company with a $1.25M taxable income will have to pay $<input type="number" step="0.01" min="0" max="9999999" name="ansQ58" id="ansQ58"> in tax.
+<br/><br/>
+<button onclick="funCheck('ansQ58', 'resQ58', 212500,212500)">Check Q58 Solution</button> &nbsp &nbsp &nbsp <a id="resQ58"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q58 Explanation</button>
+<div class="panel">
+  <p>0.17 &times $1,250,000 = $212,500</p>
+</div>
+</br></br></br>
+
+Q59. In Singapore, individuals pay a <b>progressive tax rate</b> as follows:
+</br>
+<img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAkACQAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCACSBAYDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9/KKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAr8+/+Ctvwc8I/G/9tr4D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" style="width: 540px">
+</br>
+An individual with $60,000 taxable income will have to pay $<input type="number" step="0.01" min="0" max="9999999" name="ansQ59" id="ansQ59"> in income tax.
+<br/><br/>
+<button onclick="funCheck('ansQ59', 'resQ59', 1950,1950)">Check Q59 Solution</button> &nbsp &nbsp &nbsp <a id="resQ59"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q59 Explanation</button>
+<div class="panel">
+  <p>0 &times $20K + 0.02 &times $10K + 0.035 &times $10K + 0.07 &times $20K = $1,950</p>
+</div>
+</br></br></br>
+
+Q60. Based on your solution to Question 59, the <b>effective tax rate</b> for an individual with $60,000 taxable income in Singapore is <input type="number" step="0.01" min="0" max="9999999" name="ansQ60" id="ansQ60">%.
+<br/><br/>
+<button onclick="funCheck('ansQ60', 'resQ60', 3, 3.3)">Check Q60 Solution</button> &nbsp &nbsp &nbsp <a id="resQ60"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q60 Explanation</button>
+<div class="panel">
+  <p>$1,950 ÷ $60,000 &times 100% = 3.25%</p>
+</div>
+</br></br></br>
+
+Q61. Businesses in the United States pay both federal and state tax. Suppose taxable income is $1,000,000.
+</br></br></br>
+
+Q61a. Assuming a flat federal tax rate of 35%, the tax paid to the federal government is $<input type="number" step="0.01" min="0" max="9999999" name="ansQ61a" id="ansQ61a">.
+<br/><br/>
+<button onclick="funCheck('ansQ61a', 'resQ61a', 350000,350000)">Check Q61a Solution</button> &nbsp &nbsp &nbsp <a id="resQ61a"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q61a Explanation</button>
+<div class="panel">
+  <p>0.35 &times $1,000,000 = $350,000</p>
+</div>
+</br></br></br>
+
+Q61b. The remaining profit after tax payment to the federal government is $<input type="number" step="0.01" min="0" max="9999999" name="ansQ61b" id="ansQ61b">.
+<br/><br/>
+<button onclick="funCheck('ansQ61b', 'resQ61b', 650000,650000)">Check Q61b Solution</button> &nbsp &nbsp &nbsp <a id="resQ61b"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q61b Explanation</button>
+<div class="panel">
+  <p>$1,000,000 - $350,000 = $650,000</p>
+</div>
+</br></br></br>
+
+Q61c. Assuming a flat state tax rate of 8%, the tax paid to the state government is $<input type="number" step="0.01" min="0" max="9999999" name="ansQ61c" id="ansQ61c">.
+<br/><br/>
+<button onclick="funCheck('ansQ61c', 'resQ61c',52000,52000)">Check Q61c Solution</button> &nbsp &nbsp &nbsp <a id="resQ61c"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q61c Explanation</button>
+<div class="panel">
+  <p>0.08 &times $650,000 = $52,000</p>
+</div>
+</br></br></br>
+
+Q61d. Total tax paid is $<input type="number" step="0.01" min="0" max="9999999" name="ansQ61d" id="ansQ61d">.
+<br/><br/>
+<button onclick="funCheck('ansQ61d', 'resQ61d',402000,402000)">Check Q61d Solution</button> &nbsp &nbsp &nbsp <a id="resQ61d"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q61d Explanation</button>
+<div class="panel">
+  <p>$350,000 + $52,000 = $402,000</p>
+</div>
+</br></br></br>
+
+Q61e. Effective tax rate is <input type="number" step="0.01" min="0" max="9999999" name="ansQ61e" id="ansQ61e">%.
+<br/><br/>
+<button onclick="funCheck('ansQ61e', 'resQ61e',40,40.2)">Check Q61e Solution</button> &nbsp &nbsp &nbsp <a id="resQ61e"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q61e Explanation</button>
+<div class="panel">
+  <p>$402,000 ÷ $1,000,000 &times 100% = 40.2%</p>
+</div>
+</br></br></br>
+
+<h1 id="taxable-income">Taxable Income and After-Tax Cash Flow</h1>
+
+Suppose that a company receives $10,000,000 in sales receipt. In addition, it paid out $2,000,000 in operating expenses (e.g., labour, rental). In addition, the company made a capital investment by purchasing a van for $120,000 at the start of the year. The van is to be depreciated over 3 years under the SL method with zero salvage value.
+<br/><br/>
+
+Q62. The depreciation of the van in the first year $<input type="number" step="0.01" min="0" max="9999999" name="ansQ62" id="ansQ62">.
+<br/><br/>
+<button onclick="funCheck('ansQ62', 'resQ62',40000,40000)">Check Q62 Solution</button> &nbsp &nbsp &nbsp <a id="resQ62"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q62 Explanation</button>
+<div class="panel">
+  <p>$120,000 ÷ 3 = $40,000</p>
+</div>
+</br></br></br>
+
+Q63. The <b>taxable income</b> of this company is $<input type="number" step="0.01" min="0" max="9999999" name="ansQ63" id="ansQ63">.
+<br/><br/>
+<button onclick="funCheck('ansQ63', 'resQ63',7960000,7960000)">Check Q63 Solution</button> &nbsp &nbsp &nbsp <a id="resQ63"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q63 Explanation</button>
+<div class="panel">
+  <p>$10,000,000 - $2,000,000 - $40,000 = $7,960,000. Although the company spent $120,000 to purchase the van, it is estimated that the van has only drop in value by $40,000. Hence only this $40,000 can be used to reduce taxable income.</p>
+</div>
+</br></br></br>
+
+Q64. Suppose the van was sold for $100,000 at the end of the year. The taxable income of this company is $<input type="number" step="0.01" min="0" max="9999999" name="ansQ64a" id="ansQ64a">. Assuming a flat tax rate of 17%, the tax payable is $<input type="number" step="0.01" min="0" max="9999999" name="ansQ64b" id="ansQ64b">.
+<br/><br/>
+<button onclick="funCheck('ansQ64a', 'resQ64a',7980000,7980000)">Check Q64a Solution</button> &nbsp &nbsp &nbsp <a id="resQ64a"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q64a Explanation</button>
+<div class="panel">
+  <p>$10,000,000 - $2,000,000 – ($120,000 - $100,000) = $7,980,000. Since the company spent $20,000 on the van, this amount can also be used to reduce taxable income.</p>
+</div>
+<br/><br/>
+<button onclick="funCheck('ansQ64b', 'resQ64b',1356600,1356600)">Check Q64b Solution</button> &nbsp &nbsp &nbsp <a id="resQ64b"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q64b Explanation</button>
+<div class="panel">
+  <p>Tax payable = 0.17 &times $7,980,000 = $1,356,600</p>
+</div>
+</br></br></br>
+
+Q65. Based on your solutions to Questions 63 and 64, taxable income can be computed as follows:
+</br>
+<div style="text-align: center;">
+<img src="data:image/jpeg;base64,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" style="width: 650px;">
+</div>
+</br>
+<select id="ansQ65" name="ansQ65" style="height:40px; padding:5px;"><option value="">-- Select --</option><option value="True">True</option><option value="False">False</option></select>
+<br/><br/>
+<button onclick="checktrue('ansQ65', 'resQ65', 'True')">Check Q65 Solution</button> &nbsp &nbsp &nbsp <a id="resQ65"></a>
+</br></br></br>
+
+Q66. Suppose the $10,000,000 in sales receipt was received at the end of the year. Similarly, the $2,000,000 in operating expenses were incurred at the end of the year. Furthermore, the van was sold for $100,000 at the end of the year. Assuming a flat tax rate of 17%, which of the following cash flow is correct after tax considerations:
+<select id="ansQ66" name="ansQ66" style="height:40px; padding:5px;">
+  <option value="">-- Select --</option>
+  <option value="a">a. Y<sub>0</sub> = -$120,000 and Y<sub>1</sub> = $6,643,400</option>
+  <option value="b">b. Y<sub>0</sub> = -$120,000 and Y<sub>1</sub> = $6,743,400</option>
+  <option value="c">c. Y<sub>0</sub> = -$120,000 and Y<sub>1</sub> = $8,000,000</option>
+  <option value="d">d. Y<sub>0</sub> = -$120,000 and Y<sub>1</sub> = $8,100,000</option>
+</select>
+<br/><br/>
+<button onclick="checktrue('ansQ66', 'resQ66', 'b')">Check Q66 Solution</button> &nbsp &nbsp &nbsp <a id="resQ66"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q66 Explanation</button>
+<div class="panel">
+  <p>a. is wrong, van sales missing</p>
+  <p>b. correct, $10,000,000 + $100,000 - $2,000,000 - $1,356,600 = $6,743,400</p>
+  <p>c. wrong, tax payment and van sales missing</p>
+  <p>d. wrong, tax payment missing</p>
+</div>
+</br></br></br>
+
+Q67. Based on your solution to Question 66, <b>after-tax cash flow</b> can be computed as follows:
+<h2>after-tax cash flow (ATCF) = before-tax cash flow (BTCF) - tax</h2>
+<select id="ansQ67" name="ansQ67" style="height:40px; padding:5px;"><option value="">-- Select --</option><option value="True">True</option><option value="False">False</option></select>
+<br/><br/>
+<button onclick="checktrue('ansQ67', 'resQ67', 'True')">Check Q67 Solution</button> &nbsp &nbsp &nbsp <a id="resQ67"></a>
+</br></br></br>
+
+<script>
+function funCheck(ans, res, lb, ub) {
+    var val = parseFloat(document.getElementById(ans).value);
+    if (val >= lb && val <= ub) {
+        document.getElementById(res).innerHTML = "<b style='color:green'>Correct!</b>";
+    } else {
+        document.getElementById(res).innerHTML = "<b style='color:red'>Wrong!</b>";
+    }
+}
+function checktrue(ans, res, val) {
+    var a = document.getElementById(ans).value;
+    if (a === val) {
+        document.getElementById(res).innerHTML = "<b style='color:green'>Correct!</b>";
+    } else {
+        document.getElementById(res).innerHTML = "<b style='color:red'>Wrong!</b>";
+    }
+}
+var acc = document.getElementsByClassName("accordion");
+for (var i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") { panel.style.display = "none"; }
+        else { panel.style.display = "block"; }
+    });
+}
+</script>
+
+<style>
+    h2 { text-align: center; }
+    button { height: 40px; padding: 5px 10px; }
+    .frac { display: inline-block; position: relative; vertical-align: middle; letter-spacing: 0.001em; text-align: center; }
+    .frac > span { display: block; padding: 0.1em; }
+    .frac span.bottom { border-top: thin solid black; }
+    .frac span.symbol { display: none; }
+    .panel { padding: 0 18px; background-color: white; display: none; overflow: hidden; }
+    img { max-width: 100%; height: auto; }
+</style>
+
+</body>
+</html>
