@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Topic 2: Interest Rates and Project Returns</title>
+</head>
+<body>
+
+<h1 style="text-align:center; border-bottom:2px solid #333; padding-bottom:10px; margin-bottom:5px;">Cost Analysis and Engineering Economy</h1>
+
+<h1>Topic 2: Interest Rates and Project Returns</h1>
+
+<div style="background:#f0f4f8; border:1px solid #c8d8e8; border-radius:6px; padding:15px 20px; margin-bottom:30px;">
+  <b>Contents</b>
+  <ul>
+    <li><a href="#compounding">Interest Compounding</a> (Q1&ndash;Q6)</li>
+    <li><a href="#irr1">Internal Rate of Return (Part 1)</a> (Q7&ndash;Q9)</li>
+    <li><a href="#irr2">Internal Rate of Return (Part 2)</a> (Q10&ndash;Q14)</li>
+    <li><a href="#irr3">Internal Rate of Return (Part 3)</a> (Q15&ndash;Q17)</li>
+    <li><a href="#err">External Rate of Return</a> (Q18&ndash;Q20)</li>
+  </ul>
+</div>
+
+<!-- ===== INTEREST COMPOUNDING ===== -->
+<h1 id="compounding">Interest Compounding</h1>
+Suppose you have $1,000,000 in the bank and the bank pays 3% interest each quarter (i.e., every three months). When the bank pays 3% interest each quarter, we say that the <b>nominal annual interest rate</b> is 4 &times; 3% = 12% per year.
+<br/><br/>
+
+Q1. Your account balance after one year is $<input type="number" step="0.01" min="0" max="9999999" name="ansQ1" id="ansQ1">.
+<br/><br/>
+<button onclick="funCheck('ansQ1', 'resQ1', 1125508, 1125509)">Check Q1 Solution</button> &nbsp &nbsp &nbsp <a id="resQ1"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q1 Explanation</button>
+<div class="panel">
+  <p>$1,000,000 &times 1.03<sup>4</sup> = $1,125,508.81</p>
+</div>
+<br/><br/><br/>
+
+Q2. Based on your solution to Question 1, the <b>effective annual interest rate</b> you received is <input type="number" step="0.01" min="0" max="1000" name="ansQ2" id="ansQ2">% per year.
+<br/><br/>
+<button onclick="funCheck('ansQ2', 'resQ2', 12.5, 12.6)">Check Q2 Solution</button> &nbsp &nbsp &nbsp <a id="resQ2"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q2 Explanation</button>
+<div class="panel">
+  <p>($1,125,508.81 - $1,000,000) &divide $1,000,000 = 0.1255 = 12.55%</p>
+</div>
+<br/><br/><br/>
+
+Q3. Based on your solution to Question 2, observe that the effective annual interest rate i can be computed as follows:
+<h2>i &nbsp;= &nbsp;
+<span>(</span>1 +
+<div class="frac">
+    <span>r</span>
+    <span class="symbol">/</span>
+    <span class="bottom">M</span>
+</div>
+<span>)<sup>M</sup></span>
+&nbsp;&minus;&nbsp;1
+</h2>
+where r is the nominal annual interest rate and M is the number of compounding periods per year.
+<br/><br/>
+For a bank that pays a nominal annual interest of 12%:
+<br/><br/>
+a. The effective annual interest rate is <input type="number" step="0.01" min="0" max="1000" name="ansQ3a" id="ansQ3a">% when interest is compounded semi-annually (twice a year).
+<br/><br/>
+<button onclick="funCheck('ansQ3a', 'resQ3a', 12.3, 12.4)">Check Q3a Solution</button> &nbsp &nbsp &nbsp <a id="resQ3a"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q3a Explanation</button>
+<div class="panel">
+  <p>1.06<sup>2</sup> &minus; 1 = 12.36%</p>
+</div>
+<br/><br/><br/>
+
+b. The effective annual interest rate is <input type="number" step="0.01" min="0" max="1000" name="ansQ3b" id="ansQ3b">% when interest is compounded monthly.
+<br/><br/>
+<button onclick="funCheck('ansQ3b', 'resQ3b', 12.6, 12.7)">Check Q3b Solution</button> &nbsp &nbsp &nbsp <a id="resQ3b"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q3b Explanation</button>
+<div class="panel">
+  <p>1.01<sup>12</sup> &minus; 1 = 12.68%</p>
+</div>
+<br/><br/><br/>
+
+c. The effective annual interest rate is <input type="number" step="0.01" min="0" max="1000" name="ansQ3c" id="ansQ3c">% when interest is compounded daily (assume 365 days in a year).
+<br/><br/>
+<button onclick="funCheck('ansQ3c', 'resQ3c', 12.7, 12.8)">Check Q3c Solution</button> &nbsp &nbsp &nbsp <a id="resQ3c"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q3c Explanation</button>
+<div class="panel">
+  <p>(1 + 0.12/365)<sup>365</sup> &minus; 1 = 12.75%</p>
+</div>
+<br/><br/><br/>
+
+Q4. Based on your solution to Questions 2 and 3, the effective annual interest rate is higher than the nominal annual interest rate if interest is compounded more than once a year. Assume positive nominal annual interest rate.
+<br/><br/>
+True or False: <select id="ansQ4" name="ansQ4" style="height:40px; padding:5px;">
+  <option value="">-- Select --</option>
+  <option value="True">True</option>
+  <option value="False">False</option>
+</select>
+<br/><br/>
+<button onclick="checktrue('ansQ4', 'resQ4', 'True')">Check Q4 Solution</button> &nbsp &nbsp &nbsp <a id="resQ4"></a>
+<br/><br/><br/>
+
+Q5. More generally, under positive nominal annual interest rates, the effective annual interest rate increases as the number of compounding periods increases.
+<br/><br/>
+True or False: <select id="ansQ5" name="ansQ5" style="height:40px; padding:5px;">
+  <option value="">-- Select --</option>
+  <option value="True">True</option>
+  <option value="False">False</option>
+</select>
+<br/><br/>
+<button onclick="checktrue('ansQ5', 'resQ5', 'True')">Check Q5 Solution</button> &nbsp &nbsp &nbsp <a id="resQ5"></a>
+<br/><br/><br/>
+
+Q6. We say that interest is compounded continuously when the compounding period is infinitely small (i.e., number of compounding periods is infinitely large). The effective annual interest per period under <b>continuous compounding</b> is given by the following formula:
+<div style="text-align:center; font-size:1.1em; margin:10px 0;">i = e<sup>r</sup> &minus; 1</div>
+where e = 2.718&hellip; is the Euler's constant. Using the formula above, the effective annual interest rate based on a nominal annual interest rate of 12% that is continuously compounded is <input type="number" step="0.01" min="0" max="1000" name="ansQ6" id="ansQ6">%.
+<br/><br/>
+<button onclick="funCheck('ansQ6', 'resQ6', 12.7, 12.8)">Check Q6 Solution</button> &nbsp &nbsp &nbsp <a id="resQ6"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q6 Explanation</button>
+<div class="panel">
+  <p>e<sup>0.12</sup> &minus; 1 = 12.75%</p>
+</div>
+<br/><br/><br/>
+
+<!-- ===== IRR PART 1 ===== -->
+<h1 id="irr1">Internal Rate of Return (Part 1)</h1>
+Suppose you invest $100,000 into a mutual fund and exit the fund after one year with $110,000.
+<br/><br/>
+
+Q7. We say that our investments has yielded a <input type="number" step="0.01" min="0" max="99999" name="ansQ7" id="ansQ7">% return.
+<br/><br/>
+<button onclick="funCheck('ansQ7', 'resQ7', 10, 10)">Check Q7 Solution</button> &nbsp &nbsp &nbsp <a id="resQ7"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q7 Explanation</button>
+<div class="panel">
+  <p>($110,000 - $100,000) &divide $100,000 = 0.1 = 10%</p>
+</div>
+<br/><br/><br/>
+
+Q8.
+<br/>
+<img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAkACQAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAFYAy8DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9/KKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoooo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FFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFAH5Aft7/APK3T+x7/wBk/vf/AEV4hr9f6/HP9vC4dv8Ag8L/AGSIix8tPhvO6r2BKeJgT/46Pyr9jKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooA/HD9u7/lcT/ZK/7JrL/wCg+J6/Y+vxw/bu/wCVxP8AZK/7JrL/AOg+J6/Y+gAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooA+JPjF/wcZ/sZ/AP4seJPA/iv4yx6b4n8I6ncaPq9mnhbW7oWl3BI0U0XmQ2bxsUdWUlGIyDzXN/8RRv7Cn/Rcv8AyzPEH/yDXyB/wQg/ZO+Fn7Vv/BRT/godf/E/4aeAPiJcaf8AFWT7CfE3h601YWHm6nrjS+SLiN/L3lU3bcbvLTOdor9Pv+HTv7LP/RtPwA/8N5pH/wAj0AeAf8RRv7Cn/Rcv/LM8Qf8AyDR/xFG/sKf9Fy/8szxB/wDINe//APDp39ln/o2n4Af+G80j/wCR6P8Ah07+yz/0bT8AP/DeaR/8j0AeAf8AEUb+wp/0XL/yzPEH/wAg0f8AEUb+wp/0XL/yzPEH/wAg17//AMOnf2Wf+jafgB/4bzSP/kej/h07+yz/ANG0/AD/AMN5pH/yPQB4B/xFG/sKf9Fy/wDLM8Qf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EQfBu8tNP+KS6FdSeGJrm3jnjF8qFo12SAxlmI2rvBQMylgQCK+Ov+CVX/BX7WP26/8Agk3478c6pJa2nxt+EGi6lZ+KrSS1WHZqFtazS2920GAFSYRglcKokjnQABKAPtb9m39lr4e/sffDceEPhl4U0rwb4ZF1JejTtPVlh86TbvfBJOTtXPPau/r85f8AgmT/AMFiNQ8Z/wDBEm//AGoPj7qWmCfw/NqrXz6daraLd+RcGG2too8482VzHGvPLuM4r0T/AIIRftcfHD9u79ji++LHxo0vQ9Ei8Y+ILq78G2Wn2rQNFow2pHvySXHmrKEdhudFDHIZaAPtaiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAK83uf2QvhpeftL2/xjl8HaO/xPtNPOlQ+IyjfbI7Uqy+UDnG3DsOnc18I6D/wU2+K37K//BffXv2f/jhq1lcfCn4w2kF58KL5bCG2j06YqFS0MqIGkMkqTwt5rO3miDbtWUCuv8J/8FG/iXr/APwcU+Jv2a/tWjyfDDRPAqa/5C2C/bIrpobZ8tPnO3M/TH8QoA/QeivzZ8Mf8FWfiV+1t/wXaT4E/BVdFuvgz8H7G5b4n6zPaif7Xd7Hj8iGbOUaK4MUShSCzpck7kjr9JqACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACvwD/wCC0vgLWv8Agip/wUD8ZfGbwdYXB+DX7W3hXWfCni2wtsJDY63c2ko83+6rGVku1Y/M3+nKMA1+/leDf8FMf2E9B/4KQ/sV+NfhNrvkwPr1p5uk37puOlalF89rcjHOFkADActG0i9GNAH88X/BPb4O/Eb/AIKZw/Bb9g660/UvC/w8+C2sap4s+Lc8cy5mlOoTFYC8bMu5Y5Fhj5JEtxKxUiAEf1C+D/COmfD/AMJaXoOiWFtpejaLaRWFhZW0YjhtLeJAkcSKOAqqoAHYAV8Wf8ECv+CT0X/BKb9iy30fXILST4o+NZE1fxjdwusojmwRDZJIMho7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veiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAK8/+K37PngHx/wDEvwV8R/FOiQXfib4TG/vfDurGaaOXRxdW/k3eBGwDrJEAGRwy/KpA3KCPQK5b43+C9c+JHwd8UaB4Z8U3PgfxDrWl3FlpviC3tEu5dFuJIyqXKxOQrlGIYKSM46jrQB8vfCD/AIJoeEf2itA+M/jb42+Hk8Qal+082mz654fmuJI4NF0jTwp0nT1eFlYXESqk0ssbDNwzbTtjRj1mq/syr+05+394X+JWveZB4X/Z1jvNL8G2SyZOqaxfW0aX1/MepiggKW8SHky/aHPCxlvePgz4P1r4e/CTwzoXiPxNc+NNf0fTLey1HX7m1jtZdZuI41WS5eKP5IzIwLFVyBuxk9a5b9mX4NeNvg5B40Xxr8T9T+JreIvE95rOkNeaVBYf8I7YTbfK0yMRE+akWDiRsE7vujFAHz/+0Z/wTm8HeNP2ePDX7I/gLRR4K+Dut3cuueLI7K6ldrTSotQS9ewtWkZnSS8vHCgg7IoY7jaAREp+yrGyi02yht4I1igt0WOONRhUUDAA9gBXmsfwa8bL+19J49PxP1Nvh83hgaMvgD+yoPsi34uPN/tP7Xnzd/l/u/LxjHO7tXp9ABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAVkaB4A0Lwpr2t6rpei6TpuqeJbiO71e8tbOOGfVZo4khSS4dQGldYo44wzkkIiqOABWvRQAUUUUAFFFFAGV428D6L8S/CWoaB4j0fS/EGhatC1tfabqVpHd2l7E33o5YpAUdT3DAitOGFbeFY41VEQBVVRgKB0AFOooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooA//9k=" style="max-width:100%;">
+<br/>
+Using an interest rate of 10% per year, the present value of our cash flow is $<input type="number" step="0.01" min="0" max="99999" name="ansQ8" id="ansQ8">.
+<br/><br/>
+<button onclick="funCheck('ansQ8', 'resQ8', 0, 0)">Check Q8 Solution</button> &nbsp &nbsp &nbsp <a id="resQ8"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q8 Explanation</button>
+<div class="panel">
+  <p>-$100,000 + [$110,000 &divide (1 + 0.1)] = 0</p>
+</div>
+<br/><br/><br/>
+
+Q9. The interest rate that equates the entire cash flow to zero is termed as the <b>internal rate of return</b> (IRR). Based on your solutions to Questions 7 and 8, the return of an investment can be described by the IRR of the associated cash flow.
+<br/><br/>
+True or False: <select id="ansQ9" name="ansQ9" style="height:40px; padding:5px;">
+  <option value="">-- Select --</option>
+  <option value="True">True</option>
+  <option value="False">False</option>
+</select>
+<br/><br/>
+<button onclick="checktrue('ansQ9', 'resQ9', 'True')">Check Q9 Solution</button> &nbsp &nbsp &nbsp <a id="resQ9"></a>
+<br/><br/><br/>
+
+<!-- ===== IRR PART 2 ===== -->
+<h1 id="irr2">Internal Rate of Return (Part 2)</h1>
+A manufacturing plant is considering an equipment that can increase profits (through increased productivity) by $7,000 each year. The equipment costs $24,500, can operate for five years and be salvaged for $8,872.65 at the end of its service.
+<br/><br/>
+
+Q10. Using an interest rate of 10% per year, the present value of the cash flow associated with the purchase of this equipment is $<input type="number" step="0.01" min="0" max="99999" name="ansQ10" id="ansQ10">.
+<br/><br/>
+<button onclick="funCheck('ansQ10', 'resQ10', 7544, 7545)">Check Q10 Solution</button> &nbsp &nbsp &nbsp <a id="resQ10"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q10 Explanation</button>
+<div class="panel">
+  <p>-$24,500 + $7,000 &times [(1.1<sup>5</sup>-1) &divide (0.1 &times 1.1<sup>5</sup>)] + $8,872.65 &times 1.1<sup>-5</sup> = $7,544.73</p>
+</div>
+<br/><br/><br/>
+
+Q11. Using an interest rate of 15% per year, the present value of the cash flow associated with the purchase of this equipment is $<input type="number" step="0.01" min="0" max="99999" name="ansQ11" id="ansQ11">.
+<br/><br/>
+<button onclick="funCheck('ansQ11', 'resQ11', 3376, 3377)">Check Q11 Solution</button> &nbsp &nbsp &nbsp <a id="resQ11"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q11 Explanation</button>
+<div class="panel">
+  <p>-$24,500 + $7,000 &times [(1.15<sup>5</sup>-1) &divide (0.15 &times 1.15<sup>5</sup>)] + $8,872.65 &times 1.15<sup>-5</sup> = $3,376.36</p>
+</div>
+<br/><br/><br/>
+
+Q12. Using an interest rate of 20% per year, the present value of the cash flow associated with the purchase of this equipment is $<input type="number" step="0.01" min="0" max="99999" name="ansQ12" id="ansQ12">.
+<br/><br/>
+<button onclick="funCheck('ansQ12', 'resQ12', 0, 0.1)">Check Q12 Solution</button> &nbsp &nbsp &nbsp <a id="resQ12"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q12 Explanation</button>
+<div class="panel">
+  <p>-$24,500 + $7,000 &times [(1.2<sup>5</sup>-1) &divide (0.2 &times 1.2<sup>5</sup>)] + $8,872.65 &times 1.2<sup>-5</sup> = 0</p>
+</div>
+<br/><br/><br/>
+
+Q13. Using an interest rate of 25% per year, the present value of the cash flow associated with the purchase of this equipment is $<input type="number" step="0.01" min="-99999" max="99999" name="ansQ13" id="ansQ13">.
+<br/><br/>
+<button onclick="funCheck('ansQ13', 'resQ13', -2768, -2767)">Check Q13 Solution</button> &nbsp &nbsp &nbsp <a id="resQ13"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q13 Explanation</button>
+<div class="panel">
+  <p>-$24,500 + $7,000 &times [(1.25<sup>5</sup>-1) &divide (0.25 &times 1.25<sup>5</sup>)] + $8,872.65 &times 1.25<sup>-5</sup> = -$2,767.65</p>
+</div>
+<br/><br/><br/>
+
+Q14. Based on your solutions to Questions 10 to 13, the IRR of purchasing this equipment is approximately:
+<br/><br/>
+<select id="ansQ14" name="ansQ14" style="height:40px; padding:5px;">
+  <option value="">-- Select --</option>
+  <option value="10%">10%</option>
+  <option value="15%">15%</option>
+  <option value="20%">20%</option>
+  <option value="25%">25%</option>
+</select>
+<br/><br/>
+<button onclick="checktrue('ansQ14', 'resQ14', '20%')">Check Q14 Solution</button> &nbsp &nbsp &nbsp <a id="resQ14"></a>
+<br/><br/><br/>
+
+<!-- ===== IRR PART 3 ===== -->
+<h1 id="irr3">Internal Rate of Return (Part 3)</h1>
+Consider the following cash flow:
+<br/><br/>
+<table border="1" cellpadding="10" cellspacing="0" style="border-collapse:collapse; text-align:center;">
+  <tr>
+    <th>Year 0</th><th>Year 1</th><th>Year 2</th><th>Year 3</th><th>Year 4</th><th>Year 5</th>
+  </tr>
+  <tr>
+    <td>$500</td><td>-$1,000</td><td>$0</td><td>$250</td><td>$250</td><td>$250</td>
+  </tr>
+</table>
+<br/>
+
+Q15. Using an annual interest rate of 29.7155%, the present value of the cash flow above is $<input type="number" step="0.01" min="0" max="99999" name="ansQ15" id="ansQ15">.
+<br/><br/>
+<button onclick="funCheck('ansQ15', 'resQ15', 0, 0)">Check Q15 Solution</button> &nbsp &nbsp &nbsp <a id="resQ15"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q15 Explanation</button>
+<div class="panel">
+  <p>$500 - $1,000 &times 1.297155<sup>-1</sup> + $250 &times 1.297155<sup>-3</sup> + $250 &times 1.297155<sup>-4</sup> + $250 &times 1.297155<sup>-5</sup> = $0</p>
+</div>
+<br/><br/><br/>
+
+Q16. Using an annual interest rate of 61.8027%, the present value of the cash flow above is $<input type="number" step="0.01" min="0" max="99999" name="ansQ16" id="ansQ16">.
+<br/><br/>
+<button onclick="funCheck('ansQ16', 'resQ16', 0, 0)">Check Q16 Solution</button> &nbsp &nbsp &nbsp <a id="resQ16"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q16 Explanation</button>
+<div class="panel">
+  <p>$500 - $1,000 &times 1.618027<sup>-1</sup> + $250 &times 1.618027<sup>-3</sup> + $250 &times 1.618027<sup>-4</sup> + $250 &times 1.618027<sup>-5</sup> = $0</p>
+</div>
+<br/><br/><br/>
+
+Q17. Based on your solutions to Questions 15 and 16, the cash flow above has more than one valid IRR values.
+<br/><br/>
+True or False: <select id="ansQ17" name="ansQ17" style="height:40px; padding:5px;">
+  <option value="">-- Select --</option>
+  <option value="True">True</option>
+  <option value="False">False</option>
+</select>
+<br/><br/>
+<button onclick="checktrue('ansQ17', 'resQ17', 'True')">Check Q17 Solution</button> &nbsp &nbsp &nbsp <a id="resQ17"></a>
+<br/><br/><br/>
+
+<!-- ===== EXTERNAL RATE OF RETURN ===== -->
+<h1 id="err">External Rate of Return</h1>
+A manufacturing plant is considering an equipment that can increase profits (through increased productivity) by $12,000 each year. The equipment costs $30,000, can operate for five years. At the end of its service, the equipment will have to be professionally disposed at a cost of $15,000. The company can borrow funds at an annual interest rate of 15% and excess funds can be invested to obtain an annual return of 10%.
+<br/><br/>
+
+Q18. Using a 15% interest rate for all cash outflows, the present value (at year 0) of total cash outflows is $<input type="number" step="0.01" min="-99999" max="99999" name="ansQ18" id="ansQ18">. Note: The present value of cash outflows should be negative.
+<br/><br/>
+<button onclick="funCheck('ansQ18', 'resQ18', -37458, -37457)">Check Q18 Solution</button> &nbsp &nbsp &nbsp <a id="resQ18"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q18 Explanation</button>
+<div class="panel">
+  <p>-$30,000 - $15,000 &times 1.15<sup>-5</sup> = -$37,457.65</p>
+</div>
+<br/><br/><br/>
+
+Q19. Using a 10% interest rate for all cash inflows, the future value (at year 5) of total cash inflows is $<input type="number" step="0.01" min="-99999" max="99999" name="ansQ19" id="ansQ19">.
+<br/><br/>
+<button onclick="funCheck('ansQ19', 'resQ19', 73261, 73262)">Check Q19 Solution</button> &nbsp &nbsp &nbsp <a id="resQ19"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q19 Explanation</button>
+<div class="panel">
+  <p>$12,000 &times (1.1<sup>5</sup> &minus; 1) &divide 0.1 = $73,261.20</p>
+</div>
+<br/><br/><br/>
+
+Q20. The interest rate that equates the present value and future value computed in Questions 18 and 19 is <input type="number" step="0.01" min="-99999" max="99999" name="ansQ20" id="ansQ20">%. This rate is termed as the <b>external rate of return</b> (ERR).
+<br/><br/>
+<button onclick="funCheck('ansQ20', 'resQ20', 14, 14.4)">Check Q20 Solution</button> &nbsp &nbsp &nbsp <a id="resQ20"></a> &nbsp &nbsp &nbsp
+<button class="accordion">Q20 Explanation</button>
+<div class="panel">
+  <p>$37,457.65 &times (1+i)<sup>5</sup> = $73,261.20 &rArr; i = ($73,261.20 &divide $37,457.65)<sup>1/5</sup> &minus; 1 = 0.1436 = 14.36%</p>
+</div>
+<br/><br/><br/>
+
+<script>
+function funCheck(ans, res, lb, ub) {
+    var ans = document.getElementById(ans).value;
+    if (ans >= lb && ans <= ub) {
+        document.getElementById(res).innerHTML = "<b style='color:green'>Correct!</b>";
+    } else {
+        document.getElementById(res).innerHTML = "<b style='color:red'>Wrong!</b>";
+    }
+}
+function checktrue(ans, res, correct) {
+    var val = document.getElementById(ans).value;
+    if (val === correct) {
+        document.getElementById(res).innerHTML = "<b style='color:green'>Correct!</b>";
+    } else {
+        document.getElementById(res).innerHTML = "<b style='color:red'>Wrong!</b>";
+    }
+}
+var acc = document.getElementsByClassName("accordion");
+var i;
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") { panel.style.display = "none"; }
+        else { panel.style.display = "block"; }
+    });
+}
+</script>
+
+<style>
+    h2 { text-align: center; }
+    button { height: 40px; padding: 5px 10px; }
+    .frac { display: inline-block; position: relative; vertical-align: middle; letter-spacing: 0.001em; text-align: center; }
+    .frac > span { display: block; padding: 0.1em; }
+    .frac span.bottom { border-top: thin solid black; }
+    .frac span.symbol { display: none; }
+    .panel { padding: 0 18px; background-color: white; display: none; overflow: hidden; }
+    img { max-width: 100%; height: auto; }
+    table th { background-color: #f0f4f8; }
+</style>
+
+</body>
+</html>
