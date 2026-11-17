@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Topic 6: Risk and Uncertainty</title>
+<title>Risk and Uncertainty</title>
 </head>
 <body>
 
 <h1 style="text-align:center; border-bottom:2px solid #333; padding-bottom:10px; margin-bottom:5px;">Cost Analysis and Engineering Economy</h1>
 
-<h1>Topic 6: Risk and Uncertainty</h1>
+<h1>Risk and Uncertainty</h1>
 
 <div style="background:#f0f4f8; border:1px solid #c8d8e8; border-radius:6px; padding:15px 20px; margin-bottom:30px;">
   <b>Contents</b>
@@ -17,7 +17,7 @@
     <li><a href="#breakeven-analysis">Breakeven Analysis</a> (Q1&ndash;Q14)</li>
     <li><a href="#sensitivity-analysis">Sensitivity Analysis</a> (Q15&ndash;Q31)</li>
     <li><a href="#risk-analysis">Risk Analysis</a> (Q32&ndash;Q36)</li>
-    <li><a href="#option-valuation">Option Valuation</a> (Q37&ndash;Q43)</li>
+    <li class="pg-only"><a href="#option-valuation">Option Valuation</a> (Q37&ndash;Q43)</li>
   </ul>
 </div>
 
@@ -382,6 +382,7 @@ Based on your solutions from Questions 32 to 35, the standard deviation of the p
 
 <!-- ===== SECTION 4: OPTION VALUATION ===== -->
 
+<div class="pg-only">
 <h1 id="option-valuation">Option Valuation</h1>
 
 A mining company is considering whether to invest in a newly discovered mine. The mine is expected to yield 100 kg of gold annually. There is a 0.25 probability the mine contains 300 kg of gold (i.e., last three years), 0.5 probability it contains 500 kg of gold (i.e., last five years) and 0.25 probability it contains 600 kg of gold (i.e., last six years). It costs $17 million to purchase the mine. Furthermore, the operating cost in the first year is $1 million and is estimated to increase 10% each year. The price of the newly extracted gold is currently $50,000 per kg and is estimated to increase 5% annually (i.e., the price of the newly extracted gold in the first year of operations is estimated to be $52,500 per kg). Assume that the company uses an annual interest of 7% in their decision making.
@@ -495,11 +496,16 @@ Based on your solutions from Questions 35, 36 and 42, the first course of action
   <p>False. The latter course of action is preferred since it has the same expected presented value but lower standard deviation (i.e., less dispersion and hence less risk).</p>
 </div>
 </br></br></br>
+</div>
 
 <hr style="margin-top:40px; border:none; border-top:1px solid #ccc;">
 <p style="text-align:center; color:#666; font-size:0.9em;">Original e-learning content by <a href="https://www.tanchinhon.com/e-learning/engineering-economy/risk-and-uncertainty" target="_blank">tanchinhon.com</a></p>
 
 <script>
+if (new URLSearchParams(window.location.search).get("course") === "ug") {
+    var pg = document.getElementsByClassName("pg-only");
+    for (var j = 0; j < pg.length; j++) { pg[j].style.display = "none"; }
+}
 function funCheck(ans, res, lb, ub) {
     var val = parseFloat(document.getElementById(ans).value);
     if (val >= lb && val <= ub) {

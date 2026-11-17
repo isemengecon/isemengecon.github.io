@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Topic 5: Replacement Analysis</title>
+<title>Replacement Analysis</title>
 </head>
 <body>
 
 <h1 style="text-align:center; border-bottom:2px solid #333; padding-bottom:10px; margin-bottom:5px;">Cost Analysis and Engineering Economy</h1>
 
-<h1>Topic 5: Replacement Analysis</h1>
+<h1>Replacement Analysis</h1>
 
 <div style="background:#f0f4f8; border:1px solid #c8d8e8; border-radius:6px; padding:15px 20px; margin-bottom:30px;">
   <b>Contents</b>
@@ -17,8 +17,8 @@
     <li><a href="#economic-life">Economic Life</a> (Q1&ndash;Q6)</li>
     <li><a href="#marginal-cost">Marginal Cost Analysis</a> (Q7&ndash;Q30)</li>
     <li><a href="#replacement-analysis">Replacement Analysis</a> (Q31&ndash;Q37)</li>
-    <li><a href="#after-tax-costs">After-Tax Costs</a> (Q38&ndash;Q42)</li>
-    <li><a href="#after-tax-euac">After-Tax EUAC</a> (Q43&ndash;Q44j)</li>
+    <li class="pg-only"><a href="#after-tax-costs">After-Tax Costs</a> (Q38&ndash;Q42)</li>
+    <li class="pg-only"><a href="#after-tax-euac">After-Tax EUAC</a> (Q43&ndash;Q44j)</li>
   </ul>
 </div>
 
@@ -450,6 +450,7 @@ Q37. Based on your solutions from Questions 31 to 36, when should we replace our
 
 <!-- ===== SECTION 4: AFTER-TAX COSTS ===== -->
 
+<div class="pg-only">
 <h1 id="after-tax-costs">After-Tax Costs</h1>
 
 In this section, we examine the effects of tax on costs. Suppose that your annual revenue is $100M and assume a flat tax rate of 20%.
@@ -542,7 +543,9 @@ Q42. Based on your solutions from Questions 40 and 41, we observe that after-tax
 </br></br></br>
 
 <!-- ===== SECTION 5: AFTER-TAX EUAC ===== -->
+</div>
 
+<div class="pg-only">
 <h1 id="after-tax-euac">After-Tax EUAC</h1>
 
 In the first section, we looked at how to determine the annual cost of owning and operating equipment. In the previous section, we highlighted that costs are lower after tax considerations. In the context of owning and operating equipment, annual expenses and depreciation both reduce the amount of tax payable. In this section, we examine how after-tax EUAC can be computed.
@@ -712,11 +715,16 @@ Q44j. The after-tax EUAC of owning and operating this forklift truck for two yea
   <p>= $10,348</p>
 </div>
 </br></br></br>
+</div>
 
 <hr style="margin-top:40px; border:none; border-top:1px solid #ccc;">
 <p style="text-align:center; color:#666; font-size:0.9em;">Original e-learning content by <a href="https://www.tanchinhon.com/e-learning/engineering-economy/replacement-analysis" target="_blank">tanchinhon.com</a></p>
 
 <script>
+if (new URLSearchParams(window.location.search).get("course") === "ug") {
+    var pg = document.getElementsByClassName("pg-only");
+    for (var j = 0; j < pg.length; j++) { pg[j].style.display = "none"; }
+}
 function funCheck(ans, res, lb, ub) {
     var val = parseFloat(document.getElementById(ans).value);
     if (val >= lb && val <= ub) {

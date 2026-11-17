@@ -3,19 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Topic 4: Depreciation and Taxes</title>
+<title>Depreciation and Taxes</title>
 </head>
 <body>
 <h1 style="text-align:center; border-bottom:2px solid #333; padding-bottom:10px; margin-bottom:5px;">Cost Analysis and Engineering Economy</h1>
-<h1>Topic 4: Depreciation and Taxes</h1>
+<h1>Depreciation and Taxes</h1>
 <div style="background:#f0f4f8; border:1px solid #c8d8e8; border-radius:6px; padding:15px 20px; margin-bottom:30px;">
   <b>Contents</b>
   <ul>
     <li><a href="#straight-line">Straight Line Method</a> (Q1&ndash;Q7)</li>
     <li><a href="#declining-balance">Declining Balance Method</a> (Q8&ndash;Q20)</li>
-    <li><a href="#db-switchover">DB with Switchover to SL</a> (Q21&ndash;Q40)</li>
-    <li><a href="#units-of-production">Units of Production Method</a> (Q41&ndash;Q44)</li>
-    <li><a href="#half-year-convention">Half Year Convention</a> (Q45&ndash;Q57)</li>
+    <li class="pg-only"><a href="#db-switchover">DB with Switchover to SL</a> (Q21&ndash;Q40)</li>
+    <li class="pg-only"><a href="#units-of-production">Units of Production Method</a> (Q41&ndash;Q44)</li>
+    <li class="pg-only"><a href="#half-year-convention">Half Year Convention</a> (Q45&ndash;Q57)</li>
     <li><a href="#income-tax">Income Tax</a> (Q58&ndash;Q61)</li>
     <li><a href="#taxable-income">Taxable Income and After-Tax Cash Flow</a> (Q62&ndash;Q67)</li>
   </ul>
@@ -245,6 +245,7 @@ where B is the cost basis (i.e., initial cost of acquiring asset) and R is the a
 </div>
 </br></br></br>
 
+<div class="pg-only">
 <h1 id="db-switchover">DB with Switchover to SL</h1>
 
 The DB method with switchover to SL determines depreciation based on the SL and DB method, by selecting the higher depreciation amount.
@@ -431,7 +432,9 @@ Q40. Based on your solution to Question 39, the book value of the laser surgical
   <p>$25,920 - $15,920 = $10,000</p>
 </div>
 </br></br></br>
+</div>
 
+<div class="pg-only">
 <h1 id="units-of-production">Units of Production Method</h1>
 
 The units-of-production method “estimates the value of the asset” by assuming that asset value drops by a fixed amount for each production unit of the asset. This approach is suitable for assets whose value is more dependent on usage (e.g., wear and tear) rather than age.
@@ -494,7 +497,9 @@ where B is the cost basis (i.e., initial cost of acquiring asset), M is the esti
   <p>See Question 42.</p>
 </div>
 </br></br></br>
+</div>
 
+<div class="pg-only">
 <h1 id="half-year-convention">Half Year Convention</h1>
 
 Depreciation is used in the computation of taxes. Taxes are typically charged at a fixed time of the year, which may not coincide with the purchase of assets. Hence, assets may not be exactly N years old at the point of tax computation. To simplify the task of computing depreciation for tax purposes, some governments assume that the asset is half year old in the first year, regardless of the actual purchase date. Hence, the depreciation amount is halved in the first year. Furthermore, the depreciation amount in the final year (i.e., year N+1 or year asset is sold, whichever comes first) is also halved.
@@ -624,6 +629,7 @@ Q57. In the event, the asset is disposed before it is fully depreciated, only ha
   <p> $22,222.22 - $7,407.41 = $14,814.81</p>
 </div>
 </br></br></br>
+</div>
 
 <h1 id="income-tax">Income Tax</h1>
 
@@ -784,7 +790,14 @@ Q67. Based on your solution to Question 66, <b>after-tax cash flow</b> can be co
 <button onclick="checktrue('ansQ67', 'resQ67', 'True')">Check Q67 Solution</button> &nbsp &nbsp &nbsp <a id="resQ67"></a>
 </br></br></br>
 
+<hr style="margin-top:40px; border:none; border-top:1px solid #ccc;">
+<p style="text-align:center; color:#666; font-size:0.9em;">Original e-learning content by <a href="https://www.tanchinhon.com/e-learning/engineering-economy/depreciation-and-tax" target="_blank">tanchinhon.com</a></p>
+
 <script>
+if (new URLSearchParams(window.location.search).get("course") === "ug") {
+    var pg = document.getElementsByClassName("pg-only");
+    for (var j = 0; j < pg.length; j++) { pg[j].style.display = "none"; }
+}
 function funCheck(ans, res, lb, ub) {
     var val = parseFloat(document.getElementById(ans).value);
     if (val >= lb && val <= ub) {

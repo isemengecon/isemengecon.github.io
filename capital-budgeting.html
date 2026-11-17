@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Topic 7: Capital Budgeting</title>
+<title>Capital Budgeting</title>
 </head>
 <body>
 
 <h1 style="text-align:center; border-bottom:2px solid #333; padding-bottom:10px; margin-bottom:5px;">Cost Analysis and Engineering Economy</h1>
 
-<h1>Topic 7: Capital Budgeting</h1>
+<h1>Capital Budgeting</h1>
 
 <div style="background:#f0f4f8; border:1px solid #c8d8e8; border-radius:6px; padding:15px 20px; margin-bottom:30px;">
   <b>Contents</b>
@@ -17,7 +17,7 @@
     <li><a href="#bonds">Bonds</a> (Q1&ndash;Q8)</li>
     <li><a href="#shares">Shares</a> (Q9&ndash;Q14)</li>
     <li><a href="#cost-of-capital">Cost of Capital</a> (Q15&ndash;Q22)</li>
-    <li><a href="#capital-allocation">Capital Allocation</a> (Q23&ndash;Q26)</li>
+    <li class="pg-only"><a href="#capital-allocation">Capital Allocation</a> (Q23&ndash;Q26)</li>
   </ul>
 </div>
 
@@ -289,6 +289,7 @@ Q22. Based on your solution from Question 20, a project will be considered econo
 </br></br></br>
 <!-- ===== SECTION 4: CAPITAL ALLOCATION ===== -->
 
+<div class="pg-only">
 <h1 id="capital-allocation">Capital Allocation</h1>
 
 Previously we have seen that for individual projects, a project should only be undertaken if its present value is greater than 0. Here, we consider the setting where the company has a fixed budget to undertake multiple projects. In particular, we are interested in obtaining a portfolio of projects that maximizes total present value. In this section, we review the equations that are associated with this problem.
@@ -372,10 +373,16 @@ Q26. Suppose that project 3 (e.g., build a casino within the shopping mall) can 
   <p><span style="color:green;">Correct!</span> Observe that if x<sub>3</sub> = 1 then x<sub>2</sub> must equals 1. If x<sub>3</sub> = 0 then x<sub>2</sub> can be either 0 or 1.</p>
 </div>
 </br></br></br>
+</div>
+
 <hr style="margin-top:40px; border:none; border-top:1px solid #ccc;">
 <p style="text-align:center; color:#666; font-size:0.9em;">Original e-learning content by <a href="https://www.tanchinhon.com/e-learning/engineering-economy/capital-budgeting" target="_blank">tanchinhon.com</a></p>
 
 <script>
+if (new URLSearchParams(window.location.search).get("course") === "ug") {
+    var pg = document.getElementsByClassName("pg-only");
+    for (var j = 0; j < pg.length; j++) { pg[j].style.display = "none"; }
+}
 function funCheck(ans, res, lb, ub) {
     var val = parseFloat(document.getElementById(ans).value);
     if (val >= lb && val <= ub) {
